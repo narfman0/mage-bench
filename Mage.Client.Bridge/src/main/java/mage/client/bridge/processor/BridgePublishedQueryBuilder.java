@@ -521,6 +521,32 @@ public final class BridgePublishedQueryBuilder {
                             choiceEntry.put("toughness", permanent.getToughness());
                         }
                         choiceEntry.put("choice_type", "blocker");
+
+                        // Which attackers THIS blocker may legally block. Without it the model
+                        // guesses the pairing and the engine rejects illegal ones, which costs a
+                        // decision and a generation and teaches nothing. The engine computes this
+                        // with the same canBlock() predicate it validates against, so a blocker
+                        // listed here cannot be refused.
+                        @SuppressWarnings("unchecked")
+                        Map<UUID, List<UUID>> blockable =
+                            (Map<UUID, List<UUID>>) options.get("blockableAttackers");
+                        if (blockable != null) {
+                            List<UUID> legalTargets = blockable.get(blockerId);
+                            var legalShortIds = new ArrayList<String>();
+                            if (legalTargets != null) {
+                                for (UUID attackerId : legalTargets) {
+                                    PermanentView attackerView =
+                                        processorServices.viewLocator().findPermanentViewById(attackerId, gameView);
+                                    legalShortIds.add(processorServices.viewLocator()
+                                        .getStableShortId(attackerId, attackerView, gameView));
+                                }
+                            }
+                            // Emitted even when empty: "this creature can block nothing right now"
+                            // is information the model needs, and an absent key would read as
+                            // "unknown" rather than "none".
+                            choiceEntry.put("can_block", legalShortIds);
+                        }
+
                         choiceList.add(choiceEntry);
                         indexToUuid.add(blockerId);
                         idx++;
