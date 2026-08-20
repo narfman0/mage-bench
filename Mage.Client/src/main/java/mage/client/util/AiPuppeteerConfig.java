@@ -86,11 +86,41 @@ public class AiPuppeteerConfig {
         return bridges;
     }
 
+    /**
+     * AI strength for one bot: per-player first, JVM property second, 1 last.
+     * <p>
+     * ComputerPlayer6 derives maxDepth from this (floored at 4 below skill 4)
+     * and maxThinkTimeSecs = skill * 3, so it is the only knob that makes the
+     * bot search harder. It was hardcoded to 1 -- the weakest setting the engine
+     * offers -- which is invisible from any config file.
+     * <p>
+     * The per-player field exists because -Dxmage.ai.skills is fixed for the
+     * life of the JVM, and a server that hosts a sequence of games would give
+     * every game in the sequence the same skills. That is the same defect the
+     * seed had, and it is worth fixing in the same direction: what varies per
+     * game travels with the game.
+     * <p>
+     * botIndex is the index among BOTS in join order, not among players, which
+     * is what -Dxmage.ai.skills=8,1 has always meant.
+     */
+    public static int resolveSkill(PlayerConfig player, int botIndex) {
+        if (player != null && player.skill != null) {
+            return player.skill;
+        }
+        String skillList = System.getProperty("xmage.ai.skills");
+        if (skillList != null && !skillList.isEmpty()) {
+            String[] parts = skillList.split(",");
+            return Integer.parseInt(parts[Math.min(botIndex, parts.length - 1)].trim());
+        }
+        return Integer.getInteger("xmage.ai.skill", 1);
+    }
+
     public static class PlayerConfig {
         public String type; // "cpu"/"bot", "sleepwalker", "pilot", "replay", "bridge"
         public String ai;   // for bots: "COMPUTER_MAD", "COMPUTER_MONTE_CARLO"
         public String name;
         public String deck; // optional path to .dck file (relative to project root)
+        public Integer skill; // optional per-bot AI strength; see resolveSkill
 
         /**
          * Returns true if this is a CPU/bot player (server-controlled AI).

@@ -338,7 +338,13 @@ public class ObserverMageFrame extends MageFrame {
      *
      * JSON command format:
      * {"gameDir":"/path","playersConfig":{"players":[...],"gameType":"...","deckType":"..."},
-     *  "choosingPlayer":"TestPlayer","skipInitShuffling":true,"winsNeeded":1}
+     *  "choosingPlayer":"TestPlayer","skipInitShuffling":true,"winsNeeded":1,
+     *  "gameSeed":3000001}
+     * <p>
+     * gameSeed is optional and per game -- omit it for an unseeded game. It is
+     * the field that makes this loop worth using for a batch: without it every
+     * game in a persistent server falls back to -Dxmage.game.seed, which is
+     * fixed for the life of the JVM, and the whole batch is dealt one hand.
      */
     public void startKeepAliveLoop() {
         int healthPort = Integer.getInteger("xmage.observer.healthPort", 0);
@@ -385,6 +391,13 @@ public class ObserverMageFrame extends MageFrame {
         String choosingPlayer = cmd.has("choosingPlayer") ? cmd.get("choosingPlayer").getAsString() : null;
         boolean skipInitShuffling = cmd.has("skipInitShuffling") && cmd.get("skipInitShuffling").getAsBoolean();
         int winsNeeded = cmd.has("winsNeeded") ? cmd.get("winsNeeded").getAsInt() : 1;
+        // Per-game seed. This is what lets one server JVM host a whole batch:
+        // -Dxmage.game.seed is fixed for the life of the process, so a
+        // persistent server under the property would deal every game the same
+        // hand. Absent means unseeded, which is not the same as seeded with 0.
+        Long gameSeed = cmd.has("gameSeed") && !cmd.get("gameSeed").isJsonNull()
+                ? cmd.get("gameSeed").getAsLong()
+                : null;
 
         // Update game directory for the new game
         System.setProperty("xmage.observer.gameDir", gameDir);
@@ -399,7 +412,7 @@ public class ObserverMageFrame extends MageFrame {
         UUID roomId = SessionHandler.getSession().getMainRoomId();
         assert roomId != null : "keepAlive: no main room ID";
 
-        UUID tableId = createGameTable(roomId, config, gameDir, choosingPlayer, skipInitShuffling, winsNeeded);
+        UUID tableId = createGameTable(roomId, config, gameDir, choosingPlayer, skipInitShuffling, winsNeeded, gameSeed);
 
         // Start watching for the game to begin
         watchForGameStart(roomId, tableId, gameDir);
@@ -429,7 +442,8 @@ public class ObserverMageFrame extends MageFrame {
             String gameDir,
             String choosingPlayer,
             boolean skipInitShuffling,
-            int winsNeeded
+            int winsNeeded,
+            Long gameSeed
     ) throws Exception {
         // Create a minimal test deck for bot slots (headless players bring their own decks)
         String testDeckFile = "test.dck";
@@ -473,6 +487,7 @@ public class ObserverMageFrame extends MageFrame {
         String serverAddress = SessionHandler.getSession().getServerHost();
         options.setBannedUsers(IgnoreList.getIgnoredUsers(serverAddress));
         options.setGameLogDir(gameDir);
+        options.setGameSeed(gameSeed);
 
         TableView table = SessionHandler.createTable(roomId, options);
         LOGGER.info("keepAlive: created table " + table.getTableId());
@@ -498,12 +513,28 @@ public class ObserverMageFrame extends MageFrame {
             if (player.isHeadless()) {
                 LOGGER.info("keepAlive: slot reserved for headless client: " + name);
             } else {
-                boolean joined = SessionHandler.joinTable(roomId, table.getTableId(), name, playerType, 1, deckToUse, "");
-                LOGGER.info("keepAlive: joined " + name + " (" + playerType + ") -> " + joined);
+                // Was hardcoded to 1, so a keepAlive game could not express AI strength
+                // at all -- the observer path silently played every bot at the weakest
+                // setting the engine offers while the GUI client honoured the config.
+                int aiSkill = AiPuppeteerConfig.resolveSkill(player, deckIndex);
+                boolean joined = SessionHandler.joinTable(roomId, table.getTableId(), name, playerType, aiSkill, deckToUse, "");
+                LOGGER.info("keepAlive: joined " + name + " (" + playerType + ", skill=" + aiSkill + ") -> " + joined);
             }
             if (player.isBot()) {
                 deckIndex++;
             }
+        }
+
+        // The table exists in BOTH branches below, so readiness is signalled here
+        // rather than inside the bridge branch. It used to fire only when there
+        // were bridge clients to wait for, so an all-bot game -- every seat an
+        // engine AI, no headless client to join -- created its table, started,
+        // played and finished while /wait-for-ready never resolved. The caller
+        // then failed on a 240s readiness timeout for a game that had already
+        // been won. Nothing exercised it because every golden test seats a
+        // replay or bridge player.
+        if (healthServer != null) {
+            healthServer.signalGameReady(gameDir, table.getTableId().toString());
         }
 
         // Start match or wait for bridge clients
@@ -513,9 +544,6 @@ public class ObserverMageFrame extends MageFrame {
             LOGGER.info("AI Puppeteer: waiting for " + config.getBridgeCount()
                     + " bridge client(s) to join table " + table.getTableId()
                     + " gameDir=" + gameDir);
-            if (healthServer != null) {
-                healthServer.signalGameReady(gameDir, table.getTableId().toString());
-            }
             final UUID finalTableId = table.getTableId();
             Thread starter = new Thread(() -> {
                 long deadline = System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(600);
