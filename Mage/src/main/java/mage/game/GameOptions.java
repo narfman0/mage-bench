@@ -71,6 +71,17 @@ public class GameOptions implements Serializable, Copyable<GameOptions> {
      */
     public String gameLogDir = null;
 
+    /**
+     * RNG seed for THIS game, or null to leave the stream alone.
+     * <p>
+     * Carried per game rather than read from a JVM property so that one server
+     * can host many games without every one of them getting the same deal. The
+     * property (-Dxmage.game.seed) is still honoured as a fallback, but it is
+     * fixed for the life of the JVM by construction, so a persistent server
+     * would deal every game identically under it.
+     */
+    public Long gameSeed = null;
+
     // PLANECHASE game mode
     public boolean planeChase = false;
     // xmage uses increased by 1/3 chances (2/2/9) for chaos/planar result, see 1a9f12f5767ce0beeed26a8ff5c8a8f9490c9c47
@@ -94,6 +105,7 @@ public class GameOptions implements Serializable, Copyable<GameOptions> {
         this.perPlayerEmblemCards = new HashSet<>(options.perPlayerEmblemCards);
         this.globalEmblemCards = new HashSet<>(options.globalEmblemCards);
         this.gameLogDir = options.gameLogDir;
+        this.gameSeed = options.gameSeed;
     }
 
     @Override

@@ -55,6 +55,9 @@ public class MatchOptions implements Serializable {
 
     protected String gameLogDir;
 
+    // RNG seed for each game of this match. Null leaves the stream alone.
+    protected Long gameSeed;
+
     public MatchOptions(String name, String gameType, boolean multiPlayer) {
         this.name = name;
         this.gameType = gameType;
@@ -329,5 +332,13 @@ public class MatchOptions implements Serializable {
 
     public void setGameLogDir(String gameLogDir) {
         this.gameLogDir = gameLogDir;
+    }
+
+    public Long getGameSeed() {
+        return gameSeed;
+    }
+
+    public void setGameSeed(Long gameSeed) {
+        this.gameSeed = gameSeed;
     }
 }
