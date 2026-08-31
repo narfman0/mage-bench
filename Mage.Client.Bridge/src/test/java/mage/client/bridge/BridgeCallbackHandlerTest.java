@@ -4379,6 +4379,67 @@ class BridgeCallbackHandlerTest {
     }
 
     @Test
+    void transitionToDecisionBoundaryPrefersColorMatchOverBattlefieldOrder() throws Exception {
+        // Regression test: with no mana plan, a pure colored remainder ("Pay {G}") used to
+        // tap whatever untapped land came first in battlefield order, even if it couldn't
+        // pay the requirement -- wasting it as unusable floating mana and leaving the actual
+        // green source untapped. An off-color Plains sits ahead of the Forest here on
+        // purpose; the fix must skip it and tap the Forest instead.
+        BridgeMageClient client = new BridgeMageClient("TestPlayer");
+        BridgeCallbackHandler handler = client.getCallbackHandler();
+
+        UUID gameId = UUID.randomUUID();
+        UUID playerId = UUID.randomUUID();
+        UUID plainsId = UUID.randomUUID();
+        UUID forestId = UUID.randomUUID();
+        AtomicInteger sendPlayerUuidCalls = new AtomicInteger();
+        List<UUID> tappedIds = new ArrayList<>();
+
+        client.setSession((Session) Proxy.newProxyInstance(
+            Session.class.getClassLoader(),
+            new Class<?>[]{Session.class},
+            (proxy, method, args) -> {
+                if ("sendPlayerUUID".equals(method.getName())) {
+                    sendPlayerUuidCalls.incrementAndGet();
+                    tappedIds.add((UUID) args[1]);
+                    return true;
+                }
+                return defaultReturnValue(method.getReturnType());
+            }
+        ));
+
+        PlayerView player = playerView(playerId, "TestPlayer", "p99");
+        PermanentView plains = permanentView(plainsId, "p1", "Plains", false);
+        PermanentView forest = permanentView(forestId, "p2", "Forest", false);
+        @SuppressWarnings("unchecked")
+        Map<UUID, Object> battlefield = (Map<UUID, Object>) getField(player, "battlefield");
+        battlefield.put(plainsId, plains);
+        battlefield.put(forestId, forest);
+
+        GameView manaView = gameView(62, List.of(player), new CardsView());
+        setField(manaView, "myPlayerId", playerId);
+        LinkedHashMap<UUID, PlayableObjectStats> canPlay = new LinkedHashMap<>();
+        canPlay.put(plainsId, manaStats("{T}: Add {W}."));
+        canPlay.put(forestId, manaStats("{T}: Add {G}."));
+        setField(manaView, "canPlayObjects", playableObjects(canPlay));
+
+        PendingAction action = new PendingAction(
+            gameId,
+            ClientCallbackMethod.GAME_PLAY_MANA,
+            new GameClientMessage(manaView, Collections.<String, Serializable>emptyMap(), "Pay {G}"),
+            "Pay {G}",
+            62
+        );
+        setField(handler, "pendingAction", action);
+
+        assertThat(invokeDecisionBoundaryStatus(handler, action, "test"))
+            .isEqualTo("AUTO_HANDLED");
+        assertThat(sendPlayerUuidCalls.get()).isEqualTo(1);
+        assertThat(tappedIds).containsExactly(forestId);
+        assertThat(getField(handler, "pendingAction")).isNull();
+    }
+
+    @Test
     void passPriorityReturnsManualManaChoiceWhenPoolSelectionIsAmbiguous() throws Exception {
         BridgeMageClient client = new BridgeMageClient("TestPlayer");
         BridgeCallbackHandler handler = client.getCallbackHandler();

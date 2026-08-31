@@ -1473,6 +1473,84 @@ public final class BridgeDecisionFlowService {
         }
     }
 
+    private static final Pattern REGEX_BARE_GENERIC = Pattern.compile("\\{[0-9]+\\}");
+
+    /** True if promptText still names a plain generic amount (e.g. "Pay {1}{G}"), as opposed
+     *  to a purely colored/colorless remainder (e.g. "Pay {G}"). */
+    private boolean hasOutstandingGenericMana(String promptText) {
+        return promptText != null && REGEX_BARE_GENERIC.matcher(promptText).find();
+    }
+
+    /** Colors explicitly named in promptText (e.g. "Pay {G}" -> [REGEX_GREEN]), in the same
+     *  preference order used for pool-mana choices. Empty if promptText names no color. */
+    private List<Pattern> requiredManaColorPatterns(String promptText) {
+        if (promptText == null) {
+            return List.of();
+        }
+        List<Pattern> required = new ArrayList<>();
+        if (REGEX_WHITE.matcher(promptText).find()) {
+            required.add(REGEX_WHITE);
+        }
+        if (REGEX_BLUE.matcher(promptText).find()) {
+            required.add(REGEX_BLUE);
+        }
+        if (REGEX_BLACK.matcher(promptText).find()) {
+            required.add(REGEX_BLACK);
+        }
+        if (REGEX_RED.matcher(promptText).find()) {
+            required.add(REGEX_RED);
+        }
+        if (REGEX_GREEN.matcher(promptText).find()) {
+            required.add(REGEX_GREEN);
+        }
+        if (REGEX_COLORLESS.matcher(promptText).find()) {
+            required.add(REGEX_COLORLESS);
+        }
+        return required;
+    }
+
+    /**
+     * First object in battlefield order with a plain "{T}: Add ..." mana ability, optionally
+     * restricted to ones whose ability text matches one of requiredColorPatterns (null means
+     * any tappable mana source will do).
+     */
+    private UUID findTappableManaSource(
+        List<Map.Entry<UUID, PlayableObjectStats>> sortedPlayable,
+        UUID payingForId,
+        List<Pattern> requiredColorPatterns
+    ) {
+        for (Map.Entry<UUID, PlayableObjectStats> entry : sortedPlayable) {
+            UUID objectId = entry.getKey();
+            if (objectId.equals(payingForId)) {
+                continue;
+            }
+            if (processorState.interactionState().failedManaCast(objectId)) {
+                continue;
+            }
+            for (String name : entry.getValue().getAllManaAbilityNames()) {
+                if (!name.contains("{T}")) {
+                    continue;
+                }
+                int colonPos = name.indexOf(':');
+                if (colonPos > 0) {
+                    String costPart = name.substring(0, colonPos);
+                    if (costPart.matches(".*\\{[0-9WUBRGC]\\}.*")) {
+                        continue;
+                    }
+                }
+                if (requiredColorPatterns == null) {
+                    return objectId;
+                }
+                for (Pattern pattern : requiredColorPatterns) {
+                    if (pattern.matcher(name).find()) {
+                        return objectId;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
     private boolean hasExplicitManaSymbol(String promptText) {
         if (promptText == null) {
             return false;
@@ -1667,35 +1745,36 @@ public final class BridgeDecisionFlowService {
                 gameView
             )));
 
-            for (Map.Entry<UUID, PlayableObjectStats> entry : sortedPlayable) {
-                UUID objectId = entry.getKey();
-                if (objectId.equals(payingForId)) {
-                    continue;
-                }
-                if (processorState.interactionState().failedManaCast(objectId)) {
-                    continue;
-                }
-                PlayableObjectStats stats = entry.getValue();
-                boolean hasTapManaAbility = false;
-                for (String name : stats.getAllManaAbilityNames()) {
-                    if (name.contains("{T}")) {
-                        int colonPos = name.indexOf(':');
-                        if (colonPos > 0) {
-                            String costPart = name.substring(0, colonPos);
-                            if (costPart.matches(".*\\{[0-9WUBRGC]\\}.*")) {
-                                continue;
-                            }
-                        }
-                        hasTapManaAbility = true;
-                        break;
-                    }
-                }
-                if (hasTapManaAbility) {
-                    logger.info("[" + username + "] Mana: \"" + messageText + "\" -> tapping " + objectId.toString().substring(0, 8));
-                    processorState.interactionState().resetPoolManaTracking();
-                    sendUuidOrDie(gameId, objectId, "manaAuto:tap");
-                    return true;
-                }
+            // When the only mana left to pay is colored (e.g. "Pay {G}" once any generic
+            // portion has already been covered), prefer a source that actually produces
+            // that color over whatever comes first in battlefield order -- otherwise this
+            // can burn through every off-color untapped land (Plains, Mountain, Swamp...)
+            // before it happens to reach the one land that actually satisfies the
+            // requirement, wasting all of them as unusable floating mana. A prompt that
+            // still has a bare generic component (e.g. "Pay {1}{G}") is left to the
+            // original order -- XMage's own payment-application logic already routes
+            // whatever gets tapped there to the slot it best satisfies.
+            List<Pattern> requiredColors = hasOutstandingGenericMana(messageText)
+                ? List.of()
+                : requiredManaColorPatterns(messageText);
+
+            UUID colorMatchedObjectId = requiredColors.isEmpty()
+                ? null
+                : findTappableManaSource(sortedPlayable, payingForId, requiredColors);
+            if (colorMatchedObjectId != null) {
+                logger.info("[" + username + "] Mana: \"" + messageText + "\" -> tapping "
+                    + colorMatchedObjectId.toString().substring(0, 8) + " (color match)");
+                processorState.interactionState().resetPoolManaTracking();
+                sendUuidOrDie(gameId, colorMatchedObjectId, "manaAuto:tap_color_match");
+                return true;
+            }
+
+            UUID objectId = findTappableManaSource(sortedPlayable, payingForId, null);
+            if (objectId != null) {
+                logger.info("[" + username + "] Mana: \"" + messageText + "\" -> tapping " + objectId.toString().substring(0, 8));
+                processorState.interactionState().resetPoolManaTracking();
+                sendUuidOrDie(gameId, objectId, "manaAuto:tap");
+                return true;
             }
         }
 
