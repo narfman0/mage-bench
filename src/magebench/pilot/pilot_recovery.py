@@ -142,8 +142,15 @@ async def _handle_timeout(
     logger: Logger,
     llm_request_timeout_secs: int,
     max_consecutive_timeouts: int,
+    retries_before_auto_pass: int = 1,
 ) -> bool:
     """Keep the game moving across request timeouts and reset repeated failures.
+
+    The first `retries_before_auto_pass` timeouts in a row just re-issue the request with
+    the pending decision left untouched, so a transient provider failure costs latency
+    rather than a move. Only once that budget is spent does the harness pass on the
+    player's behalf -- which is a real move made for them, and is recorded as
+    `harness_auto_pass` so it is never mistaken for a decision the model chose.
 
     Returns True if the game ended during recovery (game_over or player_dead).
     """
@@ -159,7 +166,37 @@ async def _handle_timeout(
             error_type="timeout",
             error_message=f"Timed out after {llm_request_timeout_secs}s [{state.consecutive_timeouts}]",
         )
+
+    # Retry budget: leave the pending decision alone and let the loop ask the model again.
+    if state.consecutive_timeouts <= retries_before_auto_pass:
+        logger.info(
+            "[pilot] Retrying the same decision (attempt %d of %d) before auto-passing",
+            state.consecutive_timeouts,
+            retries_before_auto_pass + 1,
+        )
+        if game_log:
+            game_log.emit(
+                "timeout_retry",
+                attempt=state.consecutive_timeouts,
+                of=retries_before_auto_pass + 1,
+            )
+        return False
+
     try:
+        pending_context, pending_message = await _describe_pending_decision(session)
+        logger.warning(
+            "[pilot] Retry budget spent; harness is passing on the player's behalf at %s (%s)",
+            pending_context,
+            pending_message,
+        )
+        if game_log:
+            game_log.emit(
+                "harness_auto_pass",
+                reason="llm_timeout",
+                timeouts=state.consecutive_timeouts,
+                pending_context=pending_context,
+                pending_message=pending_message,
+            )
         result_text = await execute_tool(session, "pass_priority", {})
         reason = _parse_game_ended_reason(result_text)
         if reason:
@@ -182,6 +219,22 @@ async def _handle_timeout(
         reset_board_context=full_reset,
     )
     return False
+
+
+async def _describe_pending_decision(session: ClientSession) -> tuple[str, str]:
+    """Best-effort description of the decision the harness is about to pass on.
+
+    Purely for the record -- get_action_choices is read-only, so this never consumes the
+    decision it is describing. Failures here must not block the auto-pass itself.
+    """
+    try:
+        raw = await execute_tool(session, "get_action_choices", {})
+        data = json.loads(raw)
+    except (ToolExecutionError, json.JSONDecodeError, TypeError):
+        return "unknown", "unknown"
+    if not isinstance(data, dict):
+        return "unknown", "unknown"
+    return str(data.get("context") or "unknown"), str(data.get("message") or "unknown")
 
 
 def _classify_permanent_llm_failure(error_str: str) -> str | None:

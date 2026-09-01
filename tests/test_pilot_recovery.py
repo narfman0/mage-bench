@@ -43,6 +43,7 @@ async def test_handle_timeout_detects_game_over():
         logger=logger,
         llm_request_timeout_secs=30,
         max_consecutive_timeouts=3,
+        retries_before_auto_pass=0,
     )
 
     assert result is True
@@ -62,6 +63,7 @@ async def test_handle_timeout_detects_player_dead():
         logger=logger,
         llm_request_timeout_secs=30,
         max_consecutive_timeouts=3,
+        retries_before_auto_pass=0,
     )
 
     assert result is True
@@ -80,6 +82,7 @@ async def test_handle_timeout_returns_false_on_normal_result():
         logger=logger,
         llm_request_timeout_secs=30,
         max_consecutive_timeouts=3,
+        retries_before_auto_pass=0,
     )
 
     assert result is False
@@ -102,6 +105,7 @@ async def test_handle_timeout_detects_stop_reason_game_over():
         logger=logger,
         llm_request_timeout_secs=30,
         max_consecutive_timeouts=3,
+        retries_before_auto_pass=0,
     )
 
     assert result is True
@@ -123,6 +127,7 @@ async def test_handle_timeout_returns_false_on_tool_error():
             logger=logger,
             llm_request_timeout_secs=30,
             max_consecutive_timeouts=3,
+            retries_before_auto_pass=0,
         )
 
     assert result is False
@@ -147,6 +152,7 @@ async def test_handle_timeout_full_board_reset_after_max_consecutive():
         logger=logger,
         llm_request_timeout_secs=30,
         max_consecutive_timeouts=3,
+        retries_before_auto_pass=0,
     )
 
     assert result is False
@@ -225,3 +231,58 @@ async def test_recover_from_stall_returns_false_on_normal_result():
     # Should reset context when game continues
     assert len(state.history) == 1
     assert state.history[0]["content"] == "A new turn has started. Call pass_priority to continue."
+
+
+@pytest.mark.asyncio
+async def test_handle_timeout_retries_before_passing():
+    """The first timeout must NOT pass on the player's behalf.
+
+    Regression test for the bug seen in game_20260831_224345, where every single LLM
+    timeout immediately fired pass_priority -- costing Kimi K3 three main phases, two
+    attack steps and three blocking steps across turns 7-9. A transient timeout should
+    cost latency, not a move.
+    """
+    session = _make_session(json.dumps({"action_pending": False}))
+    state = PilotLoopState(history=[{"role": "user", "content": "stale context"}])
+    game_log = MagicMock()
+
+    result = await _handle_timeout(
+        session,
+        state,
+        game_log,
+        logger=logger,
+        llm_request_timeout_secs=30,
+        max_consecutive_timeouts=3,
+        retries_before_auto_pass=2,
+    )
+
+    assert result is False
+    # Nothing was sent to the game at all -- the pending decision is untouched.
+    session.call_tool.assert_not_called()
+    game_log.emit.assert_any_call("timeout_retry", attempt=1, of=3)
+    assert state.consecutive_timeouts == 1
+
+
+@pytest.mark.asyncio
+async def test_handle_timeout_auto_passes_once_retry_budget_is_spent():
+    """Once retries are exhausted the harness does pass -- and records that it did."""
+    session = _make_session(json.dumps({"action_pending": False}))
+    state = PilotLoopState(history=[{"role": "user", "content": "stale context"}])
+    state.consecutive_timeouts = 2  # becomes 3, past a budget of 2
+    game_log = MagicMock()
+
+    result = await _handle_timeout(
+        session,
+        state,
+        game_log,
+        logger=logger,
+        llm_request_timeout_secs=30,
+        max_consecutive_timeouts=99,
+        retries_before_auto_pass=2,
+    )
+
+    assert result is False
+    # A move WAS made for the player, and it is recorded as the harness's, not the model's.
+    assert session.call_tool.await_count >= 1
+    emitted = [c.args[0] for c in game_log.emit.call_args_list if c.args]
+    assert "harness_auto_pass" in emitted

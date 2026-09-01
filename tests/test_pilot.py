@@ -814,6 +814,10 @@ async def test_repeated_timeout_resets_board_context():
 
     with (
         patch("magebench.pilot.pilot.MAX_CONSECUTIVE_TIMEOUTS", 1),
+        # This test covers the board-context reset, not the retry budget: send the
+        # harness straight to its auto-pass path. The retry budget itself is covered by
+        # test_pilot_recovery.test_handle_timeout_retries_before_passing.
+        patch("magebench.pilot.pilot.TIMEOUT_RETRIES_BEFORE_AUTO_PASS", 0),
         patch("magebench.pilot.pilot.auto_pass_loop", new_callable=AsyncMock),
     ):
         await asyncio.wait_for(

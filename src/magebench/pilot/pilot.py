@@ -69,8 +69,19 @@ DEFAULT_MODEL = "google/gemini-2.0-flash-001"
 PERMANENT_FAILURE_EXIT_CODE = 3
 
 MAX_TOKENS = 20_000
-LLM_REQUEST_TIMEOUT_SECS = 120
+# Raised from 120s: max-effort reasoning models routinely think for longer than that,
+# and a timeout costs the player a decision (see _handle_timeout), so a tight bound
+# structurally penalises slow models rather than weak ones. Kimi K3 at max effort hit
+# 8 timeouts in game_20260831_224345 and had 3 main phases, 2 attack steps and 3 block
+# steps auto-passed out from under it.
+LLM_REQUEST_TIMEOUT_SECS = 240
 MAX_CONSECUTIVE_TIMEOUTS = 3
+
+# How many times a single pending decision is re-attempted before the harness gives up
+# and passes on the player's behalf. A retry re-sends the same prompt and the model
+# re-reasons from scratch, so this only rescues transient failures -- genuinely slow
+# thinking is addressed by LLM_REQUEST_TIMEOUT_SECS above, not by retrying.
+TIMEOUT_RETRIES_BEFORE_AUTO_PASS = 2
 MAX_CONSECUTIVE_EMPTY_CHOICES = 5
 MAX_GAME_DURATION_SECS = 3 * 3600  # 3 hours absolute maximum
 MAX_TURNS_WITHOUT_PROGRESS = 20
@@ -177,6 +188,7 @@ async def _handle_timeout(
         logger=logger,
         llm_request_timeout_secs=LLM_REQUEST_TIMEOUT_SECS,
         max_consecutive_timeouts=MAX_CONSECUTIVE_TIMEOUTS,
+        retries_before_auto_pass=TIMEOUT_RETRIES_BEFORE_AUTO_PASS,
     )
 
 
