@@ -12,11 +12,14 @@ from mcp.types import CallToolResult, TextContent
 from openai import OpenAIError
 
 from magebench.game.game_export_types import Decision, PilotContext
+from magebench.pilot.pilot_state import PilotLoopState
 from magebench.pilot.pilot import (
     MAX_CHAT_MESSAGES_PER_TURN,
     MAX_CONSECUTIVE_EMPTY_CHOICES,
     MAX_TOKENS,
     PermanentLLMError,
+    _parse_tool_arguments,
+    _process_tool_calls,
     _prefetch_first_action,
     main,
     run_pilot_loop,
@@ -343,6 +346,55 @@ async def test_game_over_from_choose_action_triggers_auto_pass():
             username="test-player",
         )
         mock_auto_pass.assert_called_once()
+
+
+@pytest.mark.parametrize(
+    ("raw", "expected_args", "is_error"),
+    [
+        (None, {}, False),
+        ("", {}, False),
+        ('{"until": "my_turn"}', {"until": "my_turn"}, False),
+        ('{ "until": "my_turn"' + "  \n" * 50, {}, True),
+        ("[1, 2]", {}, True),
+    ],
+)
+def test_parse_tool_arguments(raw, expected_args, is_error):
+    args, error = _parse_tool_arguments(raw)
+    assert args == expected_args
+    assert (error is not None) is is_error
+
+
+async def test_invalid_tool_arguments_are_reported_to_model_not_raised():
+    """Arguments cut off at max_tokens must not crash the pilot. The call is skipped, the
+    model gets a tool error, and the malformed text is kept out of the history."""
+    session = _make_session()
+    session.call_tool = AsyncMock()
+
+    tool_call = MagicMock()
+    tool_call.id = "call_1"
+    tool_call.function.name = "pass_priority"
+    tool_call.function.arguments = '{ "until": "my_turn"' + "  \n" * 5000
+
+    choice = MagicMock()
+    choice.message.tool_calls = [tool_call]
+    choice.message.content = None
+
+    state = PilotLoopState(history=[{"role": "user", "content": "earlier context"}])
+    game_log = MagicMock()
+
+    finished, tools_called = await _process_tool_calls(session, choice, state, "test-player", None, game_log)
+
+    assert finished is False
+    assert tools_called == set()
+    session.call_tool.assert_not_called()
+    assistant_msg, tool_msg = state.history[1], state.history[2]
+    assert assistant_msg["tool_calls"][0]["function"]["arguments"] == "{}"
+    assert tool_msg["tool_call_id"] == "call_1"
+    assert json.loads(tool_msg["content"])["success"] is False
+    assert state.turns_without_progress == 1
+    errors = [c for c in game_log.emit.call_args_list if c.args and c.args[0] == "llm_error"]
+    assert len(errors) == 1
+    assert errors[0].kwargs["error_type"] == "invalid_tool_arguments"
 
 
 # --- mcp_tools_to_openai tests ---

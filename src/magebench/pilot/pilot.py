@@ -273,6 +273,59 @@ def _maybe_extract_result_dict(result_text: str) -> dict | None:
     return data if isinstance(data, dict) else None
 
 
+def _parse_tool_arguments(raw: str | None) -> tuple[dict, str | None]:
+    """Parse a tool call's JSON arguments, returning (args, error) instead of raising.
+
+    A model can emit arguments that are not a JSON object -- most often when it runs into
+    the max_tokens cap mid-call (GPT-6 Astra once followed `{ "until": "my_turn"` with
+    20,000 tokens of whitespace). That is the model's mistake, so it goes back to the model
+    as a tool error rather than crashing the pilot and aborting the game.
+    """
+    if not raw:
+        return {}, None
+    try:
+        parsed = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        return {}, f"not valid JSON ({exc.msg} at character {exc.pos} of {len(raw)})"
+    if not isinstance(parsed, dict):
+        return {}, f"not a JSON object (got {type(parsed).__name__})"
+    return parsed, None
+
+
+def _reject_invalid_tool_arguments(
+    state: PilotLoopState,
+    assistant_msg: dict,
+    index: int,
+    tool_call_id: str,
+    tool_name: str,
+    error: str,
+    game_log: GameLogWriter | None,
+) -> None:
+    """Skip a tool call with unusable arguments and tell the model why."""
+    logger.warning("[pilot] Invalid arguments for %s, call not made: %s", tool_name, error)
+    if game_log:
+        game_log.emit(
+            "llm_error",
+            error_type="invalid_tool_arguments",
+            error_message=f"{tool_name}: {error}",
+        )
+    # The malformed text would otherwise be resent, and billed, on every later request.
+    assistant_msg["tool_calls"][index]["function"]["arguments"] = "{}"
+    state.history.append(
+        {
+            "role": "tool",
+            "tool_call_id": tool_call_id,
+            "content": json.dumps(
+                {
+                    "success": False,
+                    "error": f"The arguments for {tool_name} were {error}, so the call was not made. "
+                    f"Call {tool_name} again with a valid JSON object.",
+                }
+            ),
+        }
+    )
+
+
 async def _process_tool_calls(
     session: ClientSession,
     choice: _ChoiceLike,
@@ -288,12 +341,16 @@ async def _process_tool_calls(
         logger.info("[pilot] Thinking: %s", choice.message.content)
     state.empty_responses = 0
     state.last_was_empty = False
-    state.history.append(_build_assistant_tool_message(choice.message))
+    assistant_msg = _build_assistant_tool_message(choice.message)
+    state.history.append(assistant_msg)
 
     assert choice.message.tool_calls is not None, "expected tool_calls in LLM response"
-    for tool_call in choice.message.tool_calls:
+    for index, tool_call in enumerate(choice.message.tool_calls):
         fn = tool_call.function
-        args = json.loads(fn.arguments) if fn.arguments else {}
+        args, args_error = _parse_tool_arguments(fn.arguments)
+        if args_error is not None:
+            _reject_invalid_tool_arguments(state, assistant_msg, index, tool_call.id, fn.name, args_error, game_log)
+            continue
 
         state.board_tracker.inject(fn.name, args)
         logger.info("[pilot] Tool: %s(%s)", fn.name, json.dumps(args, separators=(",", ":")))
