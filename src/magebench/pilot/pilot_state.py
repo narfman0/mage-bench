@@ -56,7 +56,9 @@ class PilotLoopState:
     last_chat_turn: int = 0
     seen_oracle_cards: set[str] = field(default_factory=set)
     cache_breakpoint_idx: int | None = None
-    render_counter: int = 0
+    # Window start the current state_summary was fetched for; refreshed only
+    # when the window advances so the cached prefix stays stable.
+    summary_chunk_start: int = -1
 
 
 @dataclass
@@ -73,7 +75,7 @@ def _reset_render_cache(state: PilotLoopState) -> None:
     """Drop cached prompt metadata after a context reset."""
     state.state_summary = ""
     state.cache_breakpoint_idx = None
-    state.render_counter = 0
+    state.summary_chunk_start = -1
 
 
 def reset_context(

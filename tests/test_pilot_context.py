@@ -10,9 +10,9 @@ from magebench.pilot.pilot import (
     _mark_tail_cache_breakpoint,
 )
 from magebench.pilot.pilot_rendering import (
+    CONTEXT_CHUNK,
     CONTEXT_RECENT_COUNT,
     CONTEXT_SUMMARY_COUNT,
-    RENDER_INTERVAL,
     TOOL_SUMMARY_TRIGGER_CHARS,
     _find_tool_name,
     _summarize_tool_result,
@@ -461,7 +461,7 @@ def test_render_preserves_recent_full():
 
 def test_render_includes_state_summary():
     """State bridge message should be present after summarised section, before recent."""
-    history = _make_history(CONTEXT_RECENT_COUNT + 5)
+    history = _make_history(CONTEXT_RECENT_COUNT + CONTEXT_CHUNK + 5)
     messages = render_context(history, SYSTEM_PROMPT, STATE_SUMMARY)
     # Find the state bridge by content
     bridge = None
@@ -640,10 +640,10 @@ async def test_build_loop_messages_matches_fresh_render_after_history_growth():
     assert fetch.await_count == 1
 
 
-def test_render_interval_constant():
-    """RENDER_INTERVAL should be a positive integer."""
-    assert isinstance(RENDER_INTERVAL, int)
-    assert RENDER_INTERVAL > 0
+def test_context_chunk_constant():
+    """CONTEXT_CHUNK should be a positive integer."""
+    assert isinstance(CONTEXT_CHUNK, int)
+    assert CONTEXT_CHUNK > 0
 
 
 # ---------------------------------------------------------------------------
@@ -895,10 +895,14 @@ async def test_long_history_tail_breakpoint_marks_state_bridge():
 
     original_last = messages[-1]
     _mark_tail_cache_breakpoint(messages, state, cc)
-    assert messages[-1] == original_last
     bridge_content = messages[bridge_idx]["content"]
     assert isinstance(bridge_content, list)
     assert any(block.get("cache_control") == cc for block in bridge_content if isinstance(block, dict))
+    # The true tail is marked too, so the next call reads this whole prompt from cache.
+    tail_content = messages[-1]["content"]
+    assert isinstance(tail_content, list)
+    assert any(block.get("cache_control") == cc for block in tail_content if isinstance(block, dict))
+    assert original_last["content"] == history[-1]["content"], "history must not be mutated"
 
 
 def test_short_history_tail_breakpoint():

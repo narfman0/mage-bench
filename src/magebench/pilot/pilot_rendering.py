@@ -20,7 +20,12 @@ from magebench.pilot.tool_error import ToolExecutionError
 CONTEXT_RECENT_COUNT = 40
 CONTEXT_SUMMARY_COUNT = 20
 TOOL_SUMMARY_TRIGGER_CHARS = 200
-RENDER_INTERVAL = 5
+# The full-fidelity window only advances in CONTEXT_CHUNK steps (and the state
+# summary only refreshes at those boundaries), so the rendered prompt prefix is
+# byte-stable between calls and provider prompt caching actually hits. A
+# per-message sliding window churned the prefix every call (measured: 5% cache
+# hits, caching cost more than no caching).
+CONTEXT_CHUNK = 20
 
 _CACHE_BREAKPOINT_MARKER = "All cards listed are playable right now."
 
@@ -272,6 +277,18 @@ def _find_cache_breakpoint_idx(messages: list[dict]) -> int:
     return len(messages) - 1
 
 
+def context_recent_start(history_len: int) -> int:
+    """Index where the full-fidelity window starts; 0 means "render everything".
+
+    Quantised to CONTEXT_CHUNK so the window holds CONTEXT_RECENT_COUNT to
+    CONTEXT_RECENT_COUNT + CONTEXT_CHUNK - 1 messages and only moves every
+    CONTEXT_CHUNK appends.
+    """
+    if history_len <= CONTEXT_RECENT_COUNT:
+        return 0
+    return (history_len - CONTEXT_RECENT_COUNT) // CONTEXT_CHUNK * CONTEXT_CHUNK
+
+
 def render_context(
     history: list[dict],
     system_prompt: str,
@@ -296,11 +313,11 @@ def render_context(
     else:
         messages = [{"role": "system", "content": system_prompt}]
 
-    if len(history) <= CONTEXT_RECENT_COUNT:
+    recent_start = context_recent_start(len(history))
+    if recent_start == 0:
         messages.extend(history)
         return messages
 
-    recent_start = len(history) - CONTEXT_RECENT_COUNT
     while recent_start > 0 and history[recent_start].get("role") == "tool":
         recent_start -= 1
 

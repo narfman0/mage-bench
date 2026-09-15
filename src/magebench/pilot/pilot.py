@@ -47,11 +47,10 @@ from magebench.pilot.pilot_recovery import (
     _recover_from_stall as _recover_from_stall_impl,
 )
 from magebench.pilot.pilot_rendering import (
-    CONTEXT_RECENT_COUNT,
-    RENDER_INTERVAL,
     _fetch_state_summary,
     _find_cache_breakpoint_idx,
     _with_cache_control,
+    context_recent_start,
     render_context,
     render_for_pilot,
 )
@@ -199,18 +198,17 @@ async def _build_loop_messages(
     cache_control: dict | None,
 ) -> list[dict]:
     """Render the next LLM request from the current history."""
-    if len(state.history) > CONTEXT_RECENT_COUNT:
-        state.render_counter += 1
-        if not state.state_summary or state.render_counter % RENDER_INTERVAL == 0:
+    recent_start = context_recent_start(len(state.history))
+    if recent_start > 0:
+        if not state.state_summary or recent_start != state.summary_chunk_start:
             state.state_summary = await _fetch_state_summary(session)
-            state.render_counter = 0
+            state.summary_chunk_start = recent_start
         messages = render_context(state.history, system_prompt, state.state_summary, cache_control)
         state.cache_breakpoint_idx = _find_cache_breakpoint_idx(messages)
         return messages
 
     messages = render_context(state.history, system_prompt, state.state_summary, cache_control)
     state.cache_breakpoint_idx = len(messages) - 1 if messages else None
-    state.render_counter = 0
     return messages
 
 
@@ -219,14 +217,20 @@ def _mark_tail_cache_breakpoint(
     state: PilotLoopState,
     cache_control: dict | None,
 ) -> None:
-    """Mark the end of the stable prompt prefix for providers that cache it."""
+    """Mark cache breakpoints: the stable-prefix marker AND the true tail.
+
+    With the tail marked, the next call (whose prompt extends this one) reads
+    everything up to here from cache and only writes its delta. Together with
+    the system prompt that's 3 of the 4 breakpoints providers allow.
+    """
     if not cache_control or len(messages) <= 1:
         return
 
-    tail_idx = state.cache_breakpoint_idx if state.cache_breakpoint_idx is not None else len(messages) - 1
-    marked = _with_cache_control(messages[tail_idx], cache_control)
-    if marked is not messages[tail_idx]:
-        messages[tail_idx] = marked
+    prefix_idx = state.cache_breakpoint_idx if state.cache_breakpoint_idx is not None else len(messages) - 1
+    for idx in {prefix_idx, len(messages) - 1}:
+        marked = _with_cache_control(messages[idx], cache_control)
+        if marked is not messages[idx]:
+            messages[idx] = marked
 
 
 def _build_assistant_tool_message(message: _AssistantMessageLike) -> dict:
