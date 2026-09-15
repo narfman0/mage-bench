@@ -3,8 +3,8 @@
 import argparse
 import asyncio
 import json
-import re
 import os
+import re
 import sys
 import time
 from contextlib import ExitStack

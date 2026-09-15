@@ -1020,21 +1020,90 @@ class BridgeCallbackHandlerTest {
             7
         ));
 
+        // A name that is not one of the options is still rejected with the structured error.
+        // A name that is one (see the test below) is accepted as if it had been sent as text.
         var result = handler.chooseAction(
-            null, "Black", null, null, null, null, null, null, null, null, null
+            null, "Purple", null, null, null, null, null, null, null, null, null
         );
 
         assertThat(result.success).isFalse();
         assertThat(result.error_code).isEqualTo("invalid_choice");
         assertThat(result.retryable).isTrue();
         assertThat(result.error)
-            .contains("choice=\"Black\"")
-            .contains("text=\"Black\"")
+            .contains("choice=\"Purple\"")
+            .contains("text=\"Purple\"")
             .contains("choice=N")
             .doesNotContain("Unknown short ID");
         assertThat(result.choices)
             .extracting(entry -> entry.get("description"))
             .containsExactly("White", "Blue", "Black");
+    }
+
+    @Test
+    void gameChooseChoiceAcceptsOptionNameInChoiceParam() throws Exception {
+        BridgeMageClient client = new BridgeMageClient("TestPlayer");
+        BridgeCallbackHandler handler = client.getCallbackHandler();
+
+        ChoiceImpl choice = new ChoiceImpl(true);
+        choice.setMessage("Choose color");
+        choice.setChoices(new LinkedHashSet<>(List.of("White", "Blue", "Black")));
+
+        UUID gameId = UUID.randomUUID();
+        GameView view = gameView(7);
+        GameView nextDecisionView = gameView(8);
+        GameClientMessage nextDecisionMessage = new GameClientMessage(
+            nextDecisionView,
+            Collections.<String, Serializable>emptyMap(),
+            "Play spells and abilities"
+        );
+        CountDownLatch sendPlayerStringCalled = new CountDownLatch(1);
+        String[] sent = new String[1];
+
+        client.setSession((Session) Proxy.newProxyInstance(
+            Session.class.getClassLoader(),
+            new Class<?>[]{Session.class},
+            (proxy, method, args) -> {
+                if (method.getName().equals("sendPlayerString")) {
+                    assertThat(args[0]).isEqualTo(gameId);
+                    sent[0] = (String) args[1];
+                    sendPlayerStringCalled.countDown();
+                    return true;
+                }
+                return defaultReturnValue(method.getReturnType());
+            }
+        ));
+
+        addActiveGame(handler, gameId);
+        setField(handler, "currentGameId", gameId);
+        setField(handler, "lastGameView", view);
+        setField(handler, "pendingAction", new PendingAction(
+            gameId,
+            ClientCallbackMethod.GAME_CHOOSE_CHOICE,
+            new GameClientMessage(view, Collections.<String, Serializable>emptyMap(), choice),
+            "Choose color",
+            7
+        ));
+
+        ExecutorService executor = Executors.newSingleThreadExecutor();
+        try {
+            // Case-insensitive, like text=: "black" selects the option named Black.
+            Future<ChooseActionTool.Result> future = executor.submit(() -> handler.chooseAction(
+                null, "black", null, null, null, null, null, null, null, null, null
+            ));
+
+            assertThat(sendPlayerStringCalled.await(1, TimeUnit.SECONDS)).isTrue();
+            assertThat(sent[0]).isEqualTo("Black");
+
+            handler.awaitProcessorIdle();
+            enqueueCallback(handler, ClientCallbackMethod.GAME_SELECT, gameId, nextDecisionMessage);
+
+            ChooseActionTool.Result result = future.get(1, TimeUnit.SECONDS);
+            assertThat(result.success).isTrue();
+            assertThat(result.action_taken).isEqualTo("selected_choice_text_Black");
+        } finally {
+            executor.shutdownNow();
+            executor.awaitTermination(1, TimeUnit.SECONDS);
+        }
     }
 
     @Test
@@ -2742,7 +2811,8 @@ class BridgeCallbackHandlerTest {
         GetOracleTextTool.Result oracle = handler.getOracleText(null, objectId, null, null);
 
         assertThat(oracle.success).isFalse();
-        assertThat(oracle.error).isEqualTo("Object not found in current game state: " + objectId);
+        assertThat(oracle.error).isEqualTo("Object not found in current game state: " + objectId
+            + ". If you know the card's name, look it up with card_name.");
     }
 
     @Test

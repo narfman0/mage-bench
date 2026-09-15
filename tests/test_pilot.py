@@ -10,6 +10,7 @@ from unittest.mock import AsyncMock, MagicMock, patch
 import pytest
 from mcp.types import CallToolResult, TextContent
 from openai import OpenAIError
+from openai.types.chat import ChatCompletion
 
 from magebench.game.game_export_types import Decision, PilotContext
 from magebench.pilot.pilot_state import PilotLoopState
@@ -1352,8 +1353,6 @@ async def test_consecutive_empty_choices_triggers_auto_pass():
 
 
 def _chat_message(**fields):
-    from openai.types.chat import ChatCompletion
-
     completion = ChatCompletion.model_validate(
         {
             "id": "gen-1",
