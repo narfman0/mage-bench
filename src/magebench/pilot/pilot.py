@@ -24,6 +24,7 @@ from magebench.common.llm_cost import (
 )
 from magebench.common.log import get_logger, log_error, setup_logging
 from magebench.game.game_log import GameLogWriter
+from magebench.pilot.anthropic_native import AnthropicNativeClient
 from magebench.pilot.auto_pass import auto_pass_loop
 from magebench.pilot.bridge_transport import build_bridge_launch_args, spawn_bridge_http
 from magebench.pilot.pilot_bridge import (
@@ -501,7 +502,7 @@ async def _prefetch_first_action(session: ClientSession) -> str:
 
 async def run_pilot_loop(
     session: ClientSession,
-    client: AsyncOpenAI,
+    client: AsyncOpenAI | AnthropicNativeClient,
     model: str,
     system_prompt: str,
     tools: list[dict],
@@ -804,12 +805,21 @@ async def run_pilot(
         )
         assert provider_order is None, f"provider_order requires provider={DEFAULT_LLM_PROVIDER!r}, got {provider!r}"
 
-    llm_client = AsyncOpenAI(
-        api_key=api_key,
-        base_url=base_url,
-        timeout=LLM_REQUEST_TIMEOUT_SECS + 5,
-        max_retries=1,
-    )
+    llm_client: AsyncOpenAI | AnthropicNativeClient
+    if provider == "anthropic":
+        # Native Messages API: the OpenAI-compat endpoint drops cache_control.
+        llm_client = AnthropicNativeClient(
+            api_key=api_key,
+            timeout=LLM_REQUEST_TIMEOUT_SECS + 5,
+            max_retries=1,
+        )
+    else:
+        llm_client = AsyncOpenAI(
+            api_key=api_key,
+            base_url=base_url,
+            timeout=LLM_REQUEST_TIMEOUT_SECS + 5,
+            max_retries=1,
+        )
 
     launch_args = build_bridge_launch_args(
         server=server,
