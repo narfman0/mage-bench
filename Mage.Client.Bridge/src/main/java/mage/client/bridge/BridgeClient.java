@@ -2,6 +2,8 @@ package mage.client.bridge;
 
 import mage.cards.decks.DeckCardInfo;
 import mage.cards.decks.DeckCardLists;
+import mage.cards.repository.CardInfo;
+import mage.cards.repository.CardRepository;
 import mage.cards.repository.CardScanner;
 import mage.constants.TableState;
 import mage.players.PlayerType;
@@ -381,6 +383,22 @@ public class BridgeClient {
                 String setCode = matcher.group(3);
                 String cardNumber = matcher.group(4);
                 String cardName = matcher.group(5).trim();
+
+                // External decklists (Moxfield/Scryfall) carry the newest
+                // printing, which XMage often lacks, and the server resolves
+                // strictly by (set, number). Re-resolve by NAME so the deck
+                // still loads with a printing the engine knows.
+                if (CardRepository.instance.findCard(setCode, cardNumber) == null) {
+                    CardInfo byName = CardRepository.instance.findCard(cardName);
+                    if (byName != null) {
+                        logger.info("Deck line " + lineNumber + ": " + cardName + " " + setCode + ":" + cardNumber
+                            + " unknown to engine; using " + byName.getSetCode() + ":" + byName.getCardNumber());
+                        setCode = byName.getSetCode();
+                        cardNumber = byName.getCardNumber();
+                    } else {
+                        logger.warn("Deck line " + lineNumber + ": no printing of '" + cardName + "' known to engine");
+                    }
+                }
 
                 DeckCardInfo cardInfo = new DeckCardInfo(
                     cardName, cardNumber, setCode, count
