@@ -1,8 +1,10 @@
 """Tests for shared bridge launch argument assembly."""
 
+import inspect
 from pathlib import Path
 
 from magebench.pilot import bridge_transport
+from magebench.pilot.bridge_transport import bridge_launch_command, connect_bridge_http
 
 
 def test_build_bridge_launch_args_for_sleepwalker() -> None:
@@ -91,3 +93,20 @@ def test_build_bridge_launch_args_adds_darwin_ui_flag(monkeypatch) -> None:
         "-Dxmage.bridge.port=17171 "
         "-Dapple.awt.UIElement=true"
     )
+
+
+def test_bridge_launch_command_prefers_prebuilt_classpath():
+    mvn_args = ["-q", "-Dxmage.bridge.username=Bot", "-Dxmage.bridge.deck=/d.dck", "exec:java"]
+    jvm = "--add-opens=java.base/java.io=ALL-UNNAMED -Xmx512m -Dxmage.bridge.server=h -Dxmage.bridge.mcpPort=1"
+    assert bridge_launch_command(mvn_args, jvm, None) == ["mvn", *mvn_args]
+    cmd = bridge_launch_command(mvn_args, jvm, "/a.jar:/b/classes")
+    assert cmd[0] == "java" and cmd[-1] == "mage.client.bridge.BridgeClient"
+    assert "-cp" in cmd and cmd[cmd.index("-cp") + 1] == "/a.jar:/b/classes"
+    assert "-Dxmage.bridge.username=Bot" in cmd and "-Dxmage.bridge.mcpPort=1" in cmd and "-Xmx512m" in cmd
+    assert "exec:java" not in cmd and "-q" not in cmd
+
+
+def test_connect_bridge_http_is_an_async_context_manager():
+    cm = connect_bridge_http("http://127.0.0.1:1/mcp")
+    assert hasattr(cm, "__aenter__") and hasattr(cm, "__aexit__")
+    assert inspect.isasyncgenfunction(connect_bridge_http.__wrapped__)

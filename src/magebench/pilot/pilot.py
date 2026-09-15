@@ -26,7 +26,7 @@ from magebench.common.log import get_logger, log_error, setup_logging
 from magebench.game.game_log import GameLogWriter
 from magebench.pilot.anthropic_native import AnthropicNativeClient
 from magebench.pilot.auto_pass import auto_pass_loop
-from magebench.pilot.bridge_transport import build_bridge_launch_args, spawn_bridge_http
+from magebench.pilot.bridge_transport import build_bridge_launch_args, connect_bridge_http, spawn_bridge_http
 from magebench.pilot.pilot_bridge import (
     _record_tool_execution_failure as _record_tool_execution_failure_impl,
 )
@@ -783,8 +783,12 @@ async def run_pilot(
     ignore_providers: list[str] | None = None,
     provider_order: list[str] | None = None,
     cache_control: dict | None = None,
+    table_id: str | None = None,
+    bridge_url: str | None = None,
 ) -> None:
-    """Run the pilot client."""
+    """Run the pilot client. With `bridge_url` the pilot attaches to an already
+    running keepAlive bridge (pre-warmed by an orchestrator) and joins the table
+    itself instead of spawning a JVM."""
     base_url = llm_base_url(provider)
     logger.info("[pilot] Starting for %s@%s:%s", username, server, port)
     logger.info("[pilot] Model: %s", model)
@@ -827,6 +831,7 @@ async def run_pilot(
         username=username,
         deck_path=deck_path,
         heap_size_mb=512,
+        table_id=table_id,
         error_log_path=game_dir / f"{username}_errors.log" if game_dir else None,
         bridge_log_path=game_dir / f"{username}_bridge.jsonl" if game_dir else None,
         max_interactions_per_turn=max_interactions_per_turn,
@@ -842,14 +847,26 @@ async def run_pilot(
             trace_log = log_stack.enter_context(GameLogWriter(game_dir, username, suffix="llm_trace"))
 
         try:
-            async with spawn_bridge_http(
-                mvn_args=launch_args.mvn_args,
-                project_root=project_root,
-                jvm_args=launch_args.jvm_args,
-                log_file=game_dir / f"{username}_mcp.log" if game_dir else None,
-            ) as session:
+            bridge_ctx = (
+                connect_bridge_http(bridge_url)
+                if bridge_url
+                else spawn_bridge_http(
+                    mvn_args=launch_args.mvn_args,
+                    project_root=project_root,
+                    jvm_args=launch_args.jvm_args,
+                    log_file=game_dir / f"{username}_mcp.log" if game_dir else None,
+                )
+            )
+            async with bridge_ctx as session:
                 result = await session.initialize()
                 logger.debug("[pilot] MCP initialized: %s", result.serverInfo)
+                if bridge_url:
+                    assert deck_path is not None, "--deck is required with --bridge-url"
+                    logger.info("[pilot] Attached to warm bridge %s; joining table %s", bridge_url, table_id)
+                    join_args: dict = {"deck_path": str(deck_path)}
+                    if table_id:
+                        join_args["table_id"] = table_id
+                    await execute_tool(session, "join_table", join_args)
 
                 tools_result = await session.list_tools()
                 if tools is not None:
@@ -938,6 +955,16 @@ def main() -> int:
         default="",
         help="JSON cache_control config for prompt caching",
     )
+    parser.add_argument(
+        "--table-id",
+        default="",
+        help="Pin the bridge to this table UUID on a shared server (default: first joinable table)",
+    )
+    parser.add_argument(
+        "--bridge-url",
+        default="",
+        help="Attach to an already running keepAlive bridge's MCP endpoint instead of spawning one",
+    )
     args = parser.parse_args()
 
     if args.project_root:
@@ -1000,6 +1027,8 @@ def main() -> int:
                 ignore_providers=ignore_providers,
                 provider_order=provider_order,
                 cache_control=cache_control,
+                table_id=args.table_id or None,
+                bridge_url=args.bridge_url or None,
             )
         )
     except KeyboardInterrupt:

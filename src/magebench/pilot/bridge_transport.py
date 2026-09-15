@@ -80,6 +80,32 @@ def build_bridge_launch_args(
     return BridgeLaunchArgs(jvm_args=" ".join(jvm_args_list), mvn_args=mvn_args)
 
 
+BRIDGE_MAIN_CLASS = "mage.client.bridge.BridgeClient"
+
+
+def bridge_launch_command(mvn_args: list[str], jvm_args: str, classpath: str | None) -> list[str]:
+    """The process to start: `mvn ... exec:java`, or with a prebuilt classpath a
+    direct `java <jvm args> <-D system props> -cp <classpath> BridgeClient`."""
+    if not classpath:
+        return ["mvn", *mvn_args]
+    sysprops = [a for a in mvn_args if a.startswith("-D")]
+    return ["java", *jvm_args.split(), *sysprops, "-cp", classpath, BRIDGE_MAIN_CLASS]
+
+
+@asynccontextmanager
+async def connect_bridge_http(url: str) -> AsyncGenerator[ClientSession, None]:
+    """Connect to a bridge that is already running (e.g. a pre-warmed keepAlive
+    bridge owned by an orchestrator) instead of spawning one. The caller is
+    responsible for join_table; the JVM's lifecycle belongs to whoever spawned it."""
+    http_client = create_mcp_http_client(timeout=httpx.Timeout(30.0, read=None))
+    async with (
+        http_client,
+        streamable_http_client(url, http_client=http_client) as (read, write, _),
+        ClientSession(read, write) as session,
+    ):
+        yield session
+
+
 @asynccontextmanager
 async def spawn_bridge_http(
     *,
@@ -117,12 +143,17 @@ async def spawn_bridge_http(
     if env_updates:
         env.update(env_updates)
 
+    # With a prebuilt classpath (MAGEBENCH_BRIDGE_CLASSPATH) launch the JVM
+    # directly: Maven's own boot + dependency resolution is several seconds
+    # on every bridge start, and the classpath never changes between games.
+    launch = bridge_launch_command(mvn_args, full_jvm_args, env.get("MAGEBENCH_BRIDGE_CLASSPATH"))
+
     log_fh = open(log_file, "w") if log_file else None
     proc: subprocess.Popen | None = None
 
     try:
         proc = subprocess.Popen(
-            ["mvn", *mvn_args],
+            launch,
             cwd=str(project_root / "Mage.Client.Bridge"),
             stdin=subprocess.PIPE,
             stdout=log_fh or subprocess.DEVNULL,
