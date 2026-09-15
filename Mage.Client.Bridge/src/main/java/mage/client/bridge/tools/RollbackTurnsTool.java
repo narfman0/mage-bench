@@ -21,7 +21,7 @@ public class RollbackTurnsTool {
     @Tool(
         name = "rollback_turns",
         description = "Roll the game back to the start of a turn: 0 = the current turn, 1 = the previous turn (undo). "
-            + "Only works while you hold priority; other players must allow it (Full Pod bridges do automatically)."
+            + "Only works while you hold priority; other players must allow it (this bridge grants such requests automatically)."
     )
     public static Result execute(
             BridgeCallbackHandler handler,

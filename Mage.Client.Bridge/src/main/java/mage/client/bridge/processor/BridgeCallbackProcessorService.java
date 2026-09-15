@@ -380,7 +380,7 @@ public final class BridgeCallbackProcessorService
             return;
         }
         if (request.getButton1Action() == mage.constants.PlayerAction.ADD_PERMISSION_TO_ROLLBACK_TURN) {
-            // Undo at a Full Pod table is by the table's host/seat, not by vote:
+            // Undo is by the requesting seat, not by vote:
             // every bridge (pilot or human) grants rollback requests.
             logger.info("[" + username + "] Auto-granting rollback request from " + request.getRelatedUserName());
             sessionSupplier.get().sendPlayerAction(
