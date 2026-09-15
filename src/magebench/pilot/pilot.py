@@ -3,6 +3,7 @@
 import argparse
 import asyncio
 import json
+import re
 import os
 import sys
 import time
@@ -262,6 +263,28 @@ def _build_assistant_tool_message(message: _AssistantMessageLike) -> dict:
             for tool_call in message.tool_calls
         ]
     return assistant_msg
+
+
+_TOOL_CALL_AS_TEXT = re.compile(r"\b(choose_action|pass_priority|get_action_choices|send_chat_message)\s*\(")
+
+
+def _no_tool_call_nudge(content: str | None) -> str:
+    """What to tell a model whose reply carried no tool call.
+
+    The old nudge, "Continue playing. Call pass_priority.", never said that nothing had
+    happened, and pointed at a tool that cannot answer a mulligan, a target choice or a
+    block. Qwen3 wrote choose_action(choice="no") as prose, was told to pass, got the same
+    question back, and went round 20 times before the harness passed for it
+    (game_20260914_221942). Every one of its 30 text-only replies on record is a tool call
+    written out as text.
+    """
+    match = _TOOL_CALL_AS_TEXT.search(content) if content is not None else None
+    lead = (
+        f"You wrote {match.group(1)}(...) as text. The game only sees real tool calls, so nothing happened. "
+        if match
+        else "Your last reply was text, so no tool was called and nothing happened in the game. "
+    )
+    return lead + "Call choose_action to answer the pending decision, or pass_priority to pass."
 
 
 def _maybe_extract_result_dict(result_text: str) -> dict | None:
@@ -771,12 +794,7 @@ async def run_pilot_loop(
                             pass
                         await auto_pass_loop(session, "pilot")
                         return
-                state.history.append(
-                    {
-                        "role": "user",
-                        "content": "Continue playing. Call pass_priority.",
-                    }
-                )
+                state.history.append({"role": "user", "content": _no_tool_call_nudge(content)})
 
             if state.turns_without_progress >= MAX_TURNS_WITHOUT_PROGRESS:
                 if await _recover_from_stall(

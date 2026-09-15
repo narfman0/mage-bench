@@ -178,6 +178,16 @@ public final class BridgePublishedQueryBuilder {
     }
 
     public BridgePublishedOracleIndex buildPublishedOracleIndex(GameView gameView) {
+        return buildPublishedOracleIndex(gameView, null);
+    }
+
+    /**
+     * As above, also indexing the cards the pending decision offers. A choice made from
+     * the library (search, reveal, "look at the top N") shows cards that are in no visible
+     * zone, so get_oracle_text on their IDs failed with "not found in current game state"
+     * (game_20260914_230049, Raucous Audience and Invasion Tactics).
+     */
+    public BridgePublishedOracleIndex buildPublishedOracleIndex(GameView gameView, PendingAction pendingAction) {
         if (gameView == null) {
             return BridgePublishedOracleIndex.empty();
         }
@@ -211,6 +221,16 @@ public final class BridgePublishedQueryBuilder {
         for (var exileZone : gameView.getExile()) {
             for (CardView card : exileZone.values()) {
                 addOracleCard(cardsByObjectId, cardsByName, cardsByUuid, card, gameView);
+            }
+        }
+        if (pendingAction != null && pendingAction.data() instanceof GameClientMessage msg) {
+            for (CardsView offered : new CardsView[] {msg.getCardsView1(), msg.getCardsView2()}) {
+                if (offered == null) {
+                    continue;
+                }
+                for (CardView card : offered.values()) {
+                    addOracleCard(cardsByObjectId, cardsByName, cardsByUuid, card, gameView);
+                }
             }
         }
 

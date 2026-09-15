@@ -129,7 +129,7 @@ public final class BridgePublishedQueryState {
         if (Boolean.TRUE.equals(result.action_pending)) {
             result.board_cursor = boardCursorAllocator.applyAsLong(McpToolRegistry.resultToMap(result));
         }
-        publishedOracleIndex = queryBuilder.buildPublishedOracleIndex(projectedGameView);
+        publishedOracleIndex = queryBuilder.buildPublishedOracleIndex(projectedGameView, pendingActionSupplier.get());
         BridgePublishedActionChoices previous = projectedActionChoices;
         projectedActionChoices = BridgePublishedActionChoices.from(result, built.backingChoices());
         traceProjectedActionChoicesChange(cause, previous, result);

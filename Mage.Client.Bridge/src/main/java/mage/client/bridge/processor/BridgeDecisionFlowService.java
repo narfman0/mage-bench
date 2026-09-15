@@ -422,8 +422,7 @@ public final class BridgeDecisionFlowService {
                             result.action_taken = answer ? "confirmed" : "passed_priority";
                         } else {
                             return chooseActionDone(buildChooseActionError(result, "missing_param",
-                                "GAME_SELECT requires choice=pN to play a card, or choice=\"no\" to pass priority. Call get_action_choices first to see available cards.",
-                                true, action, true));
+                                gameSelectMissingParamMessage(action.message()), true, action, true));
                         }
                     }
                 }
@@ -557,6 +556,13 @@ public final class BridgeDecisionFlowService {
                     result.action_taken = "selected_ability_" + resolvedIndex;
                 }
                 case GAME_CHOOSE_CHOICE -> {
+                    // choice="Red" for an option named Red is what a model means by it. The
+                    // rejection ("use text=...") cost Qwen3 five tries (game_20260914_234305).
+                    if ((text == null || text.isEmpty()) && id != null && !id.isEmpty()
+                            && choiceOptionNamed((GameClientMessage) data, id) != null) {
+                        text = choiceOptionNamed((GameClientMessage) data, id);
+                        id = null;
+                    }
                     if (text != null && !text.isEmpty()) {
                         GameClientMessage choiceMsg = (GameClientMessage) data;
                         Choice choiceObj = choiceMsg.getChoice();
@@ -1575,6 +1581,56 @@ public final class BridgeDecisionFlowService {
                 ManaType.GREEN, ManaType.COLORLESS)) {
             if (getManaPoolCount(manaPool, type) > 0) {
                 return type;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * The missing-parameter error for a GAME_SELECT, worded for the decision at hand.
+     *
+     * The generic text names choice=pN "to play a card", which is the main-phase case.
+     * During declare blockers it sent DeepSeek V3.2 round three times with its block in the
+     * wrong field, never mentioning `blockers` (game_20260914_230049).
+     */
+    private static String gameSelectMissingParamMessage(String pendingMessage) {
+        String lower = pendingMessage == null ? "" : pendingMessage.toLowerCase();
+        if (lower.contains("blockers")) {
+            return "This is a declare-blockers decision. Use blockers=\"blockerId:attackerId,...\" to block, "
+                + "or choice=\"no\" to not block. The blocker and attacker IDs are in the current choices "
+                + "and incoming_attackers.";
+        }
+        if (lower.contains("attackers")) {
+            return "This is a declare-attackers decision. Use attackers=\"p1,p2\" or attackers=\"all\" to attack, "
+                + "or choice=\"no\" to skip attacking.";
+        }
+        return "GAME_SELECT requires choice=pN to play a card, or choice=\"no\" to pass priority. "
+            + "Call get_action_choices first to see available cards.";
+    }
+
+    /** The option of a GAME_CHOOSE_CHOICE whose text (or key) equals `name`, ignoring case, or null. */
+    private static String choiceOptionNamed(GameClientMessage msg, String name) {
+        Choice choiceObj = msg == null ? null : msg.getChoice();
+        if (choiceObj == null) {
+            return null;
+        }
+        if (choiceObj.isKeyChoice()) {
+            Map<String, String> keyChoices = choiceObj.getKeyChoices();
+            if (keyChoices != null) {
+                for (Map.Entry<String, String> entry : keyChoices.entrySet()) {
+                    if (entry.getValue().equalsIgnoreCase(name) || entry.getKey().equalsIgnoreCase(name)) {
+                        return entry.getValue();
+                    }
+                }
+            }
+            return null;
+        }
+        Set<String> choices = choiceObj.getChoices();
+        if (choices != null) {
+            for (String choice : choices) {
+                if (choice.equalsIgnoreCase(name)) {
+                    return choice;
+                }
             }
         }
         return null;

@@ -18,6 +18,7 @@ from magebench.pilot.pilot import (
     MAX_CONSECUTIVE_EMPTY_CHOICES,
     MAX_TOKENS,
     PermanentLLMError,
+    _no_tool_call_nudge,
     _parse_tool_arguments,
     _process_tool_calls,
     _prefetch_first_action,
@@ -1164,6 +1165,34 @@ def _sample_pass_priority_result() -> dict:
 
 
 class TestRenderForPilot:
+    def test_non_priority_stop_says_pass_cannot_skip(self):
+        result = json.dumps(
+            {
+                "action_pending": True,
+                "action_type": "GAME_ASK",
+                "message": "Mulligan down to 6 cards?",
+                "respond_with": "choice=yes or choice=no",
+                "stop_reason": "non_priority_action",
+                "context": "T1 ()",
+            }
+        )
+        text, _ = render_for_pilot(result, None, set())
+        assert "pass_priority cannot skip this decision" in text
+
+    def test_priority_stop_has_no_skip_note(self):
+        result = json.dumps(
+            {
+                "action_pending": True,
+                "action_type": "GAME_SELECT",
+                "message": "Play spells and abilities",
+                "respond_with": "choice=pN to play, or choice=no to pass",
+                "stop_reason": "playable_cards",
+                "context": "T3 Precombat Main (You)",
+            }
+        )
+        text, _ = render_for_pilot(result, None, set())
+        assert "cannot skip" not in text
+
     def test_basic_render(self) -> None:
         result = json.dumps(_sample_pass_priority_result())
         text, board = render_for_pilot(result, None)
@@ -1319,3 +1348,78 @@ async def test_consecutive_empty_choices_triggers_auto_pass():
         mock_auto_pass.assert_called_once()
 
     assert client.chat.completions.create.call_count == MAX_CONSECUTIVE_EMPTY_CHOICES
+
+
+
+def _chat_message(**fields):
+    from openai.types.chat import ChatCompletion
+
+    completion = ChatCompletion.model_validate(
+        {
+            "id": "gen-1",
+            "object": "chat.completion",
+            "created": 1,
+            "model": "m",
+            "choices": [
+                {"index": 0, "finish_reason": "stop", "message": {"role": "assistant", "content": None, **fields}}
+            ],
+        }
+    )
+    return completion.choices[0].message
+
+
+
+
+
+
+def test_no_tool_call_nudge_names_a_call_written_as_text():
+    text = 'The hand is fine.\n\nchoose_action(choice="no") to keep.'
+    nudge = _no_tool_call_nudge(text)
+    assert nudge.startswith("You wrote choose_action(...) as text.")
+    assert "nothing happened" in nudge
+    assert "choose_action" in nudge and "pass_priority" in nudge
+
+
+def test_no_tool_call_nudge_for_plain_text():
+    nudge = _no_tool_call_nudge("Thinking about blocks.")
+    assert nudge.startswith("Your last reply was text, so no tool was called")
+    assert _no_tool_call_nudge(None).startswith("Your last reply was text")
+
+
+@pytest.mark.asyncio
+@pytest.mark.usefixtures("_no_prefetch")
+async def test_text_only_reply_is_told_no_tool_was_called():
+    """The nudge after a text-only reply reaches the next request, not a bare 'pass'."""
+    session = MagicMock()
+    session.call_tool = AsyncMock(return_value=_mock_tool_result('{"game_over": true}'))
+    client = MagicMock()
+
+    text_only = MagicMock()
+    text_only.choices = [MagicMock()]
+    text_only.choices[0].finish_reason = "stop"
+    text_only.choices[0].message.tool_calls = None
+    text_only.choices[0].message.content = 'choose_action(choice="no")'
+    text_only.usage = MagicMock(prompt_tokens=10, completion_tokens=5)
+    text_only.usage.prompt_tokens_details = None
+    text_only.usage.completion_tokens_details = None
+
+    responses = [text_only, _make_llm_response("pass_priority", "{}")]
+    client.chat.completions.create = AsyncMock(side_effect=lambda **_kw: responses.pop(0))
+
+    with patch("magebench.pilot.pilot.auto_pass_loop", new_callable=AsyncMock):
+        await asyncio.wait_for(
+            run_pilot_loop(
+                session=session,
+                client=client,
+                model="test-model",
+                system_prompt="You are a test.",
+                tools=_TOOLS,
+                prices={},
+                username="test-player",
+            ),
+            timeout=2,
+        )
+
+    second_request = client.chat.completions.create.await_args_list[1].kwargs["messages"]
+    assert second_request[-1]["role"] == "user"
+    assert second_request[-1]["content"].startswith("You wrote choose_action(...) as text.")

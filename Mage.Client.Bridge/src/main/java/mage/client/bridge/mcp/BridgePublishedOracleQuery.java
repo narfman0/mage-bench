@@ -96,7 +96,8 @@ public final class BridgePublishedOracleQuery {
             }
             result.success = false;
             if (oracleIndex.knowsObjectId(objectId)) {
-                result.error = "Object not found in current game state: " + objectId;
+                result.error = "Object not found in current game state: " + objectId
+                    + ". If you know the card's name, look it up with card_name.";
             } else {
                 result.error = "Unknown short ID: " + objectId;
             }

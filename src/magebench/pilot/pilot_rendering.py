@@ -82,6 +82,10 @@ def render_for_pilot(
         lines.append(f"  Respond: {respond_with}")
     elif resp_type:
         lines.append(f"  Response type: {resp_type}")
+    # A mulligan, a target or a block cannot be passed through. Saying so here stops a
+    # model from calling pass_priority again and again on the same question.
+    if data.get("action_pending") and data.get("stop_reason") == "non_priority_action":
+        lines.append("  Note: pass_priority cannot skip this decision. Answer it with choose_action.")
 
     mana_pool = data.get("mana_pool")
     if mana_pool and any(v > 0 for v in mana_pool.values()):
