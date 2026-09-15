@@ -1551,6 +1551,35 @@ public final class BridgeDecisionFlowService {
         return null;
     }
 
+    /**
+     * A mana type in the pool that this payment prompt can use, or null.
+     *
+     * A colour the prompt names comes first; failing that, any pool mana can pay a generic
+     * part that is still outstanding. Nothing is returned when only named pips remain and
+     * the pool holds none of them.
+     */
+    private ManaType poolManaTypeToSpendFirst(GameView gameView, String promptText) {
+        ManaPoolView manaPool = getMyManaPoolView(gameView);
+        if (manaPool == null || promptText == null) {
+            return null;
+        }
+        List<ManaType> named = new ArrayList<>();
+        addExplicitPoolChoices(named, manaPool, promptText);
+        if (!named.isEmpty()) {
+            return named.getFirst();
+        }
+        if (!hasOutstandingGenericMana(promptText)) {
+            return null;
+        }
+        for (ManaType type : List.of(ManaType.WHITE, ManaType.BLUE, ManaType.BLACK, ManaType.RED,
+                ManaType.GREEN, ManaType.COLORLESS)) {
+            if (getManaPoolCount(manaPool, type) > 0) {
+                return type;
+            }
+        }
+        return null;
+    }
+
     private boolean hasExplicitManaSymbol(String promptText) {
         if (promptText == null) {
             return false;
@@ -1718,6 +1747,23 @@ public final class BridgeDecisionFlowService {
             } else {
                 logger.warn("[" + username + "] Mana plan: exhausted with pips remaining, cancelling spell (auto_tap=false)");
                 return cancelSpellFromBadManaPlan(gameId, payingForId);
+            }
+        }
+
+        // Floating mana first. A pool payment costs nothing, while tapping a land for a pip
+        // the pool could have paid wastes that land, and the floating mana empties at the end
+        // of the step. Ran and Shaw's firebending made {R}{R} on attack and the {3}{R} pump
+        // was then paid from four lands, twice, each time leaving the player a creature short
+        // (game_20260914_174527). The mana_plan path already spends pool mana on request;
+        // this makes the automatic path do the same.
+        ManaType poolFirst = poolManaTypeToSpendFirst(gameView, messageText);
+        if (poolFirst != null && processorState.interactionState().tryPoolFirst(payingForId, messageText)) {
+            UUID manaPlayerId = getManaPoolPlayerId(gameId, gameView);
+            if (manaPlayerId != null) {
+                logger.info("[" + username + "] Mana: \"" + messageText + "\" -> using pool " + poolFirst
+                    + " before tapping");
+                sendManaTypeOrDie(gameId, manaPlayerId, poolFirst, "manaAuto:pool_first");
+                return true;
             }
         }
 

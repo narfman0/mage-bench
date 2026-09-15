@@ -117,6 +117,34 @@ public final class BridgeInteractionState {
         poolManaAttempts = 0;
     }
 
+    private UUID poolFirstPayingForId = null;
+    private String poolFirstLastPrompt = null;
+    private boolean poolFirstUnusable = false;
+
+    /**
+     * Whether to try paying this prompt from the mana pool before tapping anything.
+     *
+     * A payment that the server accepts changes the prompt (the remaining cost shrinks), so
+     * seeing the same prompt again for the same cost means the pool mana could not be
+     * applied. From then on this cost is paid by tapping.
+     */
+    public boolean tryPoolFirst(UUID payingForId, String prompt) {
+        if (payingForId == null || !payingForId.equals(poolFirstPayingForId)) {
+            poolFirstPayingForId = payingForId;
+            poolFirstLastPrompt = null;
+            poolFirstUnusable = false;
+        }
+        if (poolFirstUnusable) {
+            return false;
+        }
+        if (prompt != null && prompt.equals(poolFirstLastPrompt)) {
+            poolFirstUnusable = true;
+            return false;
+        }
+        poolFirstLastPrompt = prompt;
+        return true;
+    }
+
     public int recordPoolManaAttempt(UUID payingForId) {
         if (payingForId != null && payingForId.equals(poolManaPayingForId)) {
             poolManaAttempts++;

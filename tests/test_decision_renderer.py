@@ -487,6 +487,19 @@ class TestPermanentDisplay:
         assert "Thalia" in result
         assert "+1/+1=2" in result
 
+    def test_pt_counters_are_described_against_the_shown_pt(self) -> None:
+        """ "3/3 (+1/+1=2)" was read as a 5/5 by both models in game_20260914_174527."""
+        result = permanent_display(Permanent(name="Wan Shi Tong", pt="3/3", counters=[{"name": "+1/+1", "count": 2}]))
+        assert result == "Wan Shi Tong 3/3 (2 +1/+1 counters, included in 3/3)"
+
+    def test_single_pt_counter_is_singular(self) -> None:
+        result = permanent_display(Permanent(name="Bear", pt="1/1", counters=[{"name": "-1/-1", "count": 1}]))
+        assert result == "Bear 1/1 (1 -1/-1 counter, included in 1/1)"
+
+    def test_other_counters_keep_name_equals_count(self) -> None:
+        result = permanent_display(Permanent(name="Shrine", pt="2/2", counters=[{"name": "charge", "count": 3}]))
+        assert result == "Shrine 2/2 (charge=3)"
+
     def test_power_toughness(self) -> None:
         assert permanent_display(Permanent(name="Goblin Guide", pt="2/2")) == "Goblin Guide 2/2"
 

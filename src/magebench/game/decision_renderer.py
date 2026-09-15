@@ -298,11 +298,43 @@ def card_display(c: object) -> str:
     return str(c)
 
 
+_PT_COUNTERS = ("+1/+1", "-1/-1")
+
+
+def _counter_notes(counters: object, pt: str | None) -> list[str]:
+    """Describe a permanent's counters.
+
+    The P/T shown is the current one, counters included, but "3/3 (+1/+1=2)" reads as a
+    3/3 carrying two more: both models in game_20260914_174527 played Wan Shi Tong as a
+    5/5. P/T counters are spelled out against the P/T they are already part of; other
+    counters keep the name=count form.
+    """
+    pairs: list[tuple[str, object]] = []
+    if isinstance(counters, list):
+        pairs = [(str(ctr.get("name", "?")), ctr.get("count", "?")) for ctr in counters if isinstance(ctr, dict)]
+    elif isinstance(counters, dict):
+        pairs = [(str(k), v) for k, v in counters.items()]
+    notes: list[str] = []
+    for cname, count in pairs:
+        if pt and cname in _PT_COUNTERS:
+            plural = "" if count == 1 else "s"
+            notes.append(f"{count} {cname} counter{plural}, included in {pt}")
+        else:
+            notes.append(f"{cname}={count}")
+    return notes
+
+
 def permanent_display(c: object) -> str:
     """Display a battlefield permanent with status annotations."""
     if isinstance(c, str):
         return str(c)
     name = _record_name(c, source="permanent")
+    # Power/toughness for creatures, computed first because the counter note refers to it.
+    pt = _record_field(c, "power_toughness") or _record_field(c, "pt")
+    power = _record_field(c, "power")
+    toughness = _record_field(c, "toughness")
+    if not pt and power is not None:
+        pt = f"{power}/{toughness}"
     extras: list[str] = []
     if _record_field(c, "tapped"):
         extras.append("tapped")
@@ -315,13 +347,7 @@ def permanent_display(c: object) -> str:
         extras.append(f"loyalty={loyalty}")
     counters = _record_field(c, "counters")
     if counters:
-        if isinstance(counters, list):
-            extras.extend(
-                f"{ctr.get('name', '?')}={ctr.get('count', '?')}" for ctr in counters if isinstance(ctr, dict)
-            )
-        elif isinstance(counters, dict):
-            for k, v in counters.items():
-                extras.append(f"{k}={v}")
+        extras.extend(_counter_notes(counters, pt))
     original_card = _record_field(c, "original_card")
     if isinstance(original_card, str) and original_card:
         extras.append(f"copy of {original_card}")
@@ -329,12 +355,6 @@ def permanent_display(c: object) -> str:
         extras.append("copy")
     if _record_field(c, "token"):
         extras.append("token")
-    # Power/toughness for creatures
-    pt = _record_field(c, "power_toughness") or _record_field(c, "pt")
-    power = _record_field(c, "power")
-    toughness = _record_field(c, "toughness")
-    if not pt and power is not None:
-        pt = f"{power}/{toughness}"
     if pt:
         name += f" {pt}"
     if extras:
