@@ -1,0 +1,7591 @@
+{
+  "actions": [
+    {
+      "message": "TestPlayer chooses that they take the first turn",
+      "seq": 2,
+    },
+    {
+      "seq": 3,
+      "turn": 1,
+      "type": "turn_change",
+    },
+    {
+      "seq": 4,
+      "turn": 1,
+      "type": "phase_change",
+    },
+    {
+      "message": "TestPlayer skips Draw step",
+      "seq": 7,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "BEGINNING",
+      "seq": 8,
+      "step": "DRAW",
+      "turn": 1,
+      "type": "phase_change",
+    },
+    {
+      "message": "TestPlayer skip attack",
+      "seq": 11,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "COMBAT",
+      "seq": 12,
+      "step": "DECLARE_ATTACKERS",
+      "turn": 1,
+      "type": "phase_change",
+    },
+    {
+      "message": "TestPlayer puts Mountain from hand onto the Battlefield",
+      "seq": 16,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "POSTCOMBAT_MAIN",
+      "seq": 17,
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 1,
+      "type": "phase_change",
+    },
+    {
+      "message": "Opponent skip attack",
+      "seq": 22,
+    },
+    {
+      "active_player": "Opponent",
+      "seq": 23,
+      "turn": 2,
+      "type": "turn_change",
+    },
+    {
+      "active_player": "Opponent",
+      "phase": "COMBAT",
+      "seq": 24,
+      "step": "DECLARE_ATTACKERS",
+      "turn": 2,
+      "type": "phase_change",
+    },
+    {
+      "message": "Opponent discards down to 7 hand cards",
+      "seq": 29,
+    },
+    {
+      "active_player": "Opponent",
+      "phase": "END",
+      "seq": 30,
+      "step": "CLEANUP",
+      "turn": 2,
+      "type": "phase_change",
+    },
+    {
+      "message": "Opponent discards Mountain",
+      "seq": 32,
+    },
+    {
+      "message": "TestPlayer skip attack",
+      "seq": 35,
+    },
+    {
+      "active_player": "TestPlayer",
+      "seq": 36,
+      "turn": 3,
+      "type": "turn_change",
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "COMBAT",
+      "seq": 37,
+      "step": "DECLARE_ATTACKERS",
+      "turn": 3,
+      "type": "phase_change",
+    },
+    {
+      "message": "TestPlayer puts Crystal Vein from hand onto the Battlefield",
+      "seq": 41,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "POSTCOMBAT_MAIN",
+      "seq": 42,
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 3,
+      "type": "phase_change",
+    },
+    {
+      "message": "TestPlayer sacrificed Crystal Vein (source: Crystal Vein)",
+      "seq": 45,
+    },
+    {
+      "message": "TestPlayer casts Fellwar Stone from hand",
+      "seq": 49,
+    },
+    {
+      "message": "TestPlayer wants to concede",
+      "seq": 51,
+    }
+  ],
+  "card_data": {
+    "Crystal Vein": {
+      "mana_cost": "",
+      "oracle_text": "{T}: Add {C}.\n\
+{T}, Sacrifice this land: Add {C}{C}.",
+      "type_line": "Land",
+    },
+    "Fellwar Stone": {
+      "mana_cost": "{2}",
+      "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
+      "type_line": "Artifact",
+    },
+    "Mountain": {
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {R}.)",
+      "type_line": "Basic Land — Mountain",
+    }
+  },
+  "card_images": {},
+  "decisions": [
+    {
+      "action_result": {},
+      "action_seq": 5,
+      "action_type": "GAME_ASK",
+      "choice_count": 0,
+      "choices": [],
+      "chosen": null,
+      "chosen_args": {},
+      "index": 0,
+      "is_forced": false,
+      "llm_event_indices": [
+        2,
+        3,
+      ],
+      "message": "Mulligan down to 6 cards?",
+      "phase": null,
+      "player": "TestPlayer",
+      "response_type": "boolean",
+      "snapshot_index": 1,
+      "step": null,
+      "subsequent_actions": [],
+      "turn": 1,
+    },
+    {
+      "action_result": {
+        "action_pending": true,
+        "action_taken": "no",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "hand": [
+              {
+                "id": "p10",
+                "is_land": true,
+                "name": "Crystal Vein",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p12",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 53,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 53,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 3,
+        "choices": [
+          {
+            "action": "land",
+            "id": "p10",
+            "index": 0,
+            "name": "Crystal Vein",
+          },
+          {
+            "action": "land",
+            "id": "p12",
+            "index": 1,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p13",
+            "index": 2,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p14",
+            "index": 3,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p15",
+            "index": 4,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p16",
+            "index": 5,
+            "name": "Mountain",
+          }
+        ],
+        "context": "T1 Precombat Main/Precombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 9,
+        "land_drops_used": 0,
+        "message": "Play spells and abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "success": true,
+      },
+      "action_seq": 9,
+      "action_type": "GAME_ASK",
+      "choice_count": 0,
+      "choices": [],
+      "chosen": false,
+      "chosen_args": {
+        "choice": "no",
+      },
+      "index": 1,
+      "is_forced": false,
+      "llm_event_indices": [
+        4,
+        5,
+        6,
+      ],
+      "message": "Mulligan down to 6 cards?",
+      "phase": null,
+      "player": "TestPlayer",
+      "response_type": "boolean",
+      "snapshot_index": 1,
+      "step": null,
+      "subsequent_actions": [],
+      "turn": 1,
+    },
+    {
+      "action_result": {},
+      "action_seq": 9,
+      "action_type": "GAME_SELECT",
+      "choice_count": 6,
+      "choices": [
+        {
+          "action": "land",
+          "id": "p10",
+          "index": 0,
+          "name": "Crystal Vein",
+        },
+        {
+          "action": "land",
+          "id": "p12",
+          "index": 1,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p13",
+          "index": 2,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p14",
+          "index": 3,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p15",
+          "index": 4,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p16",
+          "index": 5,
+          "name": "Mountain",
+        }
+      ],
+      "chosen": null,
+      "chosen_args": {},
+      "index": 2,
+      "is_forced": false,
+      "llm_event_indices": [
+        6,
+        7,
+      ],
+      "message": "Play spells and abilities",
+      "phase": "PRECOMBAT_MAIN",
+      "pilot_context": {
+        "land_drops_used": 0,
+        "playable_cards": [
+          "p10",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+        ]
+      },
+      "player": "TestPlayer",
+      "response_type": "select",
+      "snapshot_index": 2,
+      "step": "PRECOMBAT_MAIN",
+      "subsequent_actions": [
+        "TestPlayer skip attack",
+      ],
+      "turn": 1,
+    },
+    {
+      "action_result": {
+        "action_pending": true,
+        "action_taken": "selected_1",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "hand": [
+              {
+                "id": "p10",
+                "is_land": true,
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 6,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 53,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 53,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 6,
+        "choices": [
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 0,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          }
+        ],
+        "context": "T1 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 18,
+        "land_drops_used": 1,
+        "message": "Play spells and abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "success": true,
+        "untapped_lands": 1,
+      },
+      "action_seq": 18,
+      "action_type": "GAME_SELECT",
+      "choice_count": 6,
+      "choices": [
+        {
+          "action": "land",
+          "id": "p10",
+          "index": 0,
+          "name": "Crystal Vein",
+        },
+        {
+          "action": "land",
+          "id": "p12",
+          "index": 1,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p13",
+          "index": 2,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p14",
+          "index": 3,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p15",
+          "index": 4,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p16",
+          "index": 5,
+          "name": "Mountain",
+        }
+      ],
+      "chosen": 1,
+      "chosen_args": {
+        "choice": "p12",
+      },
+      "index": 3,
+      "is_forced": false,
+      "llm_event_indices": [
+        8,
+        9,
+        10,
+      ],
+      "message": "Play spells and abilities",
+      "phase": "POSTCOMBAT_MAIN",
+      "pilot_context": {
+        "land_drops_used": 0,
+        "playable_cards": [
+          "p10",
+          "p12",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+        ]
+      },
+      "player": "TestPlayer",
+      "response_type": "select",
+      "snapshot_index": 6,
+      "step": "POSTCOMBAT_MAIN",
+      "subsequent_actions": [],
+      "turn": 1,
+    },
+    {
+      "action_result": {},
+      "action_seq": 18,
+      "action_type": "GAME_SELECT",
+      "choice_count": 1,
+      "choices": [
+        {
+          "action": "mana",
+          "id": "p12",
+          "index": 0,
+          "mana_abilities": [
+            "{T}: Add {R}.",
+          ],
+          "name": "Mountain",
+        }
+      ],
+      "chosen": null,
+      "chosen_args": {},
+      "index": 4,
+      "is_forced": false,
+      "llm_event_indices": [
+        10,
+        11,
+      ],
+      "message": "Play spells and abilities",
+      "phase": "POSTCOMBAT_MAIN",
+      "pilot_context": {
+        "land_drops_used": 1,
+        "untapped_lands": 1,
+      },
+      "player": "TestPlayer",
+      "response_type": "select",
+      "snapshot_index": 7,
+      "step": "POSTCOMBAT_MAIN",
+      "subsequent_actions": [
+        "Opponent skip attack",
+        "Opponent discards down to 7 hand cards",
+        "Opponent discards Mountain",
+      ],
+      "turn": 1,
+    },
+    {
+      "action_result": {
+        "action_pending": true,
+        "action_taken": "passed_priority",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "hand": [
+              {
+                "id": "p10",
+                "is_land": true,
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 11,
+        "choices": [
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 0,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          }
+        ],
+        "context": "T2 Combat/Declare Attackers (TestPlayer)",
+        "game_seq": 38,
+        "message": "Play instants and activated abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "success": true,
+        "untapped_lands": 1,
+      },
+      "action_seq": 38,
+      "action_type": "GAME_SELECT",
+      "choice_count": 7,
+      "choices": [
+        {
+          "action": "land",
+          "id": "p10",
+          "index": 0,
+          "name": "Crystal Vein",
+        },
+        {
+          "action": "mana",
+          "id": "p12",
+          "index": 1,
+          "mana_abilities": [
+            "{T}: Add {R}.",
+          ],
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p13",
+          "index": 2,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p14",
+          "index": 3,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p15",
+          "index": 4,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p16",
+          "index": 5,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p24",
+          "index": 6,
+          "name": "Mountain",
+        }
+      ],
+      "chosen": false,
+      "chosen_args": {
+        "choice": "no",
+      },
+      "index": 5,
+      "is_forced": false,
+      "llm_event_indices": [
+        12,
+        13,
+        14,
+      ],
+      "message": "Play spells and abilities",
+      "phase": "PRECOMBAT_MAIN",
+      "pilot_context": {
+        "land_drops_used": 0,
+        "playable_cards": [
+          "p10",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p24",
+        ],
+        "untapped_lands": 1,
+      },
+      "player": "TestPlayer",
+      "response_type": "select",
+      "snapshot_index": 16,
+      "step": "PRECOMBAT_MAIN",
+      "subsequent_actions": [],
+      "turn": 3,
+    },
+    {
+      "action_result": {},
+      "action_seq": 38,
+      "action_type": "GAME_SELECT",
+      "choice_count": 1,
+      "choices": [
+        {
+          "action": "mana",
+          "id": "p12",
+          "index": 0,
+          "mana_abilities": [
+            "{T}: Add {R}.",
+          ],
+          "name": "Mountain",
+        }
+      ],
+      "chosen": null,
+      "chosen_args": {},
+      "index": 6,
+      "is_forced": false,
+      "llm_event_indices": [
+        14,
+        15,
+      ],
+      "message": "Play instants and activated abilities",
+      "phase": "COMBAT",
+      "pilot_context": {
+        "untapped_lands": 1,
+      },
+      "player": "TestPlayer",
+      "response_type": "select",
+      "snapshot_index": 18,
+      "step": "DECLARE_ATTACKERS",
+      "subsequent_actions": [],
+      "turn": 3,
+    },
+    {
+      "action_result": {
+        "action_pending": true,
+        "action_taken": "selected_0",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p10",
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              },
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "hand": [
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "playable": true,
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 6,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 13,
+        "choices": [
+          {
+            "action": "mana",
+            "id": "p10",
+            "index": 0,
+            "mana_abilities": [
+              "{T}, Sacrifice {this}: Add {C}{C}.",
+              "{T}: Add {C}.",
+            ],
+            "name": "Crystal Vein",
+          },
+          {
+            "action": "cast",
+            "id": "p11",
+            "index": 1,
+            "mana_cost": "{2}",
+            "name": "Fellwar Stone",
+          },
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 2,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          }
+        ],
+        "context": "T2 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 43,
+        "land_drops_used": 1,
+        "message": "Play spells and abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "success": true,
+        "untapped_lands": 2,
+      },
+      "action_seq": 43,
+      "action_type": "GAME_SELECT",
+      "choice_count": 7,
+      "choices": [
+        {
+          "action": "land",
+          "id": "p10",
+          "index": 0,
+          "name": "Crystal Vein",
+        },
+        {
+          "action": "mana",
+          "id": "p12",
+          "index": 1,
+          "mana_abilities": [
+            "{T}: Add {R}.",
+          ],
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p13",
+          "index": 2,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p14",
+          "index": 3,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p15",
+          "index": 4,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p16",
+          "index": 5,
+          "name": "Mountain",
+        },
+        {
+          "action": "land",
+          "id": "p24",
+          "index": 6,
+          "name": "Mountain",
+        }
+      ],
+      "chosen": 0,
+      "chosen_args": {
+        "choice": "p10",
+      },
+      "index": 7,
+      "is_forced": false,
+      "llm_event_indices": [
+        16,
+        17,
+        18,
+      ],
+      "message": "Play spells and abilities",
+      "phase": "POSTCOMBAT_MAIN",
+      "pilot_context": {
+        "land_drops_used": 0,
+        "playable_cards": [
+          "p10",
+          "p13",
+          "p14",
+          "p15",
+          "p16",
+          "p24",
+        ],
+        "untapped_lands": 1,
+      },
+      "player": "TestPlayer",
+      "response_type": "select",
+      "snapshot_index": 20,
+      "step": "POSTCOMBAT_MAIN",
+      "subsequent_actions": [],
+      "turn": 3,
+    },
+    {
+      "action_result": {
+        "action_pending": true,
+        "action_taken": "selected_0",
+        "action_type": "GAME_CHOOSE_ABILITY",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p10",
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              },
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "hand": [
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "playable": true,
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 6,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 14,
+        "choices": [
+          {
+            "description": "{T}: Add {C}.",
+            "index": 0,
+          },
+          {
+            "description": "{T}, Sacrifice Crystal Vein: Add {C}{C}.",
+            "index": 1,
+          }
+        ],
+        "context": "T2 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 44,
+        "land_drops_used": 1,
+        "message": "Choose which mana to produce from Crystal Vein",
+        "respond_with": "choice=0, choice=1, etc. (not yes/no)",
+        "response_type": "index",
+        "success": true,
+        "untapped_lands": 2,
+      },
+      "action_seq": 44,
+      "action_type": "GAME_SELECT",
+      "choice_count": 3,
+      "choices": [
+        {
+          "action": "mana",
+          "id": "p10",
+          "index": 0,
+          "mana_abilities": [
+            "{T}, Sacrifice {this}: Add {C}{C}.",
+            "{T}: Add {C}.",
+          ],
+          "name": "Crystal Vein",
+        },
+        {
+          "action": "cast",
+          "id": "p11",
+          "index": 1,
+          "mana_cost": "{2}",
+          "name": "Fellwar Stone",
+        },
+        {
+          "action": "mana",
+          "id": "p12",
+          "index": 2,
+          "mana_abilities": [
+            "{T}: Add {R}.",
+          ],
+          "name": "Mountain",
+        }
+      ],
+      "chosen": 0,
+      "chosen_args": {
+        "choice": "p10",
+      },
+      "index": 8,
+      "is_forced": false,
+      "llm_event_indices": [
+        18,
+        19,
+        20,
+      ],
+      "message": "Play spells and abilities",
+      "phase": "POSTCOMBAT_MAIN",
+      "pilot_context": {
+        "land_drops_used": 1,
+        "playable_cards": [
+          "p11",
+        ],
+        "untapped_lands": 2,
+      },
+      "player": "TestPlayer",
+      "response_type": "select",
+      "snapshot_index": 21,
+      "step": "POSTCOMBAT_MAIN",
+      "subsequent_actions": [],
+      "turn": 3,
+    },
+    {
+      "action_result": {
+        "action_pending": true,
+        "action_taken": "selected_ability_1",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "graveyard": [
+              {
+                "id": "p10",
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ]
+              },
+            ],
+            "hand": [
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "playable": true,
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 6,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "mana_pool": {
+              "C": 2,
+            },
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 15,
+        "choices": [
+          {
+            "action": "cast",
+            "id": "p11",
+            "index": 0,
+            "mana_cost": "{2}",
+            "name": "Fellwar Stone",
+          },
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 1,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          }
+        ],
+        "context": "T2 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 46,
+        "land_drops_used": 1,
+        "message": "Play spells and abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "success": true,
+        "untapped_lands": 1,
+      },
+      "action_seq": 46,
+      "action_type": "GAME_CHOOSE_ABILITY",
+      "choice_count": 2,
+      "choices": [
+        {
+          "description": "{T}: Add {C}.",
+          "index": 0,
+        },
+        {
+          "description": "{T}, Sacrifice Crystal Vein: Add {C}{C}.",
+          "index": 1,
+        }
+      ],
+      "chosen": 1,
+      "chosen_args": {
+        "choice": "1",
+      },
+      "index": 9,
+      "is_forced": false,
+      "llm_event_indices": [
+        20,
+        21,
+        22,
+      ],
+      "message": "Choose which mana to produce from Crystal Vein",
+      "phase": "POSTCOMBAT_MAIN",
+      "pilot_context": {
+        "land_drops_used": 1,
+        "playable_cards": [
+          "p11",
+        ],
+        "untapped_lands": 2,
+      },
+      "player": "TestPlayer",
+      "response_type": "index",
+      "snapshot_index": 21,
+      "step": "POSTCOMBAT_MAIN",
+      "subsequent_actions": [],
+      "turn": 3,
+    },
+    {
+      "action_result": {
+        "action_pending": true,
+        "action_taken": "selected_0",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "graveyard": [
+              {
+                "id": "p10",
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ]
+              },
+            ],
+            "hand": [
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 5,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 18,
+        "choices": [
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 0,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          }
+        ],
+        "context": "T2 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 50,
+        "land_drops_used": 1,
+        "message": "Play instants and activated abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "stack": [
+          {
+            "id": "p26",
+            "name": "Fellwar Stone",
+            "owner": "TestPlayer",
+          }
+        ],
+        "success": true,
+        "untapped_lands": 1,
+      },
+      "action_seq": 50,
+      "action_type": "GAME_SELECT",
+      "choice_count": 2,
+      "choices": [
+        {
+          "action": "cast",
+          "id": "p11",
+          "index": 0,
+          "mana_cost": "{2}",
+          "name": "Fellwar Stone",
+        },
+        {
+          "action": "mana",
+          "id": "p12",
+          "index": 1,
+          "mana_abilities": [
+            "{T}: Add {R}.",
+          ],
+          "name": "Mountain",
+        }
+      ],
+      "chosen": 0,
+      "chosen_args": {
+        "choice": "p11",
+      },
+      "index": 10,
+      "is_forced": false,
+      "llm_event_indices": [
+        22,
+        23,
+        24,
+      ],
+      "message": "Play spells and abilities",
+      "phase": "POSTCOMBAT_MAIN",
+      "pilot_context": {
+        "land_drops_used": 1,
+        "playable_cards": [
+          "p11",
+        ],
+        "untapped_lands": 1,
+      },
+      "player": "TestPlayer",
+      "response_type": "select",
+      "snapshot_index": 22,
+      "step": "POSTCOMBAT_MAIN",
+      "subsequent_actions": [],
+      "turn": 3,
+    },
+    {
+      "action_result": {},
+      "action_seq": 50,
+      "action_type": "GAME_SELECT",
+      "choice_count": 1,
+      "choices": [
+        {
+          "action": "mana",
+          "id": "p12",
+          "index": 0,
+          "mana_abilities": [
+            "{T}: Add {R}.",
+          ],
+          "name": "Mountain",
+        }
+      ],
+      "chosen": null,
+      "chosen_args": {},
+      "index": 11,
+      "is_forced": false,
+      "llm_event_indices": [
+        24,
+        25,
+      ],
+      "message": "Play instants and activated abilities",
+      "phase": "POSTCOMBAT_MAIN",
+      "pilot_context": {
+        "land_drops_used": 1,
+        "untapped_lands": 1,
+      },
+      "player": "TestPlayer",
+      "response_type": "select",
+      "snapshot_index": 24,
+      "step": "POSTCOMBAT_MAIN",
+      "subsequent_actions": [
+        "TestPlayer wants to concede",
+      ],
+      "turn": 3,
+    }
+  ],
+  "deck_type": "Constructed - Legacy",
+  "game_over": {
+    "message": "Opponent",
+    "seq": 52,
+  },
+  "game_type": "Two Player Duel",
+  "harness_epoch": 60,
+  "id": "crystal_vein_manual_mana",
+  "llm_events": [
+    {
+      "available_tools": [
+        "get_game_log",
+        "get_game_history",
+        "send_chat_message",
+        "pass_priority",
+        "get_game_state",
+        "get_oracle_text",
+        "get_action_choices",
+        "choose_action",
+        "concede",
+        "rollback_turns",
+        "hold_for_replay",
+        "offer_mana_sources",
+      ],
+      "model": "google/gemini-2.0-flash-001",
+      "player": "TestPlayer",
+      "seq": 1,
+      "type": "game_start",
+    },
+    {
+      "cost_usd": 0.0,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 2,
+      "tool_calls": [
+        {
+          "arguments": {
+            "choice": "0",
+          },
+          "name": "choose_action",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "choice": "0",
+      },
+      "game_seq": 5,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_taken": "selected_target_0",
+        "action_type": "GAME_ASK",
+        "board": [
+          {
+            "hand": [
+              {
+                "id": "p10",
+                "is_land": true,
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p12",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": true,
+            "library_size": 53,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 53,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 2,
+        "context": "T1 ()",
+        "game_seq": 5,
+        "message": "Mulligan down to 6 cards?",
+        "no_text": "Keep",
+        "respond_with": "choice=yes (Mulligan) or choice=no (Keep)",
+        "response_type": "boolean",
+        "success": true,
+        "yes_text": "Mulligan",
+        "your_hand": [
+          {
+            "is_land": true,
+            "name": "Crystal Vein",
+            "rules": [
+              "{T}: Add {C}.",
+              "{T}, Sacrifice {this}: Add {C}{C}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "mana_cost": "{2}",
+            "name": "Fellwar Stone",
+            "rules": [
+              "{T}: Add one mana of any color that a land an opponent controls could produce.",
+            ],
+            "types": [
+              "Artifact",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Mountain",
+            "rules": [
+              "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Mountain",
+            "rules": [
+              "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Mountain",
+            "rules": [
+              "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Mountain",
+            "rules": [
+              "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Mountain",
+            "rules": [
+              "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+        ]
+      },
+      "seq": 3,
+      "tool": "choose_action",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 5,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 4,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "name": "pass_priority",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "board_cursor": 2,
+      },
+      "game_seq": 5,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_type": "GAME_ASK",
+        "board_cursor": 2,
+        "board_unchanged": true,
+        "context": "T1 ()",
+        "game_seq": 5,
+        "message": "Mulligan down to 6 cards?",
+        "no_text": "Keep",
+        "respond_with": "choice=yes (Mulligan) or choice=no (Keep)",
+        "response_type": "boolean",
+        "stop_reason": "non_priority_action",
+        "yes_text": "Mulligan",
+        "your_hand": [
+          {
+            "is_land": true,
+            "name": "Crystal Vein",
+            "rules": [
+              "{T}: Add {C}.",
+              "{T}, Sacrifice {this}: Add {C}{C}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "mana_cost": "{2}",
+            "name": "Fellwar Stone",
+            "rules": [
+              "{T}: Add one mana of any color that a land an opponent controls could produce.",
+            ],
+            "types": [
+              "Artifact",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Mountain",
+            "rules": [
+              "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Mountain",
+            "rules": [
+              "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Mountain",
+            "rules": [
+              "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Mountain",
+            "rules": [
+              "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Mountain",
+            "rules": [
+              "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+        ]
+      },
+      "seq": 5,
+      "tool": "pass_priority",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 5,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 6,
+      "tool_calls": [
+        {
+          "arguments": {
+            "choice": "no",
+          },
+          "name": "choose_action",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "choice": "no",
+      },
+      "game_seq": 9,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_taken": "no",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "hand": [
+              {
+                "id": "p10",
+                "is_land": true,
+                "name": "Crystal Vein",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p12",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 53,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 53,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 3,
+        "choices": [
+          {
+            "action": "land",
+            "id": "p10",
+            "index": 0,
+            "name": "Crystal Vein",
+          },
+          {
+            "action": "land",
+            "id": "p12",
+            "index": 1,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p13",
+            "index": 2,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p14",
+            "index": 3,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p15",
+            "index": 4,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p16",
+            "index": 5,
+            "name": "Mountain",
+          }
+        ],
+        "context": "T1 Precombat Main/Precombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 9,
+        "land_drops_used": 0,
+        "message": "Play spells and abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "success": true,
+      },
+      "seq": 7,
+      "tool": "choose_action",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 9,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 8,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "name": "pass_priority",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "board_cursor": 3,
+      },
+      "game_seq": 15,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "hand": [
+              {
+                "id": "p10",
+                "is_land": true,
+                "name": "Crystal Vein",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p12",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 53,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 53,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 5,
+        "choices": [
+          {
+            "action": "land",
+            "id": "p10",
+            "index": 0,
+            "name": "Crystal Vein",
+          },
+          {
+            "action": "land",
+            "id": "p12",
+            "index": 1,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p13",
+            "index": 2,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p14",
+            "index": 3,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p15",
+            "index": 4,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p16",
+            "index": 5,
+            "name": "Mountain",
+          }
+        ],
+        "context": "T1 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 15,
+        "has_playable_cards": true,
+        "land_drops_used": 0,
+        "message": "Play spells and abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "stop_reason": "playable_cards",
+      },
+      "seq": 9,
+      "tool": "pass_priority",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 15,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 10,
+      "tool_calls": [
+        {
+          "arguments": {
+            "choice": "p12",
+          },
+          "name": "choose_action",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "choice": "p12",
+      },
+      "game_seq": 18,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_taken": "selected_1",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "hand": [
+              {
+                "id": "p10",
+                "is_land": true,
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 6,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 53,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 53,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 6,
+        "choices": [
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 0,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          }
+        ],
+        "context": "T1 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 18,
+        "land_drops_used": 1,
+        "message": "Play spells and abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "success": true,
+        "untapped_lands": 1,
+      },
+      "seq": 11,
+      "tool": "choose_action",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 18,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 12,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "name": "pass_priority",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "board_cursor": 6,
+      },
+      "game_seq": 33,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "hand": [
+              {
+                "id": "p10",
+                "is_land": true,
+                "name": "Crystal Vein",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 10,
+        "choices": [
+          {
+            "action": "land",
+            "id": "p10",
+            "index": 0,
+            "name": "Crystal Vein",
+          },
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 1,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p13",
+            "index": 2,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p14",
+            "index": 3,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p15",
+            "index": 4,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p16",
+            "index": 5,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p24",
+            "index": 6,
+            "name": "Mountain",
+          }
+        ],
+        "context": "T2 Precombat Main/Precombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 33,
+        "has_playable_cards": true,
+        "land_drops_used": 0,
+        "message": "Play spells and abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "stop_reason": "playable_cards",
+        "untapped_lands": 1,
+      },
+      "seq": 13,
+      "tool": "pass_priority",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 33,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 14,
+      "tool_calls": [
+        {
+          "arguments": {
+            "choice": "no",
+          },
+          "name": "choose_action",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "choice": "no",
+      },
+      "game_seq": 38,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_taken": "passed_priority",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "hand": [
+              {
+                "id": "p10",
+                "is_land": true,
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 11,
+        "choices": [
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 0,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          }
+        ],
+        "context": "T2 Combat/Declare Attackers (TestPlayer)",
+        "game_seq": 38,
+        "message": "Play instants and activated abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "success": true,
+        "untapped_lands": 1,
+      },
+      "seq": 15,
+      "tool": "choose_action",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 38,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 16,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "name": "pass_priority",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "board_cursor": 11,
+      },
+      "game_seq": 40,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "hand": [
+              {
+                "id": "p10",
+                "is_land": true,
+                "name": "Crystal Vein",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "playable": true,
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 12,
+        "choices": [
+          {
+            "action": "land",
+            "id": "p10",
+            "index": 0,
+            "name": "Crystal Vein",
+          },
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 1,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p13",
+            "index": 2,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p14",
+            "index": 3,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p15",
+            "index": 4,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p16",
+            "index": 5,
+            "name": "Mountain",
+          },
+          {
+            "action": "land",
+            "id": "p24",
+            "index": 6,
+            "name": "Mountain",
+          }
+        ],
+        "context": "T2 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 40,
+        "has_playable_cards": true,
+        "land_drops_used": 0,
+        "message": "Play spells and abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "stop_reason": "playable_cards",
+        "untapped_lands": 1,
+      },
+      "seq": 17,
+      "tool": "pass_priority",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 40,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 18,
+      "tool_calls": [
+        {
+          "arguments": {
+            "choice": "p10",
+          },
+          "name": "choose_action",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "choice": "p10",
+      },
+      "game_seq": 43,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_taken": "selected_0",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p10",
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              },
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "hand": [
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "playable": true,
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 6,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 13,
+        "choices": [
+          {
+            "action": "mana",
+            "id": "p10",
+            "index": 0,
+            "mana_abilities": [
+              "{T}, Sacrifice {this}: Add {C}{C}.",
+              "{T}: Add {C}.",
+            ],
+            "name": "Crystal Vein",
+          },
+          {
+            "action": "cast",
+            "id": "p11",
+            "index": 1,
+            "mana_cost": "{2}",
+            "name": "Fellwar Stone",
+          },
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 2,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          }
+        ],
+        "context": "T2 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 43,
+        "land_drops_used": 1,
+        "message": "Play spells and abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "success": true,
+        "untapped_lands": 2,
+      },
+      "seq": 19,
+      "tool": "choose_action",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 43,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 20,
+      "tool_calls": [
+        {
+          "arguments": {
+            "choice": "p10",
+          },
+          "name": "choose_action",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "choice": "p10",
+      },
+      "game_seq": 44,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_taken": "selected_0",
+        "action_type": "GAME_CHOOSE_ABILITY",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p10",
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              },
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "hand": [
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "playable": true,
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 6,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 14,
+        "choices": [
+          {
+            "description": "{T}: Add {C}.",
+            "index": 0,
+          },
+          {
+            "description": "{T}, Sacrifice Crystal Vein: Add {C}{C}.",
+            "index": 1,
+          }
+        ],
+        "context": "T2 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 44,
+        "land_drops_used": 1,
+        "message": "Choose which mana to produce from Crystal Vein",
+        "respond_with": "choice=0, choice=1, etc. (not yes/no)",
+        "response_type": "index",
+        "success": true,
+        "untapped_lands": 2,
+      },
+      "seq": 21,
+      "tool": "choose_action",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 44,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 22,
+      "tool_calls": [
+        {
+          "arguments": {
+            "choice": "1",
+          },
+          "name": "choose_action",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "choice": "1",
+      },
+      "game_seq": 46,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_taken": "selected_ability_1",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "graveyard": [
+              {
+                "id": "p10",
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ]
+              },
+            ],
+            "hand": [
+              {
+                "id": "p11",
+                "mana_cost": "{2}",
+                "name": "Fellwar Stone",
+                "playable": true,
+                "rules": [
+                  "{T}: Add one mana of any color that a land an opponent controls could produce.",
+                ],
+                "types": [
+                  "Artifact",
+                ]
+              },
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 6,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "mana_pool": {
+              "C": 2,
+            },
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 15,
+        "choices": [
+          {
+            "action": "cast",
+            "id": "p11",
+            "index": 0,
+            "mana_cost": "{2}",
+            "name": "Fellwar Stone",
+          },
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 1,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          }
+        ],
+        "context": "T2 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 46,
+        "land_drops_used": 1,
+        "message": "Play spells and abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "success": true,
+        "untapped_lands": 1,
+      },
+      "seq": 23,
+      "tool": "choose_action",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 46,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 24,
+      "tool_calls": [
+        {
+          "arguments": {
+            "choice": "p11",
+          },
+          "name": "choose_action",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {
+        "choice": "p11",
+      },
+      "game_seq": 50,
+      "player": "TestPlayer",
+      "result": {
+        "action_pending": true,
+        "action_taken": "selected_0",
+        "action_type": "GAME_SELECT",
+        "board": [
+          {
+            "battlefield": [
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "graveyard": [
+              {
+                "id": "p10",
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ]
+              },
+            ],
+            "hand": [
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 5,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "board_cursor": 18,
+        "choices": [
+          {
+            "action": "mana",
+            "id": "p12",
+            "index": 0,
+            "mana_abilities": [
+              "{T}: Add {R}.",
+            ],
+            "name": "Mountain",
+          }
+        ],
+        "context": "T2 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
+        "game_seq": 50,
+        "land_drops_used": 1,
+        "message": "Play instants and activated abilities",
+        "respond_with": "choice=pN to play, or choice=no to pass",
+        "response_type": "select",
+        "stack": [
+          {
+            "id": "p26",
+            "name": "Fellwar Stone",
+            "owner": "TestPlayer",
+          }
+        ],
+        "success": true,
+        "untapped_lands": 1,
+      },
+      "seq": 25,
+      "tool": "choose_action",
+      "type": "tool_call",
+    },
+    {
+      "cost_usd": 0.0,
+      "game_seq": 50,
+      "player": "TestPlayer",
+      "reasoning": null,
+      "seq": 26,
+      "tool_calls": [
+        {
+          "arguments": {},
+          "name": "get_game_state",
+        }
+      ],
+      "type": "llm_response",
+    },
+    {
+      "args": {},
+      "game_seq": 50,
+      "player": "TestPlayer",
+      "result": {
+        "active_player": "TestPlayer",
+        "available": true,
+        "game_seq": 50,
+        "phase": "Postcombat Main",
+        "players": [
+          {
+            "battlefield": [
+              {
+                "id": "p12",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
+              }
+            ],
+            "graveyard": [
+              {
+                "id": "p10",
+                "name": "Crystal Vein",
+                "rules": [
+                  "{T}: Add {C}.",
+                  "{T}, Sacrifice {this}: Add {C}{C}.",
+                ]
+              },
+            ],
+            "hand": [
+              {
+                "id": "p13",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p14",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p15",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p16",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+              {
+                "id": "p24",
+                "is_land": true,
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
+                ]
+              },
+            ],
+            "hand_size": 5,
+            "is_active": true,
+            "is_you": true,
+            "library_size": 52,
+            "life": 20,
+            "name": "TestPlayer",
+          },
+          {
+            "graveyard": [
+              {
+                "id": "p3",
+                "name": "Mountain",
+                "rules": [
+                  "{T}: Add {R}.",
+                ]
+              },
+            ],
+            "hand_size": 7,
+            "is_active": false,
+            "is_you": false,
+            "library_size": 52,
+            "life": 20,
+            "name": "Opponent",
+          }
+        ],
+        "priority_player": "TestPlayer",
+        "snapshot_id": 971928699882,
+        "stack": [
+          {
+            "id": "p26",
+            "name": "Fellwar Stone",
+            "owner": "TestPlayer",
+            "rules": [
+              "{T}: Add one mana of any color that a land an opponent controls could produce.",
+            ]
+          },
+        ],
+        "step": "Postcombat Main",
+        "turn": 2,
+      },
+      "seq": 27,
+      "tool": "get_game_state",
+      "type": "tool_call",
+    }
+  ],
+  "players": [
+    {
+      "deck_name": "crystal_vein_fellwar",
+      "model": "test/golden",
+      "name": "TestPlayer",
+      "tool_calls_failed": 0,
+      "tool_calls_ok": 13,
+      "tools": [
+        "get_game_log",
+        "get_game_history",
+        "send_chat_message",
+        "pass_priority",
+        "get_game_state",
+        "get_oracle_text",
+        "get_action_choices",
+        "choose_action",
+        "concede",
+        "rollback_turns",
+        "hold_for_replay",
+        "offer_mana_sources",
+      ],
+      "total_cost_usd": 0.0,
+      "type": "pilot",
+    },
+    {
+      "deck_name": "filler_opponent",
+      "name": "Opponent",
+      "placement": 1,
+      "tool_calls_failed": 0,
+      "tool_calls_ok": 0,
+      "type": "replay",
+    }
+  ],
+  "season": 1,
+  "snapshots": [
+    {
+      "active_player": null,
+      "phase": null,
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [],
+          "library_size": 60,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [],
+          "library_size": 60,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": null,
+      "seq": 1,
+      "stack": [],
+      "step": null,
+      "turn": 1,
+    },
+    {
+      "active_player": null,
+      "phase": null,
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p12",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": null,
+      "seq": 5,
+      "stack": [],
+      "step": null,
+      "turn": 1,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "PRECOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p12",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 9,
+      "stack": [],
+      "step": "PRECOMBAT_MAIN",
+      "turn": 1,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "PRECOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p12",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "Opponent",
+      "seq": 10,
+      "stack": [],
+      "step": "PRECOMBAT_MAIN",
+      "turn": 1,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "COMBAT",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p12",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 13,
+      "stack": [],
+      "step": "DECLARE_ATTACKERS",
+      "turn": 1,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "COMBAT",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p12",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "Opponent",
+      "seq": 14,
+      "stack": [],
+      "step": "DECLARE_ATTACKERS",
+      "turn": 1,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "POSTCOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p12",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 15,
+      "stack": [],
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 1,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "POSTCOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": true,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 18,
+      "stack": [],
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 1,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "POSTCOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": true,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "Opponent",
+      "seq": 19,
+      "stack": [],
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 1,
+    },
+    {
+      "active_player": "Opponent",
+      "phase": "PRECOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": true,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "Opponent",
+      "seq": 20,
+      "stack": [],
+      "step": "PRECOMBAT_MAIN",
+      "turn": 2,
+    },
+    {
+      "active_player": "Opponent",
+      "phase": "PRECOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": true,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 21,
+      "stack": [],
+      "step": "PRECOMBAT_MAIN",
+      "turn": 2,
+    },
+    {
+      "active_player": "Opponent",
+      "phase": "COMBAT",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": true,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "Opponent",
+      "seq": 25,
+      "stack": [],
+      "step": "DECLARE_ATTACKERS",
+      "turn": 2,
+    },
+    {
+      "active_player": "Opponent",
+      "phase": "COMBAT",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": true,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 26,
+      "stack": [],
+      "step": "DECLARE_ATTACKERS",
+      "turn": 2,
+    },
+    {
+      "active_player": "Opponent",
+      "phase": "POSTCOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": true,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "Opponent",
+      "seq": 27,
+      "stack": [],
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 2,
+    },
+    {
+      "active_player": "Opponent",
+      "phase": "POSTCOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": true,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 28,
+      "stack": [],
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 2,
+    },
+    {
+      "active_player": "Opponent",
+      "phase": "END",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": true,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 53,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "Opponent",
+      "seq": 31,
+      "stack": [],
+      "step": "CLEANUP",
+      "turn": 2,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "PRECOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": false,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p24",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 33,
+      "stack": [],
+      "step": "PRECOMBAT_MAIN",
+      "turn": 3,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "PRECOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": false,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p24",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "Opponent",
+      "seq": 34,
+      "stack": [],
+      "step": "PRECOMBAT_MAIN",
+      "turn": 3,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "COMBAT",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": false,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p24",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 38,
+      "stack": [],
+      "step": "DECLARE_ATTACKERS",
+      "turn": 3,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "COMBAT",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": false,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p24",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "Opponent",
+      "seq": 39,
+      "stack": [],
+      "step": "DECLARE_ATTACKERS",
+      "turn": 3,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "POSTCOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": false,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p24",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 40,
+      "stack": [],
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 3,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "POSTCOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p10",
+              "name": "Crystal Vein",
+              "summoning_sick": true,
+              "tapped": false,
+              "token": false,
+            },
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": false,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p24",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 43,
+      "stack": [],
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 3,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "POSTCOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": false,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p11",
+              "name": "Fellwar Stone",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p24",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "mana_pool": {
+            "C": 2,
+          },
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 46,
+      "stack": [],
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 3,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "POSTCOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": false,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p24",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "mana_pool": {
+            "C": 2,
+          },
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 47,
+      "stack": [
+        {
+          "controller": "TestPlayer",
+          "id": "p26",
+          "mana_cost": "{2}",
+          "name": "Fellwar Stone",
+        }
+      ],
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 3,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "POSTCOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": false,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p10",
+              "name": "Crystal Vein",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p13",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p14",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p15",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p16",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+            {
+              "id": "p24",
+              "name": "Mountain",
+              "visible_to": [
+                "TestPlayer",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "mana_pool": {
+            "C": 1,
+          },
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 48,
+      "stack": [
+        {
+          "controller": "TestPlayer",
+          "id": "p26",
+          "mana_cost": "{2}",
+          "name": "Fellwar Stone",
+        }
+      ],
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 3,
+    },
+    {
+      "active_player": "TestPlayer",
+      "phase": "POSTCOMBAT_MAIN",
+      "players": [
+        {
+          "battlefield": [],
+          "exile": [],
+          "graveyard": [
+            {
+              "id": "p3",
+              "name": "Mountain",
+            }
+          ],
+          "hand": [
+            {
+              "id": "p4",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p5",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p6",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p7",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p8",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p9",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+            {
+              "id": "p23",
+              "name": "Mountain",
+              "visible_to": [
+                "Opponent",
+              ]
+            },
+          ],
+          "library_size": 52,
+          "life": 20,
+          "name": "Opponent",
+        },
+        {
+          "battlefield": [
+            {
+              "face_down": false,
+              "id": "p12",
+              "name": "Mountain",
+              "summoning_sick": false,
+              "tapped": false,
+              "token": false,
+            }
+          ],
+          "exile": [],
+          "graveyard": [],
+          "hand": [],
+          "library_size": 0,
+          "life": 20,
+          "name": "TestPlayer",
+        }
+      ],
+      "priority_player": "TestPlayer",
+      "seq": 52,
+      "stack": [
+        {
+          "controller": "TestPlayer",
+          "id": "p26",
+          "mana_cost": "{2}",
+          "name": "Fellwar Stone",
+        }
+      ],
+      "step": "POSTCOMBAT_MAIN",
+      "turn": 3,
+    }
+  ],
+  "total_turns": 3,
+  "tournament": null,
+  "version": 9,
+  "winner": "Opponent",
+  "youtube_url": "",
+}

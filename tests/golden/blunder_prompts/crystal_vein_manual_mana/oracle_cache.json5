@@ -1,0 +1,21 @@
+{
+  "Crystal Vein": {
+    "mana_cost": "",
+    "name": "Crystal Vein",
+    "oracle_text": "{T}: Add {C}.\n\
+{T}, Sacrifice this land: Add {C}{C}.",
+    "type_line": "Land",
+  },
+  "Fellwar Stone": {
+    "mana_cost": "{2}",
+    "name": "Fellwar Stone",
+    "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
+    "type_line": "Artifact",
+  },
+  "Mountain": {
+    "mana_cost": "",
+    "name": "Mountain",
+    "oracle_text": "({T}: Add {R}.)",
+    "type_line": "Basic Land — Mountain",
+  }
+}
