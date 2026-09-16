@@ -389,6 +389,10 @@ public class BridgeCallbackHandler {
         fresh.keepAliveAfterGameConfig = this.keepAliveAfterGameConfig;
         fresh.maxInteractionsPerTurnConfig = this.maxInteractionsPerTurnConfig;
         fresh.applyPersistentProcessorConfig();
+        if (this.holdThroughGameSeqConfig > 0) {
+            fresh.holdForReplay(this.holdThroughGameSeqConfig);
+            this.holdThroughGameSeqConfig = 0L; // one game only
+        }
         fresh.errorLogPath = this.errorLogPath;
         fresh.bridgeLogPath = this.bridgeLogPath;
         fresh.joinHandler = this.joinHandler;
@@ -545,8 +549,15 @@ public class BridgeCallbackHandler {
     @SuppressWarnings("unchecked")
     private BridgeCallbackProcessorService callbackProcessorService;
 
+    // hold_for_replay (HoldForReplayTool): the hold is set before join_table,
+    // and join_table replaces this handler (createFreshForNextGame), so it is
+    // persistent config that the fresh handler inherits — for its next game
+    // only; the processor releases it on the first live query.
+    private volatile long holdThroughGameSeqConfig = 0L;
+
     /** hold_for_replay: see HoldForReplayTool. */
     public void holdForReplay(long throughGameSeq) {
+        holdThroughGameSeqConfig = Math.max(0L, throughGameSeq);
         callbackProcessorService.setHoldThroughGameSeq(throughGameSeq);
     }
 

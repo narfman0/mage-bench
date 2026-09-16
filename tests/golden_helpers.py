@@ -807,8 +807,16 @@ class SpectatorProcess:
         game_dir: Path,
         players_config: dict,
         choosing_player: str,
+        *,
+        game_seed: int | None = None,
+        replay_from: Path | None = None,
     ) -> None:
-        """Send a JSON command to create a new game table."""
+        """Send a JSON command to create a new game table.
+
+        ``game_seed`` seeds the game's RNG; ``replay_from`` is a recorded
+        ``server_game_events.jsonl`` whose decisions the server's replay
+        feeder answers before the bridges act (resume; ReplayFeederCollector).
+        """
         cmd = {
             "gameDir": str(game_dir),
             "playersConfig": players_config,
@@ -816,6 +824,10 @@ class SpectatorProcess:
             "skipInitShuffling": True,
             "winsNeeded": 1,
         }
+        if game_seed is not None:
+            cmd["gameSeed"] = game_seed
+        if replay_from is not None:
+            cmd["replayFrom"] = str(replay_from)
         self._stdin.write(json.dumps(cmd, separators=(",", ":")) + "\n")
         self._stdin.flush()
 
