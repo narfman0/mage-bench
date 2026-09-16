@@ -1,5 +1,6 @@
 package mage.client.bridge;
 
+import mage.constants.CardType;
 import mage.view.AbilityView;
 import mage.view.CardView;
 import mage.view.CardsView;
@@ -58,6 +59,15 @@ public final class BridgeCardFormatter {
         return (sourceName == null || sourceName.isEmpty()) ? null : sourceName;
     }
 
+    /** The card's current types as text ("Artifact", "Creature", …), engine order. */
+    static List<String> cardTypeNames(CardView cv) {
+        var out = new ArrayList<String>();
+        for (CardType type : cv.getCardTypes()) {
+            out.add(type.toString());
+        }
+        return out;
+    }
+
     public Map<String, Object> buildCardInfoMap(CardView cv) {
         var info = new HashMap<String, Object>();
         info.put("name", safeDisplayName(cv));
@@ -68,6 +78,7 @@ public final class BridgeCardFormatter {
         if (cv.isLand()) {
             info.put("is_land", true);
         }
+        info.put("types", cardTypeNames(cv));
         if (cv.isCreature() && cv.getPower() != null) {
             info.put("power", cv.getPower());
             info.put("toughness", cv.getToughness());

@@ -75,6 +75,9 @@ public final class BridgeGameStateBuilder {
                     permInfo.put("id", viewLocator.getStableShortId(perm.getId(), perm, gameView));
                     permInfo.put("name", cardFormatter.safeDisplayName(perm));
                     permInfo.put("tapped", perm.isTapped());
+                    // Current card types (not printed — an animated land is a
+                    // creature here), so a client can lay the board out in rows.
+                    permInfo.put("types", BridgeCardFormatter.cardTypeNames(perm));
 
                     if (perm.isCreature()) {
                         permInfo.put("power", perm.getPower());
