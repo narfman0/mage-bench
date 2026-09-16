@@ -42,6 +42,7 @@ import java.util.regex.Pattern;
  *   -Dxmage.bridge.port=17171
  *   -Dxmage.bridge.username=bot1
  *   -Dxmage.bridge.password=
+ *   -Dxmage.bridge.stateLog=/path/board.jsonl   (append every board change + zone moves; see BridgeStateLog)
  */
 public class BridgeClient {
 

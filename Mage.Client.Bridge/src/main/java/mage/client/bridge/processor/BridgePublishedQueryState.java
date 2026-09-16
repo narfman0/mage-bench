@@ -20,6 +20,7 @@ public final class BridgePublishedQueryState {
     private final Supplier<BridgePublishedGameLog> publishedGameLogSupplier;
     private final ToLongFunction<Map<String, Object>> boardCursorAllocator;
     private final boolean tracePublishedState = Boolean.getBoolean("xmage.bridge.tracePublishedState");
+    private final BridgeStateLog stateLog;
     private final boolean tracePublishedActionChoices = Boolean.getBoolean("xmage.bridge.tracePublishedActionChoices");
     private volatile BridgePublishedQuerySnapshot publishedSnapshot = BridgePublishedQuerySnapshot.empty();
     private volatile BridgePublishedOracleIndex publishedOracleIndex = BridgePublishedOracleIndex.empty();
@@ -47,6 +48,7 @@ public final class BridgePublishedQueryState {
         this.projectionInputsSupplier = projectionInputsSupplier;
         this.publishedGameLogSupplier = publishedGameLogSupplier;
         this.boardCursorAllocator = boardCursorAllocator;
+        this.stateLog = BridgeStateLog.fromSystemProperties(username);
     }
 
     public void publishProcessorState(BridgeProcessorMessage cause) {
@@ -87,6 +89,7 @@ public final class BridgePublishedQueryState {
             queryBuilder.buildPublishedGameState(gameView, round, projectionInputs.currentPlayerId());
         BridgePublishedGameState previous = projectedGameState;
         projectedGameState = built.state();
+        stateLog.record(built.state());
         projectedActionContext = queryBuilder.buildProjectedActionContext(gameView, built.state(), round);
         projectedGameView = gameView;
         projectActionChoices(cause, projectionInputs);
