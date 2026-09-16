@@ -143,6 +143,7 @@
         "concede",
         "rollback_turns",
         "hold_for_replay",
+        "offer_mana_sources",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -275,10 +276,12 @@
         "context": "T1 ()",
         "game_seq": 5,
         "message": "Mulligan down to 6 cards?",
-        "respond_with": "choice=yes or choice=no",
+        "no_text": "Keep",
+        "respond_with": "choice=yes (Mulligan) or choice=no (Keep)",
         "response_type": "boolean",
         "success": true,
         "warning": "Required target auto-selected. Use get_action_choices first, then index=N.",
+        "yes_text": "Mulligan",
         "your_hand": [
           {
             "is_land": true,
@@ -384,9 +387,11 @@
         "context": "T1 ()",
         "game_seq": 5,
         "message": "Mulligan down to 6 cards?",
-        "respond_with": "choice=yes or choice=no",
+        "no_text": "Keep",
+        "respond_with": "choice=yes (Mulligan) or choice=no (Keep)",
         "response_type": "boolean",
         "stop_reason": "non_priority_action",
+        "yes_text": "Mulligan",
         "your_hand": [
           {
             "is_land": true,
@@ -525,9 +530,11 @@
         "context": "T1 ()",
         "game_seq": 5,
         "message": "Mulligan down to 6 cards?",
-        "respond_with": "choice=yes or choice=no",
+        "no_text": "Keep",
+        "respond_with": "choice=yes (Mulligan) or choice=no (Keep)",
         "response_type": "boolean",
         "stop_reason": "non_priority_action",
+        "yes_text": "Mulligan",
         "your_hand": [
           {
             "is_land": true,
@@ -753,6 +760,7 @@
         "concede",
         "rollback_turns",
         "hold_for_replay",
+        "offer_mana_sources",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",

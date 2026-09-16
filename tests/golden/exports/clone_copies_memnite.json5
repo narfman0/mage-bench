@@ -2222,6 +2222,7 @@
         "concede",
         "rollback_turns",
         "hold_for_replay",
+        "offer_mana_sources",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -2356,9 +2357,11 @@
         "context": "T1 ()",
         "game_seq": 5,
         "message": "Mulligan down to 6 cards?",
-        "respond_with": "choice=yes or choice=no",
+        "no_text": "Keep",
+        "respond_with": "choice=yes (Mulligan) or choice=no (Keep)",
         "response_type": "boolean",
         "success": true,
+        "yes_text": "Mulligan",
         "your_hand": [
           {
             "mana_cost": "{0}",
@@ -2466,9 +2469,11 @@
         "context": "T1 ()",
         "game_seq": 5,
         "message": "Mulligan down to 6 cards?",
-        "respond_with": "choice=yes or choice=no",
+        "no_text": "Keep",
+        "respond_with": "choice=yes (Mulligan) or choice=no (Keep)",
         "response_type": "boolean",
         "stop_reason": "non_priority_action",
+        "yes_text": "Mulligan",
         "your_hand": [
           {
             "mana_cost": "{0}",
@@ -4748,7 +4753,8 @@
         "game_seq": 54,
         "land_drops_used": 0,
         "message": "Use effect of Clone?",
-        "respond_with": "choice=yes or choice=no",
+        "no_text": "No",
+        "respond_with": "choice=yes (Yes) or choice=no (No)",
         "response_type": "boolean",
         "stack": [
           {
@@ -4758,6 +4764,7 @@
           }
         ],
         "stop_reason": "non_priority_action",
+        "yes_text": "Yes",
       },
       "seq": 33,
       "tool": "pass_priority",
@@ -5334,6 +5341,7 @@
         "concede",
         "rollback_turns",
         "hold_for_replay",
+        "offer_mana_sources",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",

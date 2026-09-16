@@ -101,7 +101,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=[Black Lotus, Dark Depths, Plains, Plains, Plains, Plains, Thespian's Stage] lib=53 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no",
+  Respond: choice=yes (Mulligan) or choice=no (Keep)",
     "role": "tool",
     "tool_call_id": "call_1",
   },
@@ -126,7 +126,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=7 lib=53 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no\n\
+  Respond: choice=yes (Mulligan) or choice=no (Keep)\n\
   Note: pass_priority cannot skip this decision. Answer it with choose_action.",
     "role": "tool",
     "tool_call_id": "call_2",

@@ -100,7 +100,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=[Boggart Trawler, Crashing Footfalls, Forest, Plains, Plains, Plains, Plains] lib=53 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no",
+  Respond: choice=yes (Mulligan) or choice=no (Keep)",
     "role": "tool",
     "tool_call_id": "call_1",
   },
@@ -125,7 +125,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=7 lib=53 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no\n\
+  Respond: choice=yes (Mulligan) or choice=no (Keep)\n\
   Note: pass_priority cannot skip this decision. Answer it with choose_action.",
     "role": "tool",
     "tool_call_id": "call_2",
@@ -352,7 +352,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Land drops remaining: 1\n\
   Message: pay 3 life? (otherwise Boggart Bog becomes tapped)\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no\n\
+  Respond: choice=yes (Yes) or choice=no (No)\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -588,7 +588,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Untapped lands: 5\n\
   Message: Cast spell without paying its mana cost (Crashing Footfalls)?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no\n\
+  Respond: choice=yes (Yes) or choice=no (No)\n\
   Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 6 turns since you last chatted — send a message to your opponent!]",
