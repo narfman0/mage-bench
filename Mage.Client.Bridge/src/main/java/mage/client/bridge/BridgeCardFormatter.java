@@ -1,5 +1,6 @@
 package mage.client.bridge;
 
+import mage.view.AbilityView;
 import mage.view.CardView;
 import mage.view.CardsView;
 import mage.view.GameView;
@@ -22,16 +23,20 @@ public final class BridgeCardFormatter {
     }
 
     public String safeDisplayName(CardView cv) {
+        // Ability views carry no name of their own: StackAbilityView leaves it
+        // unset and AbilityView hardcodes it to the literal "Ability", so every
+        // triggered ability in a "pick triggered ability" prompt would be named
+        // the same thing. Both know their source card; use that.
         if (cv instanceof StackAbilityView sav) {
-            CardView sourceCard = sav.getSourceCard();
-            if (sourceCard != null) {
-                String sourceName = sourceCard.getDisplayName();
-                if (sourceName == null || sourceName.isEmpty()) {
-                    sourceName = sourceCard.getName();
-                }
-                if (sourceName != null && !sourceName.isEmpty()) {
-                    return sourceName;
-                }
+            String sourceName = sourceCardName(sav.getSourceCard());
+            if (sourceName != null) {
+                return sourceName;
+            }
+        }
+        if (cv instanceof AbilityView av) {
+            String sourceName = sourceCardName(av.getSourceCard());
+            if (sourceName != null) {
+                return sourceName;
             }
         }
         String name = cv.getDisplayName();
@@ -39,6 +44,18 @@ public final class BridgeCardFormatter {
             name = cv.getName() != null ? cv.getName() : "Unknown";
         }
         return name;
+    }
+
+    /** Display name of an ability's source card, or null when there isn't one. */
+    private static String sourceCardName(CardView sourceCard) {
+        if (sourceCard == null) {
+            return null;
+        }
+        String sourceName = sourceCard.getDisplayName();
+        if (sourceName == null || sourceName.isEmpty()) {
+            sourceName = sourceCard.getName();
+        }
+        return (sourceName == null || sourceName.isEmpty()) ? null : sourceName;
     }
 
     public Map<String, Object> buildCardInfoMap(CardView cv) {
@@ -121,6 +138,19 @@ public final class BridgeCardFormatter {
         }
         if (cv != null) {
             entry.put("name", safeDisplayName(cv));
+            if (cv instanceof AbilityView) {
+                // "Pick triggered ability": the source name alone can't tell two
+                // triggers off the same permanent apart, and auto-order already
+                // collapsed the ones that ARE identical — so the rule text is
+                // the only thing that makes this choice answerable.
+                entry.put("target_type", "ability");
+                List<String> abilityRules = BridgePromptFormatting.stripHtmlList(cv.getRules());
+                if (abilityRules != null && !abilityRules.isEmpty()) {
+                    entry.put("rules", abilityRules);
+                    entry.put("text", String.join(" ", abilityRules));
+                }
+                return cv;
+            }
             if (cv instanceof PermanentView pv) {
                 entry.put("target_type", "permanent");
                 if (pv.isCreature() && cv.getPower() != null) {
