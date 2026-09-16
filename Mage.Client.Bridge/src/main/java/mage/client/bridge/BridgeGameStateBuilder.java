@@ -114,6 +114,25 @@ public final class BridgeGameStateBuilder {
                         permInfo.put("rules", rules);
                     }
 
+                    // Board legibility (fullpod): who really owns it, what is
+                    // attached to it, and a ref for engine log lines (log names
+                    // embed the first 3 chars of the object UUID, "Name [58c]").
+                    String nameOwner = perm.getNameOwner();
+                    if (nameOwner != null && !nameOwner.isEmpty()) {
+                        permInfo.put("owner", nameOwner);
+                    }
+                    if (perm.isAttachedToPermanent() && perm.getAttachedTo() != null) {
+                        permInfo.put("attached_to", shortIdFor(perm.getAttachedTo(), gameView));
+                    }
+                    if (perm.getAttachments() != null && !perm.getAttachments().isEmpty()) {
+                        var attachments = new ArrayList<String>();
+                        for (UUID attachmentId : perm.getAttachments()) {
+                            attachments.add(shortIdFor(attachmentId, gameView));
+                        }
+                        permInfo.put("attachments", attachments);
+                    }
+                    permInfo.put("uid", perm.getId().toString().substring(0, 3));
+
                     String altName = perm.getAlternateName();
                     if (altName != null && !altName.isEmpty()) {
                         permInfo.put("original_card", altName);
@@ -219,6 +238,10 @@ public final class BridgeGameStateBuilder {
             players.add(playerInfo);
         }
         return players;
+    }
+
+    private String shortIdFor(UUID objectId, GameView gameView) {
+        return viewLocator.getStableShortId(objectId, viewLocator.findCardViewById(objectId, gameView), gameView);
     }
 
     public List<Map<String, Object>> buildCombatGroups(GameView gameView) {
