@@ -31,6 +31,8 @@ import java.net.SocketException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collection;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
@@ -469,9 +471,15 @@ public class ObserverMageFrame extends MageFrame {
         String deckTypeStr = config.getDeckType() != null ? config.getDeckType() : "Constructed - Legacy";
 
         MatchOptions options = new MatchOptions("AI Puppeteer", gameTypeStr, numPlayers > 2);
+        List<String> seatNames = new ArrayList<>();
+        int slot = 0;
         for (AiPuppeteerConfig.PlayerConfig player : config.getPlayers()) {
             options.getPlayerTypes().add(player.getPlayerType());
+            seatNames.add(player.name != null ? player.name : ("Player " + (slot + 1)));
+            slot++;
         }
+        // Seats by config order, whatever order the headless clients join in.
+        options.setSeatNames(seatNames);
         options.setDeckType(deckTypeStr);
         options.setAttackOption(MultiplayerAttackOption.MULTIPLE);
         options.setRange(RangeOfInfluence.ALL);

@@ -60,6 +60,12 @@ public class MatchOptions implements Serializable {
 
     // Recorded event log to replay decisions from (resume). Null plays normally.
     protected String replayFrom;
+    // Seat reservation by player name, in seat order (null: first free seat of
+    // the right type, i.e. join order). Set by the observer from its players
+    // config so a table's seating — and with it the turn order — is the config's,
+    // not the order the bridges' concurrent joins happened to land in; a resumed
+    // game must seat the same players in the same order as its record.
+    protected java.util.List<String> seatNames;
 
     public MatchOptions(String name, String gameType, boolean multiPlayer) {
         this.name = name;
@@ -351,5 +357,13 @@ public class MatchOptions implements Serializable {
 
     public void setReplayFrom(String replayFrom) {
         this.replayFrom = replayFrom;
+    }
+
+    public java.util.List<String> getSeatNames() {
+        return seatNames;
+    }
+
+    public void setSeatNames(java.util.List<String> seatNames) {
+        this.seatNames = seatNames == null ? null : new java.util.ArrayList<>(seatNames);
     }
 }

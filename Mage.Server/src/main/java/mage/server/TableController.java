@@ -269,8 +269,22 @@ public class TableController {
             }
         }
 
-        // table - no more free seats
-        Seat seat = table.getNextAvailableSeat(playerType);
+        // table - the seat reserved for this name (MatchOptions.seatNames), else
+        // the next free one of the right type
+        Seat seat = null;
+        List<String> seatNames = table.getMatch().getOptions().getSeatNames();
+        if (seatNames != null) {
+            int reserved = seatNames.indexOf(name);
+            if (reserved >= 0 && reserved < table.getNumberOfSeats()) {
+                Seat candidate = table.getSeats()[reserved];
+                if (candidate.getPlayer() == null && candidate.getPlayerType() == playerType) {
+                    seat = candidate;
+                }
+            }
+        }
+        if (seat == null) {
+            seat = table.getNextAvailableSeat(playerType);
+        }
         if (seat == null) {
             user.showUserMessage("Join Table", "No available seats.");
             return false;
