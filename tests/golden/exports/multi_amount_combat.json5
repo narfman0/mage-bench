@@ -309,6 +309,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -318,6 +321,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -327,6 +333,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -336,6 +345,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -345,6 +357,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -354,6 +369,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -362,7 +380,10 @@
                 "name": "Grizzly Bears",
                 "power": "2",
                 "toughness": "2",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -539,6 +560,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -548,6 +573,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -556,6 +584,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -564,6 +595,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -572,6 +606,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -580,6 +617,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -588,7 +628,10 @@
                 "name": "Grizzly Bears",
                 "power": "2",
                 "toughness": "2",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -735,6 +778,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -743,6 +790,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -752,6 +803,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -760,6 +814,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -768,6 +825,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -776,6 +836,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -784,6 +847,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -793,7 +859,10 @@
                 "playable": true,
                 "power": "2",
                 "toughness": "2",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -811,6 +880,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p8",
@@ -819,6 +892,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 6,
@@ -938,6 +1015,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -946,6 +1027,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -955,6 +1040,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -963,6 +1051,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -971,6 +1062,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -979,6 +1073,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -987,6 +1084,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1006,6 +1106,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p8",
@@ -1014,6 +1118,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 6,
@@ -1033,6 +1141,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p26",
             "name": "Grizzly Bears",
             "owner": "TestPlayer",
           }
@@ -1127,6 +1236,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -1135,6 +1248,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -1143,6 +1260,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "2",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1152,6 +1273,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1160,6 +1284,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1168,6 +1295,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1176,6 +1306,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1184,6 +1317,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1192,6 +1328,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1211,6 +1350,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p4",
@@ -1219,6 +1362,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p8",
@@ -1227,6 +1374,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p9",
@@ -1235,6 +1386,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 5,
@@ -1401,6 +1556,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -1409,6 +1568,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -1417,6 +1580,10 @@
                 "summoning_sick": false,
                 "tapped": true,
                 "toughness": "2",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1426,6 +1593,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1434,6 +1604,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1442,6 +1615,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1450,6 +1626,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1458,6 +1637,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1466,6 +1648,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1485,6 +1670,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p4",
@@ -1493,6 +1682,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p8",
@@ -1501,6 +1694,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p9",
@@ -1509,6 +1706,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 5,
@@ -1633,6 +1834,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -1641,6 +1846,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -1656,6 +1865,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1664,6 +1876,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1672,6 +1887,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1680,6 +1898,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1688,6 +1909,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1696,6 +1920,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1715,6 +1942,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p4",
@@ -1723,6 +1954,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -1926,6 +2161,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -1966,6 +2202,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1974,6 +2213,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1982,6 +2224,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1990,6 +2235,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1998,6 +2246,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2006,6 +2257,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2014,7 +2268,10 @@
                 "name": "Grizzly Bears",
                 "power": "2",
                 "toughness": "2",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": false,
@@ -2045,6 +2302,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2052,6 +2312,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2059,6 +2322,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2066,6 +2332,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2073,6 +2342,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2080,6 +2352,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2087,8 +2362,11 @@
             "name": "Grizzly Bears",
             "power": "2",
             "toughness": "2",
-          }
-        ],
+            "types": [
+              "Creature",
+            ]
+          },
+        ]
       },
       "seq": 3,
       "tool": "choose_action",
@@ -2131,6 +2409,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2138,6 +2419,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2145,6 +2429,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2152,6 +2439,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2159,6 +2449,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2166,6 +2459,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2173,8 +2469,11 @@
             "name": "Grizzly Bears",
             "power": "2",
             "toughness": "2",
-          }
-        ],
+            "types": [
+              "Creature",
+            ]
+          },
+        ]
       },
       "seq": 5,
       "tool": "pass_priority",
@@ -2216,6 +2515,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2225,6 +2527,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2234,6 +2539,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2243,6 +2551,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2252,6 +2563,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2261,6 +2575,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2269,7 +2586,10 @@
                 "name": "Grizzly Bears",
                 "power": "2",
                 "toughness": "2",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -2371,6 +2691,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2380,6 +2703,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2389,6 +2715,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2398,6 +2727,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2407,6 +2739,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2416,6 +2751,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2424,7 +2762,10 @@
                 "name": "Grizzly Bears",
                 "power": "2",
                 "toughness": "2",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -2530,6 +2871,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2539,6 +2884,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2547,6 +2895,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2555,6 +2906,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2563,6 +2917,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2571,6 +2928,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2579,7 +2939,10 @@
                 "name": "Grizzly Bears",
                 "power": "2",
                 "toughness": "2",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -2644,6 +3007,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2654,6 +3021,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2663,6 +3033,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2672,6 +3045,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2681,6 +3057,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2690,6 +3069,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2699,6 +3081,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2707,7 +3092,10 @@
                 "name": "Grizzly Bears",
                 "power": "2",
                 "toughness": "2",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -2725,6 +3113,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p8",
@@ -2733,6 +3125,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 6,
@@ -2832,6 +3228,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -2840,6 +3240,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2849,6 +3253,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2857,6 +3264,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2865,6 +3275,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2873,6 +3286,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2881,6 +3297,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2890,7 +3309,10 @@
                 "playable": true,
                 "power": "2",
                 "toughness": "2",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -2908,6 +3330,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p8",
@@ -2916,6 +3342,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 6,
@@ -2987,6 +3417,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -2995,6 +3429,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3004,6 +3442,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3012,6 +3453,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3020,6 +3464,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3028,6 +3475,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3036,6 +3486,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3055,6 +3508,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p8",
@@ -3063,6 +3520,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 6,
@@ -3082,6 +3543,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p26",
             "name": "Grizzly Bears",
             "owner": "TestPlayer",
           }
@@ -3125,6 +3587,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -3133,6 +3599,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -3141,6 +3611,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "2",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3151,6 +3625,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3160,6 +3637,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3169,6 +3649,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3178,6 +3661,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3187,6 +3673,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3196,6 +3685,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3215,6 +3707,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p4",
@@ -3223,6 +3719,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p8",
@@ -3231,6 +3731,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p9",
@@ -3239,6 +3743,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 5,
@@ -3338,6 +3846,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -3346,6 +3858,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -3354,6 +3870,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "2",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3363,6 +3883,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3371,6 +3894,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3379,6 +3905,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3387,6 +3916,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3395,6 +3927,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3403,6 +3938,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3422,6 +3960,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p4",
@@ -3430,6 +3972,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p8",
@@ -3438,6 +3984,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p9",
@@ -3446,6 +3996,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 5,
@@ -3576,6 +4130,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -3584,6 +4142,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -3592,6 +4154,10 @@
                 "summoning_sick": false,
                 "tapped": true,
                 "toughness": "2",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3601,6 +4167,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3609,6 +4178,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3617,6 +4189,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3625,6 +4200,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3633,6 +4211,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3641,6 +4222,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3660,6 +4244,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p4",
@@ -3668,6 +4256,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p8",
@@ -3676,6 +4268,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p9",
@@ -3684,6 +4280,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 5,
@@ -3759,6 +4359,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -3767,6 +4371,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -3775,6 +4383,10 @@
                 "summoning_sick": false,
                 "tapped": true,
                 "toughness": "2",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3784,6 +4396,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3792,6 +4407,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3800,6 +4418,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3808,6 +4429,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3816,6 +4440,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3824,6 +4451,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3843,6 +4473,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p4",
@@ -3851,6 +4485,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p8",
@@ -3859,6 +4497,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p9",
@@ -3867,6 +4509,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 5,
@@ -3976,6 +4622,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -3984,6 +4634,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -3999,6 +4653,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4007,6 +4664,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4015,6 +4675,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4023,6 +4686,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4031,6 +4697,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4039,6 +4708,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4058,6 +4730,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p4",
@@ -4066,6 +4742,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4142,6 +4822,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -4150,6 +4834,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4166,6 +4854,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4175,6 +4866,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4184,6 +4878,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4193,6 +4890,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4202,6 +4902,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4211,6 +4914,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4230,6 +4936,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p4",
@@ -4238,6 +4948,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4344,6 +5058,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -4352,6 +5070,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4368,6 +5090,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4377,6 +5102,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4386,6 +5114,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4395,6 +5126,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4404,6 +5138,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4413,6 +5150,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4432,6 +5172,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p4",
@@ -4440,6 +5184,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4461,7 +5209,7 @@
           }
         ],
         "priority_player": "TestPlayer",
-        "snapshot_id": 336820877778,
+        "snapshot_id": 236131693196,
         "stack": [],
         "step": "Postcombat Main",
         "turn": 3,
@@ -4488,6 +5236,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",

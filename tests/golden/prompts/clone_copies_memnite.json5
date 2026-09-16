@@ -125,7 +125,8 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=7 lib=53 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no",
+  Respond: choice=yes or choice=no\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.",
     "role": "tool",
     "tool_call_id": "call_2",
   },
@@ -292,6 +293,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Choose spell or ability to play: Black Lotus\n\
   Choices (1): Cast Black Lotus\n\
   Respond: choice=0, choice=1, etc. (not yes/no)\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -409,6 +411,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Choose spell or ability to play: Memnite\n\
   Choices (1): Cast Memnite\n\
   Respond: choice=0, choice=1, etc. (not yes/no)\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -528,6 +531,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Use effect of Clone?\n\
   Choices (0): \n\
   Respond: choice=yes or choice=no\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -611,7 +615,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
     "content": {
       "active_player": "TestPlayer",
       "available": true,
-      "game_seq": 63,
+      "game_seq": 62,
       "phase": "Postcombat Main",
       "players": [
         {
@@ -623,6 +627,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {U}.",
               ],
               "tapped": true,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             },
             {
               "copy": true,
@@ -634,6 +642,11 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "summoning_sick": true,
               "tapped": false,
               "toughness": 1,
+              "types": [
+                "Artifact",
+                "Creature",
+              ],
+              "uid": "xxx",
             },
             {
               "id": "p16",
@@ -642,6 +655,11 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "summoning_sick": true,
               "tapped": false,
               "toughness": 1,
+              "types": [
+                "Artifact",
+                "Creature",
+              ],
+              "uid": "xxx",
             }
           ],
           "graveyard": [
@@ -661,6 +679,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {U}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -670,6 +691,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {U}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -679,6 +703,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {U}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -688,6 +715,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {U}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
           ],
@@ -717,7 +747,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
         }
       ],
       "priority_player": "TestPlayer",
-      "snapshot_id": 673462047574,
+      "snapshot_id": 452164978921,
       "stack": [],
       "step": "Postcombat Main",
       "turn": 2,

@@ -121,7 +121,8 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=7 lib=53 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no",
+  Respond: choice=yes or choice=no\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.",
     "role": "tool",
     "tool_call_id": "call_2",
   },
@@ -384,6 +385,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {W}.",
               ],
               "tapped": true,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             }
           ],
           "graveyard": [
@@ -399,6 +404,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -407,6 +415,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -415,6 +426,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -423,6 +437,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -431,6 +448,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -439,6 +459,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
           ],
@@ -458,6 +481,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {W}.",
               ],
               "tapped": false,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             },
             {
               "id": "p4",
@@ -466,6 +493,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {W}.",
               ],
               "tapped": false,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             }
           ],
           "graveyard": [
@@ -483,7 +514,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
         }
       ],
       "priority_player": "TestPlayer",
-      "snapshot_id": 337472491819,
+      "snapshot_id": 952404948073,
       "stack": [],
       "step": "Postcombat Main",
       "turn": 2,

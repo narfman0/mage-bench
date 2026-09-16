@@ -124,7 +124,8 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=7 lib=53 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no",
+  Respond: choice=yes or choice=no\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.",
     "role": "tool",
     "tool_call_id": "call_2",
   },
@@ -262,7 +263,8 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Land drops remaining: 0\n\
   Message: Reveal a colorless card and put it into your hand?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no",
+  Respond: choice=yes or choice=no\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.",
     "role": "tool",
     "tool_call_id": "call_7",
   },
@@ -357,6 +359,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {G}.",
               ],
               "tapped": true,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             }
           ],
           "hand": [
@@ -369,6 +375,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "Flying",
               ],
               "toughness": 2,
+              "types": [
+                "Artifact",
+                "Creature",
+              ]
             },
             {
               "id": "p12",
@@ -376,6 +386,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -384,6 +397,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -392,6 +408,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -400,6 +419,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -408,6 +430,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
           ],
@@ -428,7 +453,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
         }
       ],
       "priority_player": "TestPlayer",
-      "snapshot_id": 558301020152,
+      "snapshot_id": 85051488444,
       "stack": [
         {
           "id": "p23",

@@ -150,6 +150,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -159,6 +162,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -168,6 +174,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -177,6 +186,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -186,6 +198,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -195,6 +210,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -204,6 +222,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -395,6 +416,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -404,6 +429,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -412,6 +440,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -420,6 +451,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -428,6 +462,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -436,6 +473,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -444,6 +484,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -599,6 +642,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -607,6 +654,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -616,6 +667,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -624,6 +678,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -632,6 +689,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -640,6 +700,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -648,6 +711,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -656,6 +722,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -675,6 +744,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 7,
@@ -826,6 +899,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -866,6 +940,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -874,6 +951,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -882,6 +962,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -890,6 +973,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -898,6 +984,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -906,6 +995,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -914,6 +1006,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -946,6 +1041,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -953,6 +1051,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -960,6 +1061,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -967,6 +1071,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -974,6 +1081,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -981,6 +1091,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -988,6 +1101,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -1033,6 +1149,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1040,6 +1159,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1047,6 +1169,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1054,6 +1179,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1061,6 +1189,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1068,6 +1199,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1075,6 +1209,9 @@
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -1119,6 +1256,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1128,6 +1268,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1137,6 +1280,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1146,6 +1292,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1155,6 +1304,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1164,6 +1316,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1173,6 +1328,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1282,6 +1440,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1291,6 +1452,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1300,6 +1464,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1309,6 +1476,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1318,6 +1488,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1327,6 +1500,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1336,6 +1512,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1449,6 +1628,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1458,6 +1641,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1466,6 +1652,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1474,6 +1663,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1482,6 +1674,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1490,6 +1685,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1498,6 +1696,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1630,6 +1831,10 @@ TestPlayer played Mountain\n\
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1640,6 +1845,9 @@ TestPlayer played Mountain\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1649,6 +1857,9 @@ TestPlayer played Mountain\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1658,6 +1869,9 @@ TestPlayer played Mountain\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1667,6 +1881,9 @@ TestPlayer played Mountain\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1676,6 +1893,9 @@ TestPlayer played Mountain\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1685,6 +1905,9 @@ TestPlayer played Mountain\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1694,6 +1917,9 @@ TestPlayer played Mountain\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1713,6 +1939,10 @@ TestPlayer played Mountain\n\
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 7,
@@ -1821,6 +2051,10 @@ TestPlayer played Mountain\n\
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -1829,6 +2063,10 @@ TestPlayer played Mountain\n\
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1838,6 +2076,9 @@ TestPlayer played Mountain\n\
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1846,6 +2087,9 @@ TestPlayer played Mountain\n\
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1854,6 +2098,9 @@ TestPlayer played Mountain\n\
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1862,6 +2109,9 @@ TestPlayer played Mountain\n\
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1870,6 +2120,9 @@ TestPlayer played Mountain\n\
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1878,6 +2131,9 @@ TestPlayer played Mountain\n\
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1897,6 +2153,10 @@ TestPlayer played Mountain\n\
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 7,
@@ -1995,6 +2255,10 @@ TestPlayer played Mountain",
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p11",
@@ -2003,6 +2267,10 @@ TestPlayer played Mountain",
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2012,6 +2280,9 @@ TestPlayer played Mountain",
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2020,6 +2291,9 @@ TestPlayer played Mountain",
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2028,6 +2302,9 @@ TestPlayer played Mountain",
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2036,6 +2313,9 @@ TestPlayer played Mountain",
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2044,6 +2324,9 @@ TestPlayer played Mountain",
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2052,6 +2335,9 @@ TestPlayer played Mountain",
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2071,6 +2357,10 @@ TestPlayer played Mountain",
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 7,
@@ -2082,7 +2372,7 @@ TestPlayer played Mountain",
           }
         ],
         "priority_player": "TestPlayer",
-        "snapshot_id": 44738628800,
+        "snapshot_id": 372321114220,
         "stack": [],
         "step": "Precombat Main",
         "turn": 2,
@@ -2109,6 +2399,7 @@ TestPlayer played Mountain",
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",

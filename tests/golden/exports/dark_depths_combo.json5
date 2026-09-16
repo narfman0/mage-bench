@@ -139,7 +139,7 @@
       "seq": 55,
     },
     {
-      "message": "Dark Depths is put into graveyard from battlefield",
+      "message": "Dark Depths is put into graveyard from battlefield (SBA: legendary rule to keep only one)",
       "seq": 59,
     },
     {
@@ -231,8 +231,12 @@
       "type": "phase_change",
     },
     {
-      "message": "Opponent has lost the game.",
+      "message": "Opponent lost the game due life is 0 or less",
       "seq": 95,
+    },
+    {
+      "message": "Opponent has lost the game.",
+      "seq": 96,
     }
   ],
   "card_data": {
@@ -312,6 +316,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -323,6 +330,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{this} enters with ten ice counters on it.",
                   "{3}: Remove an ice counter from {this}.",
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -332,6 +342,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -341,6 +354,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -350,6 +366,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -359,6 +378,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -369,6 +391,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "rules": [
                   "{T}: Add {C}.",
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -567,6 +592,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -577,6 +606,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -585,6 +617,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -593,6 +628,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -601,6 +639,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -609,6 +650,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -618,6 +662,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "rules": [
                   "{T}: Add {C}.",
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -798,6 +845,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -807,6 +858,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -817,6 +872,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -825,6 +883,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -833,6 +894,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -841,6 +905,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -849,6 +916,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -857,6 +927,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1045,6 +1118,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -1054,6 +1131,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1064,6 +1145,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -1072,6 +1156,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1080,6 +1167,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1088,6 +1178,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1096,6 +1189,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1104,6 +1200,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1242,6 +1341,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -1251,6 +1354,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1260,6 +1367,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1268,6 +1378,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1276,6 +1389,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1284,6 +1400,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1292,6 +1411,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1329,6 +1451,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p25",
             "name": "Black Lotus",
             "owner": "TestPlayer",
           }
@@ -1413,6 +1536,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "counters": {
@@ -1426,6 +1553,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -1435,6 +1566,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1444,6 +1579,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1452,6 +1590,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1460,6 +1601,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1468,6 +1612,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1476,6 +1623,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1622,6 +1772,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "counters": {
@@ -1635,6 +1789,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -1644,6 +1802,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1653,6 +1815,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1661,6 +1826,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1669,6 +1837,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1677,6 +1848,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1685,6 +1859,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1739,6 +1916,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         "stack": [
           {
             "ability_text": "{2}, {T}: Thespian's Stage becomes a copy of target land, except it has this ability.",
+            "id": "p27",
             "name": "Thespian's Stage",
             "owner": "TestPlayer",
             "source_card": "Thespian's Stage",
@@ -1844,6 +2022,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -1853,6 +2035,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -1871,6 +2057,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1879,6 +2068,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1887,6 +2079,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1895,6 +2090,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1903,6 +2101,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1944,6 +2145,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         "stack": [
           {
             "ability_text": "{2}, {T}: Thespian's Stage becomes a copy of target land, except it has this ability.",
+            "id": "p27",
             "name": "Thespian's Stage",
             "owner": "TestPlayer",
             "source_card": "Thespian's Stage",
@@ -2047,6 +2249,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -2074,6 +2280,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2082,6 +2291,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2090,6 +2302,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2098,6 +2313,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2106,6 +2324,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2147,6 +2368,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         "stack": [
           {
             "ability_text": "When Dark Depths has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
+            "id": "p28",
             "name": "Dark Depths",
             "owner": "TestPlayer",
             "source_card": "Dark Depths",
@@ -2319,6 +2541,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "tapped": true,
                 "token": true,
                 "toughness": "20",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -2354,6 +2580,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2362,6 +2591,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2370,6 +2602,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2378,6 +2613,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2386,6 +2624,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2394,6 +2635,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2522,6 +2766,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
       "subsequent_actions": [
         "Attacker: Marit Lage (20/20) unblocked",
         "Opponent loses 20 life at combat from Marit Lage",
+        "Opponent lost the game due life is 0 or less",
         "Opponent has lost the game.",
       ],
       "turn": 5,
@@ -2530,7 +2775,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
   "deck_type": "Constructed - Legacy",
   "game_over": {
     "message": "TestPlayer",
-    "seq": 96,
+    "seq": 97,
   },
   "game_type": "Two Player Duel",
   "harness_epoch": 60,
@@ -2547,6 +2792,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -2587,6 +2833,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Black Lotus",
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2597,6 +2846,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{this} enters with ten ice counters on it.",
                   "{3}: Remove an ice counter from {this}.",
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2605,6 +2857,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2613,6 +2868,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2621,6 +2879,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2629,6 +2890,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2638,6 +2902,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "rules": [
                   "{T}: Add {C}.",
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2670,6 +2937,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "name": "Black Lotus",
             "rules": [
               "{T}, Sacrifice {this}: Add three mana of any one color.",
+            ],
+            "types": [
+              "Artifact",
             ]
           },
           {
@@ -2679,6 +2949,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
               "{this} enters with ten ice counters on it.",
               "{3}: Remove an ice counter from {this}.",
               "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2686,6 +2959,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2693,6 +2969,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2700,6 +2979,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2707,6 +2989,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2715,6 +3000,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "rules": [
               "{T}: Add {C}.",
               "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -2760,6 +3048,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "name": "Black Lotus",
             "rules": [
               "{T}, Sacrifice {this}: Add three mana of any one color.",
+            ],
+            "types": [
+              "Artifact",
             ]
           },
           {
@@ -2769,6 +3060,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
               "{this} enters with ten ice counters on it.",
               "{3}: Remove an ice counter from {this}.",
               "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2776,6 +3070,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2783,6 +3080,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2790,6 +3090,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2797,6 +3100,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2805,6 +3111,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
             "rules": [
               "{T}: Add {C}.",
               "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -2849,6 +3158,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2860,6 +3172,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{this} enters with ten ice counters on it.",
                   "{3}: Remove an ice counter from {this}.",
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2869,6 +3184,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2878,6 +3196,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2887,6 +3208,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2896,6 +3220,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2906,6 +3233,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "rules": [
                   "{T}: Add {C}.",
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3016,6 +3346,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -3027,6 +3360,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{this} enters with ten ice counters on it.",
                   "{3}: Remove an ice counter from {this}.",
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3036,6 +3372,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3045,6 +3384,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3054,6 +3396,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3063,6 +3408,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3073,6 +3421,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "rules": [
                   "{T}: Add {C}.",
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3192,6 +3543,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3202,6 +3557,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -3210,6 +3568,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3218,6 +3579,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3226,6 +3590,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3234,6 +3601,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3243,6 +3613,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "rules": [
                   "{T}: Add {C}.",
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3323,6 +3696,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3333,6 +3710,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -3342,6 +3722,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3351,6 +3734,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3360,6 +3746,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3369,6 +3758,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3378,6 +3770,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3388,6 +3783,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "rules": [
                   "{T}: Add {C}.",
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3517,6 +3915,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -3526,6 +3928,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3536,6 +3942,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -3544,6 +3953,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3552,6 +3964,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3560,6 +3975,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3568,6 +3986,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3576,6 +3997,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3665,6 +4089,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -3674,6 +4102,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3684,6 +4116,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -3692,6 +4127,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3700,6 +4138,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3708,6 +4149,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3716,6 +4160,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3724,6 +4171,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3817,6 +4267,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -3826,6 +4280,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3836,6 +4294,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -3844,6 +4305,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3852,6 +4316,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3860,6 +4327,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3868,6 +4338,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3876,6 +4349,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4009,6 +4485,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -4018,6 +4498,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -4027,6 +4511,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4035,6 +4522,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4043,6 +4533,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4051,6 +4544,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4059,6 +4555,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4096,6 +4595,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p25",
             "name": "Black Lotus",
             "owner": "TestPlayer",
           }
@@ -4140,6 +4640,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "counters": {
@@ -4153,6 +4657,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -4162,6 +4670,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -4171,6 +4683,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4179,6 +4694,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4187,6 +4705,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4195,6 +4716,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4203,6 +4727,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4302,6 +4829,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "counters": {
@@ -4315,6 +4846,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -4324,6 +4859,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -4333,6 +4872,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4341,6 +4883,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4349,6 +4894,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4357,6 +4905,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4365,6 +4916,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4501,6 +5055,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "counters": {
@@ -4514,6 +5072,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -4523,6 +5085,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -4532,6 +5098,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4540,6 +5109,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4548,6 +5120,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4556,6 +5131,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4564,6 +5142,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4618,6 +5199,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         "stack": [
           {
             "ability_text": "{2}, {T}: Thespian's Stage becomes a copy of target land, except it has this ability.",
+            "id": "p27",
             "name": "Thespian's Stage",
             "owner": "TestPlayer",
             "source_card": "Thespian's Stage",
@@ -4680,6 +5262,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         "stack": [
           {
             "ability_text": "{2}, {T}: Thespian's Stage becomes a copy of target land, except it has this ability.",
+            "id": "p27",
             "name": "Thespian's Stage",
             "owner": "TestPlayer",
             "source_card": "Thespian's Stage",
@@ -4733,6 +5316,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -4742,6 +5329,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4760,6 +5351,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4768,6 +5362,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4776,6 +5373,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4784,6 +5384,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4792,6 +5395,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4833,6 +5439,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         "stack": [
           {
             "ability_text": "{2}, {T}: Thespian's Stage becomes a copy of target land, except it has this ability.",
+            "id": "p27",
             "name": "Thespian's Stage",
             "owner": "TestPlayer",
             "source_card": "Thespian's Stage",
@@ -4889,6 +5496,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "When {this} has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "copy": true,
@@ -4903,6 +5514,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4921,6 +5536,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4929,6 +5547,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4937,6 +5558,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4945,6 +5569,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4953,6 +5580,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -5057,6 +5687,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                   "{2}, {T}: {this} becomes a copy of target land, except it has this ability.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -5084,6 +5718,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5092,6 +5729,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5100,6 +5740,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5108,6 +5751,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5116,6 +5762,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -5157,6 +5806,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         "stack": [
           {
             "ability_text": "When Dark Depths has no ice counters on it, sacrifice it. If you do, create Marit Lage, a legendary 20/20 black Avatar creature token with flying and indestructible.",
+            "id": "p28",
             "name": "Dark Depths",
             "owner": "TestPlayer",
             "source_card": "Dark Depths",
@@ -5209,6 +5859,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "tapped": false,
                 "token": true,
                 "toughness": "20",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -5245,6 +5899,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5254,6 +5911,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5263,6 +5923,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5272,6 +5935,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5281,6 +5947,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5290,6 +5959,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -5418,6 +6090,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "tapped": false,
                 "token": true,
                 "toughness": "20",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -5453,6 +6129,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5461,6 +6140,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5469,6 +6151,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5477,6 +6162,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5485,6 +6173,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5493,6 +6184,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -5598,6 +6292,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "tapped": true,
                 "token": true,
                 "toughness": "20",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -5633,6 +6331,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5641,6 +6342,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5649,6 +6353,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5657,6 +6364,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5665,6 +6375,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5673,6 +6386,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -5791,6 +6507,10 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "tapped": true,
                 "token": true,
                 "toughness": "20",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -5826,6 +6546,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5834,6 +6557,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5842,6 +6568,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5850,6 +6579,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5858,6 +6590,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5866,6 +6601,9 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -5902,7 +6640,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
           }
         ],
         "priority_player": "TestPlayer",
-        "snapshot_id": 698816322071,
+        "snapshot_id": 305035548239,
         "stack": [],
         "step": "Declare Attackers",
         "turn": 3,
@@ -5966,6 +6704,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",
@@ -13173,7 +13912,7 @@ When Dark Depths has no ice counters on it, sacrifice it. If you do, create Mari
         }
       ],
       "priority_player": "TestPlayer",
-      "seq": 96,
+      "seq": 97,
       "stack": [],
       "step": "COMBAT_DAMAGE",
       "turn": 5,

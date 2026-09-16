@@ -217,6 +217,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -226,6 +229,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -235,6 +241,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -244,6 +253,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -253,6 +265,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -262,6 +277,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -270,7 +288,10 @@
                 "name": "Savannah Lions",
                 "power": "2",
                 "toughness": "1",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -447,6 +468,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -456,6 +481,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -464,6 +492,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -472,6 +503,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -480,6 +514,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -488,6 +525,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -497,7 +537,10 @@
                 "playable": true,
                 "power": "2",
                 "toughness": "1",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -623,6 +666,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -632,6 +679,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -640,6 +690,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -648,6 +701,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -656,6 +712,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -664,6 +723,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -692,6 +754,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p23",
             "name": "Savannah Lions",
             "owner": "TestPlayer",
           }
@@ -786,6 +849,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -794,6 +861,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -803,6 +874,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -811,6 +885,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -819,6 +896,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -827,6 +907,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -835,6 +918,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -843,6 +929,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -862,6 +951,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p9",
@@ -870,6 +963,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 6,
@@ -1036,6 +1133,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -1044,6 +1145,10 @@
                 "summoning_sick": false,
                 "tapped": true,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1053,6 +1158,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1061,6 +1169,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1069,6 +1180,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1077,6 +1191,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1085,6 +1202,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1093,6 +1213,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1112,6 +1235,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p9",
@@ -1120,6 +1247,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 6,
@@ -1329,6 +1460,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -1369,6 +1501,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1377,6 +1512,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1385,6 +1523,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1393,6 +1534,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1401,6 +1545,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1409,6 +1556,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1417,7 +1567,10 @@
                 "name": "Savannah Lions",
                 "power": "2",
                 "toughness": "1",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": false,
@@ -1448,6 +1601,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1455,6 +1611,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1462,6 +1621,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1469,6 +1631,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1476,6 +1641,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1483,6 +1651,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1490,8 +1661,11 @@
             "name": "Savannah Lions",
             "power": "2",
             "toughness": "1",
-          }
-        ],
+            "types": [
+              "Creature",
+            ]
+          },
+        ]
       },
       "seq": 3,
       "tool": "choose_action",
@@ -1534,6 +1708,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1541,6 +1718,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1548,6 +1728,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1555,6 +1738,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1562,6 +1748,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1569,6 +1758,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1576,8 +1768,11 @@
             "name": "Savannah Lions",
             "power": "2",
             "toughness": "1",
-          }
-        ],
+            "types": [
+              "Creature",
+            ]
+          },
+        ]
       },
       "seq": 5,
       "tool": "pass_priority",
@@ -1619,6 +1814,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1628,6 +1826,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1637,6 +1838,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1646,6 +1850,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1655,6 +1862,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1664,6 +1874,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1672,7 +1885,10 @@
                 "name": "Savannah Lions",
                 "power": "2",
                 "toughness": "1",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -1774,6 +1990,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1783,6 +2002,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1792,6 +2014,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1801,6 +2026,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1810,6 +2038,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1819,6 +2050,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1827,7 +2061,10 @@
                 "name": "Savannah Lions",
                 "power": "2",
                 "toughness": "1",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -1933,6 +2170,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1942,6 +2183,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1950,6 +2194,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1958,6 +2205,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1966,6 +2216,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1974,6 +2227,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1983,7 +2239,10 @@
                 "playable": true,
                 "power": "2",
                 "toughness": "1",
-              }
+                "types": [
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -2062,6 +2321,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2071,6 +2334,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2079,6 +2345,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2087,6 +2356,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2095,6 +2367,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2103,6 +2378,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2131,6 +2409,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p23",
             "name": "Savannah Lions",
             "owner": "TestPlayer",
           }
@@ -2174,6 +2453,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -2182,6 +2465,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2192,6 +2479,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2201,6 +2491,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2210,6 +2503,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2219,6 +2515,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2228,6 +2527,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2237,6 +2539,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2256,6 +2561,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p9",
@@ -2264,6 +2573,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 6,
@@ -2363,6 +2676,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -2371,6 +2688,10 @@
                 "summoning_sick": false,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2380,6 +2701,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2388,6 +2712,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2396,6 +2723,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2404,6 +2734,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2412,6 +2745,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2420,6 +2756,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2439,6 +2778,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p9",
@@ -2447,6 +2790,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 6,
@@ -2577,6 +2924,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -2585,6 +2936,10 @@
                 "summoning_sick": false,
                 "tapped": true,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2594,6 +2949,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2602,6 +2960,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2610,6 +2971,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2618,6 +2982,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2626,6 +2993,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2634,6 +3004,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2653,6 +3026,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p9",
@@ -2661,6 +3038,10 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand_size": 6,
@@ -2795,6 +3176,10 @@ Turn 3 (TestPlayer):\n\
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -2811,6 +3196,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2820,6 +3208,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2829,6 +3220,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2838,6 +3232,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2847,6 +3244,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2856,6 +3256,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2875,6 +3278,10 @@ Turn 3 (TestPlayer):\n\
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -2977,6 +3384,10 @@ Turn 3 (TestPlayer):\n\
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -2993,6 +3404,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3002,6 +3416,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3011,6 +3428,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3020,6 +3440,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3029,6 +3452,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3038,6 +3464,9 @@ Turn 3 (TestPlayer):\n\
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3057,6 +3486,10 @@ Turn 3 (TestPlayer):\n\
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -3074,7 +3507,7 @@ Turn 3 (TestPlayer):\n\
           }
         ],
         "priority_player": "TestPlayer",
-        "snapshot_id": 188590599080,
+        "snapshot_id": 622556079572,
         "stack": [],
         "step": "Postcombat Main",
         "turn": 2,
@@ -3101,6 +3534,7 @@ Turn 3 (TestPlayer):\n\
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",

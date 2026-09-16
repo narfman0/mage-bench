@@ -141,6 +141,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -181,6 +182,9 @@
                 "name": "Ancient Tomb",
                 "rules": [
                   "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -189,6 +193,9 @@
                 "name": "Ancient Tomb",
                 "rules": [
                   "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -197,6 +204,9 @@
                 "name": "Ancient Tomb",
                 "rules": [
                   "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -205,6 +215,9 @@
                 "name": "Ancient Tomb",
                 "rules": [
                   "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -213,6 +226,9 @@
                 "name": "Blood Moon",
                 "rules": [
                   "Nonbasic lands are Mountains.",
+                ],
+                "types": [
+                  "Enchantment",
                 ]
               },
               {
@@ -221,6 +237,9 @@
                 "name": "Blood Moon",
                 "rules": [
                   "Nonbasic lands are Mountains.",
+                ],
+                "types": [
+                  "Enchantment",
                 ]
               },
               {
@@ -229,6 +248,9 @@
                 "name": "Blood Moon",
                 "rules": [
                   "Nonbasic lands are Mountains.",
+                ],
+                "types": [
+                  "Enchantment",
                 ]
               },
             ],
@@ -262,6 +284,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -269,6 +294,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -276,6 +304,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -283,6 +314,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -290,6 +324,9 @@
             "name": "Blood Moon",
             "rules": [
               "Nonbasic lands are Mountains.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
           {
@@ -297,6 +334,9 @@
             "name": "Blood Moon",
             "rules": [
               "Nonbasic lands are Mountains.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
           {
@@ -304,6 +344,9 @@
             "name": "Blood Moon",
             "rules": [
               "Nonbasic lands are Mountains.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
         ]
@@ -349,6 +392,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -356,6 +402,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -363,6 +412,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -370,6 +422,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -377,6 +432,9 @@
             "name": "Blood Moon",
             "rules": [
               "Nonbasic lands are Mountains.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
           {
@@ -384,6 +442,9 @@
             "name": "Blood Moon",
             "rules": [
               "Nonbasic lands are Mountains.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
           {
@@ -391,6 +452,9 @@
             "name": "Blood Moon",
             "rules": [
               "Nonbasic lands are Mountains.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
         ]
@@ -469,6 +533,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -476,6 +543,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -483,6 +553,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -490,6 +563,9 @@
             "name": "Ancient Tomb",
             "rules": [
               "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -497,6 +573,9 @@
             "name": "Blood Moon",
             "rules": [
               "Nonbasic lands are Mountains.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
           {
@@ -504,6 +583,9 @@
             "name": "Blood Moon",
             "rules": [
               "Nonbasic lands are Mountains.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
           {
@@ -511,6 +593,9 @@
             "name": "Blood Moon",
             "rules": [
               "Nonbasic lands are Mountains.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
         ]
@@ -550,6 +635,9 @@
                 "name": "Ancient Tomb",
                 "rules": [
                   "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -558,6 +646,9 @@
                 "name": "Ancient Tomb",
                 "rules": [
                   "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -566,6 +657,9 @@
                 "name": "Ancient Tomb",
                 "rules": [
                   "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -574,6 +668,9 @@
                 "name": "Ancient Tomb",
                 "rules": [
                   "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -582,6 +679,9 @@
                 "name": "Blood Moon",
                 "rules": [
                   "Nonbasic lands are Mountains.",
+                ],
+                "types": [
+                  "Enchantment",
                 ]
               },
               {
@@ -590,6 +690,9 @@
                 "name": "Blood Moon",
                 "rules": [
                   "Nonbasic lands are Mountains.",
+                ],
+                "types": [
+                  "Enchantment",
                 ]
               },
               {
@@ -598,6 +701,9 @@
                 "name": "Blood Moon",
                 "rules": [
                   "Nonbasic lands are Mountains.",
+                ],
+                "types": [
+                  "Enchantment",
                 ]
               },
             ],
@@ -618,7 +724,7 @@
           }
         ],
         "priority_player": "",
-        "snapshot_id": 1018570327402,
+        "snapshot_id": 155443165300,
         "stack": [],
         "turn": 1,
       },
@@ -644,6 +750,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",

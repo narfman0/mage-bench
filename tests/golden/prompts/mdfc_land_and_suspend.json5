@@ -105,10 +105,6 @@ Call get_action_choices to see your options, then choose_action to decide.",
     "tool_call_id": "call_1",
   },
   {
-    "content": "Current game state: Turn 6; Precombat Main; TestPlayer: 20hp, 7 permanents, 6 cards; Opponent: 20hp, 0 permanents, 7 cards. Continue playing. Call pass_priority to get your next decision, then choose_action to respond. All cards listed are playable right now. Play cards with choice=pN, pass with choice=no.",
-    "role": "user",
-  },
-  {
     "content": null,
     "role": "assistant",
     "tool_calls": [
@@ -129,7 +125,8 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=7 lib=53 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no",
+  Respond: choice=yes or choice=no\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.",
     "role": "tool",
     "tool_call_id": "call_2",
   },
@@ -592,6 +589,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Cast spell without paying its mana cost (Crashing Footfalls)?\n\
   Choices (0): \n\
   Respond: choice=yes or choice=no\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 6 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -691,6 +689,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {B}.",
               ],
               "tapped": false,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             },
             {
               "id": "p12",
@@ -699,6 +701,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {G}.",
               ],
               "tapped": false,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             },
             {
               "id": "p13",
@@ -707,6 +713,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {W}.",
               ],
               "tapped": false,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             },
             {
               "id": "p14",
@@ -715,6 +725,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {W}.",
               ],
               "tapped": false,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             },
             {
               "id": "p15",
@@ -723,6 +737,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {W}.",
               ],
               "tapped": false,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             },
             {
               "id": "p40",
@@ -735,6 +753,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "tapped": false,
               "token": true,
               "toughness": 4,
+              "types": [
+                "Creature",
+              ],
+              "uid": "xxx",
             },
             {
               "id": "p41",
@@ -747,6 +769,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "tapped": false,
               "token": true,
               "toughness": 4,
+              "types": [
+                "Creature",
+              ],
+              "uid": "xxx",
             }
           ],
           "graveyard": [
@@ -767,6 +793,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -776,6 +805,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -785,6 +817,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -794,6 +829,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -803,6 +841,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -812,6 +853,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
           ],
@@ -869,7 +913,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
         }
       ],
       "priority_player": "TestPlayer",
-      "snapshot_id": 875645921334,
+      "snapshot_id": 350694278684,
       "stack": [],
       "step": "Precombat Main",
       "turn": 6,

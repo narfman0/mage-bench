@@ -198,6 +198,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -206,6 +209,9 @@
                 "name": "Lightning Bolt",
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -214,6 +220,9 @@
                 "name": "Lightning Bolt",
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -223,6 +232,10 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p14",
@@ -231,6 +244,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -241,6 +257,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -251,6 +270,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -422,6 +444,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -432,6 +458,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -441,6 +470,9 @@
                 "playable": true,
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -450,6 +482,9 @@
                 "playable": true,
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -459,6 +494,10 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p15",
@@ -467,6 +506,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -476,6 +518,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -669,6 +714,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -679,6 +728,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -688,6 +740,9 @@
                 "playable": true,
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -696,6 +751,10 @@
                 "name": "Memnite",
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p15",
@@ -704,6 +763,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -713,6 +775,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -757,6 +822,7 @@
         "response_type": "index",
         "stack": [
           {
+            "id": "p24",
             "name": "Lightning Bolt",
             "owner": "TestPlayer",
           }
@@ -825,6 +891,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -835,6 +905,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -843,6 +916,9 @@
                 "name": "Lightning Bolt",
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -851,6 +927,10 @@
                 "name": "Memnite",
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p15",
@@ -859,6 +939,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -868,6 +951,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -895,6 +981,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p24",
             "name": "Lightning Bolt",
             "owner": "TestPlayer",
             "targets": [
@@ -1103,6 +1190,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -1144,6 +1232,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1152,6 +1243,9 @@
                 "name": "Lightning Bolt",
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1160,6 +1254,9 @@
                 "name": "Lightning Bolt",
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1168,6 +1265,10 @@
                 "name": "Memnite",
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p14",
@@ -1175,6 +1276,9 @@
                 "name": "Mountain",
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1184,6 +1288,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1193,6 +1300,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1226,6 +1336,9 @@
             "rules": [
               "{T}: Add {B}.",
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1233,6 +1346,9 @@
             "name": "Lightning Bolt",
             "rules": [
               "{this} deals 3 damage to any target.",
+            ],
+            "types": [
+              "Instant",
             ]
           },
           {
@@ -1240,6 +1356,9 @@
             "name": "Lightning Bolt",
             "rules": [
               "{this} deals 3 damage to any target.",
+            ],
+            "types": [
+              "Instant",
             ]
           },
           {
@@ -1247,12 +1366,19 @@
             "name": "Memnite",
             "power": "1",
             "toughness": "1",
+            "types": [
+              "Artifact",
+              "Creature",
+            ]
           },
           {
             "is_land": true,
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1261,6 +1387,9 @@
             "rules": [
               "{T}: Add {R}.",
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1269,6 +1398,9 @@
             "rules": [
               "{T}: Add {G}.",
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -1315,6 +1447,9 @@
             "rules": [
               "{T}: Add {B}.",
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1322,6 +1457,9 @@
             "name": "Lightning Bolt",
             "rules": [
               "{this} deals 3 damage to any target.",
+            ],
+            "types": [
+              "Instant",
             ]
           },
           {
@@ -1329,6 +1467,9 @@
             "name": "Lightning Bolt",
             "rules": [
               "{this} deals 3 damage to any target.",
+            ],
+            "types": [
+              "Instant",
             ]
           },
           {
@@ -1336,12 +1477,19 @@
             "name": "Memnite",
             "power": "1",
             "toughness": "1",
+            "types": [
+              "Artifact",
+              "Creature",
+            ]
           },
           {
             "is_land": true,
             "name": "Mountain",
             "rules": [
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1350,6 +1498,9 @@
             "rules": [
               "{T}: Add {R}.",
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1358,6 +1509,9 @@
             "rules": [
               "{T}: Add {G}.",
               "{T}: Add {R}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -1403,6 +1557,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1411,6 +1568,9 @@
                 "name": "Lightning Bolt",
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1419,6 +1579,9 @@
                 "name": "Lightning Bolt",
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1428,6 +1591,10 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p14",
@@ -1436,6 +1603,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1446,6 +1616,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1456,6 +1629,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1557,6 +1733,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1565,6 +1744,9 @@
                 "name": "Lightning Bolt",
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1573,6 +1755,9 @@
                 "name": "Lightning Bolt",
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1582,6 +1767,10 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p14",
@@ -1590,6 +1779,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1600,6 +1792,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1610,6 +1805,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1714,6 +1912,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1724,6 +1926,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1733,6 +1938,9 @@
                 "playable": true,
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1742,6 +1950,9 @@
                 "playable": true,
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1751,6 +1962,10 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p15",
@@ -1759,6 +1974,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1768,6 +1986,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1859,6 +2080,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1869,6 +2094,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1878,6 +2106,9 @@
                 "playable": true,
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1887,6 +2118,9 @@
                 "playable": true,
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1895,6 +2129,10 @@
                 "name": "Memnite",
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p15",
@@ -1903,6 +2141,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1912,6 +2153,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1997,6 +2241,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2007,6 +2255,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2016,6 +2267,9 @@
                 "playable": true,
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -2024,6 +2278,10 @@
                 "name": "Memnite",
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p15",
@@ -2032,6 +2290,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2041,6 +2302,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2085,6 +2349,7 @@
         "response_type": "index",
         "stack": [
           {
+            "id": "p24",
             "name": "Lightning Bolt",
             "owner": "TestPlayer",
           }
@@ -2132,6 +2397,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2142,6 +2411,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2150,6 +2422,9 @@
                 "name": "Lightning Bolt",
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -2158,6 +2433,10 @@
                 "name": "Memnite",
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p15",
@@ -2166,6 +2445,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2175,6 +2457,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2202,6 +2487,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p24",
             "name": "Lightning Bolt",
             "owner": "TestPlayer",
             "targets": [
@@ -2254,6 +2540,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -2273,6 +2563,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2281,6 +2574,9 @@
                 "name": "Lightning Bolt",
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -2289,6 +2585,10 @@
                 "name": "Memnite",
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p15",
@@ -2297,6 +2597,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2306,6 +2609,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2373,6 +2679,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -2393,6 +2703,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2402,6 +2715,9 @@
                 "playable": true,
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -2411,6 +2727,10 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p25",
@@ -2419,6 +2739,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2429,6 +2752,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2439,6 +2765,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2557,6 +2886,10 @@
                   "{T}: Add {R}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -2577,6 +2910,9 @@
                 "rules": [
                   "{T}: Add {B}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2586,6 +2922,9 @@
                 "playable": true,
                 "rules": [
                   "{this} deals 3 damage to any target.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -2595,6 +2934,10 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p25",
@@ -2603,6 +2946,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2613,6 +2959,9 @@
                 "rules": [
                   "{T}: Add {R}.",
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2623,6 +2972,9 @@
                 "rules": [
                   "{T}: Add {G}.",
                   "{T}: Add {R}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2652,7 +3004,7 @@
           }
         ],
         "priority_player": "TestPlayer",
-        "snapshot_id": 847410460514,
+        "snapshot_id": 18028689560,
         "stack": [],
         "step": "Precombat Main",
         "turn": 2,
@@ -2679,6 +3031,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",

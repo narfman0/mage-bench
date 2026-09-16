@@ -144,6 +144,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -156,6 +159,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "When {this} enters, return a permanent you control to its owner's hand.",
                 ],
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p12",
@@ -164,6 +170,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -173,6 +182,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -182,6 +194,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -191,6 +206,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -200,6 +218,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -380,6 +401,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -390,6 +415,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -402,6 +430,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "When {this} enters, return a permanent you control to its owner's hand.",
                 ],
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -409,6 +440,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -417,6 +451,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -425,6 +462,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -433,6 +473,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -559,6 +602,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -569,6 +616,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -581,6 +631,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "When {this} enters, return a permanent you control to its owner's hand.",
                 ],
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -588,6 +641,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -596,6 +652,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -604,6 +663,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -612,6 +674,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -701,6 +766,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -714,6 +783,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "When {this} enters, return a permanent you control to its owner's hand.",
                 ],
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -721,6 +793,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -729,6 +804,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -737,6 +815,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -745,6 +826,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -773,6 +857,7 @@ When this creature enters, return a permanent you control to its owner's hand.",
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p23",
             "name": "Black Lotus",
             "owner": "TestPlayer",
           }
@@ -860,6 +945,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -878,6 +967,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -886,6 +978,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -894,6 +989,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -902,6 +1000,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -933,6 +1034,7 @@ When this creature enters, return a permanent you control to its owner's hand.",
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p24",
             "name": "Emancipation Angel",
             "owner": "TestPlayer",
           }
@@ -1073,6 +1175,7 @@ When this creature enters, return a permanent you control to its owner's hand.",
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -1113,6 +1216,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Black Lotus",
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -1125,6 +1231,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "When {this} enters, return a permanent you control to its owner's hand.",
                 ],
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p12",
@@ -1132,6 +1241,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1140,6 +1252,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1148,6 +1263,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1156,6 +1274,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1164,6 +1285,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1196,6 +1320,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
             "name": "Black Lotus",
             "rules": [
               "{T}, Sacrifice {this}: Add three mana of any one color.",
+            ],
+            "types": [
+              "Artifact",
             ]
           },
           {
@@ -1207,12 +1334,8 @@ When this creature enters, return a permanent you control to its owner's hand.",
               "When {this} enters, return a permanent you control to its owner's hand.",
             ],
             "toughness": "3",
-          },
-          {
-            "is_land": true,
-            "name": "Plains",
-            "rules": [
-              "{T}: Add {W}.",
+            "types": [
+              "Creature",
             ]
           },
           {
@@ -1220,6 +1343,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1227,6 +1353,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1234,6 +1363,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1241,6 +1373,19 @@ When this creature enters, return a permanent you control to its owner's hand.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Plains",
+            "rules": [
+              "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -1286,6 +1431,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
             "name": "Black Lotus",
             "rules": [
               "{T}, Sacrifice {this}: Add three mana of any one color.",
+            ],
+            "types": [
+              "Artifact",
             ]
           },
           {
@@ -1297,12 +1445,8 @@ When this creature enters, return a permanent you control to its owner's hand.",
               "When {this} enters, return a permanent you control to its owner's hand.",
             ],
             "toughness": "3",
-          },
-          {
-            "is_land": true,
-            "name": "Plains",
-            "rules": [
-              "{T}: Add {W}.",
+            "types": [
+              "Creature",
             ]
           },
           {
@@ -1310,6 +1454,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1317,6 +1464,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1324,6 +1474,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1331,6 +1484,19 @@ When this creature enters, return a permanent you control to its owner's hand.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Plains",
+            "rules": [
+              "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -1375,6 +1541,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -1387,6 +1556,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "When {this} enters, return a permanent you control to its owner's hand.",
                 ],
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p12",
@@ -1395,6 +1567,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1404,6 +1579,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1413,6 +1591,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1422,6 +1603,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1431,6 +1615,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1535,6 +1722,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -1547,6 +1737,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "When {this} enters, return a permanent you control to its owner's hand.",
                 ],
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p12",
@@ -1555,6 +1748,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1564,6 +1760,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1573,6 +1772,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1582,6 +1784,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1591,6 +1796,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1699,6 +1907,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1709,6 +1921,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -1721,6 +1936,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "When {this} enters, return a permanent you control to its owner's hand.",
                 ],
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -1728,6 +1946,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1736,6 +1957,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1744,6 +1968,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1752,6 +1979,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1830,6 +2060,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1840,6 +2074,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -1852,6 +2089,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "When {this} enters, return a permanent you control to its owner's hand.",
                 ],
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -1859,6 +2099,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1867,6 +2110,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1875,6 +2121,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1883,6 +2132,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1958,6 +2210,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1971,6 +2227,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "When {this} enters, return a permanent you control to its owner's hand.",
                 ],
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -1978,6 +2237,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1986,6 +2248,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1994,6 +2259,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2002,6 +2270,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2030,6 +2301,7 @@ When this creature enters, return a permanent you control to its owner's hand.",
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p23",
             "name": "Black Lotus",
             "owner": "TestPlayer",
           }
@@ -2074,6 +2346,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -2082,6 +2358,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2096,6 +2376,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "When {this} enters, return a permanent you control to its owner's hand.",
                 ],
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -2103,6 +2386,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2111,6 +2397,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2119,6 +2408,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2127,6 +2419,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2208,6 +2503,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -2226,6 +2525,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2234,6 +2536,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2242,6 +2547,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2250,6 +2558,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2281,6 +2592,7 @@ When this creature enters, return a permanent you control to its owner's hand.",
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p24",
             "name": "Emancipation Angel",
             "owner": "TestPlayer",
           }
@@ -2328,6 +2640,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "3",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -2336,6 +2652,10 @@ When this creature enters, return a permanent you control to its owner's hand.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -2354,6 +2674,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2362,6 +2685,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2370,6 +2696,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2378,6 +2707,9 @@ When this creature enters, return a permanent you control to its owner's hand.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2429,6 +2761,7 @@ When this creature enters, return a permanent you control to its owner's hand.",
         "stack": [
           {
             "ability_text": "When Emancipation Angel enters, return a permanent you control to its owner's hand.",
+            "id": "p25",
             "name": "Emancipation Angel",
             "owner": "TestPlayer",
             "source_card": "Emancipation Angel",
@@ -2464,6 +2797,7 @@ When this creature enters, return a permanent you control to its owner's hand.",
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",

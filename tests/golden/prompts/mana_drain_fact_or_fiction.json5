@@ -126,7 +126,8 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=7 lib=53 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no",
+  Respond: choice=yes or choice=no\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.",
     "role": "tool",
     "tool_call_id": "call_2",
   },
@@ -297,6 +298,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Choose spell or ability to play: Black Lotus\n\
   Choices (1): Cast Black Lotus\n\
   Respond: choice=0, choice=1, etc. (not yes/no)\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -476,6 +478,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Choose a pile to put into hand.\n\
   Choices (0): \n\
   Respond: pile=1 or pile=2\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -507,6 +510,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Choose a pile to put into hand.\n\
   Choices (0): \n\
   Respond: pile=1 or pile=2\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -564,6 +568,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Choose a pile to put into hand.\n\
   Choices (0): \n\
   Respond: pile=1 or pile=2\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -635,6 +640,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {U}.",
               ],
               "tapped": true,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             }
           ],
           "graveyard": [
@@ -687,6 +696,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "Flying",
               ],
               "toughness": 4,
+              "types": [
+                "Creature",
+              ]
             },
             {
               "id": "p31",
@@ -699,6 +711,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{2}{U}{U}, Remove a wish counter from {this}: Reveal the top card of your library. You may play that card without paying its mana cost. If you don't, exile it.",
               ],
               "toughness": 4,
+              "types": [
+                "Creature",
+              ]
             },
             {
               "id": "p13",
@@ -707,6 +722,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {U}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -716,6 +734,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {U}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -725,6 +746,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {U}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -734,6 +758,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {U}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -742,6 +769,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Mana Drain",
               "rules": [
                 "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+              ],
+              "types": [
+                "Instant",
               ]
             },
           ],
@@ -761,6 +791,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {W}.",
               ],
               "tapped": false,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             }
           ],
           "graveyard": [
@@ -788,7 +822,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
         }
       ],
       "priority_player": "TestPlayer",
-      "snapshot_id": 597385116241,
+      "snapshot_id": 32468346469,
       "stack": [],
       "step": "Postcombat Main",
       "turn": 2,

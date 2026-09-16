@@ -128,6 +128,9 @@
                 "name": "Ancient Stirrings",
                 "rules": [
                   "Look at the top five cards of your library. You may reveal a colorless card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -137,6 +140,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -146,6 +152,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -155,6 +164,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -164,6 +176,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -173,6 +188,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -182,6 +200,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -360,6 +381,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -370,6 +395,9 @@
                 "playable": true,
                 "rules": [
                   "Look at the top five cards of your library. You may reveal a colorless card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -378,6 +406,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -386,6 +417,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -394,6 +428,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -402,6 +439,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -410,6 +450,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -535,6 +578,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -544,6 +591,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -552,6 +602,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -560,6 +613,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -568,6 +624,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -576,6 +635,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -604,6 +666,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p23",
             "name": "Ancient Stirrings",
             "owner": "TestPlayer",
           }
@@ -690,6 +753,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -699,6 +766,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -707,6 +777,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -715,6 +788,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -723,6 +799,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -731,6 +810,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -793,6 +875,7 @@
         "response_type": "index",
         "stack": [
           {
+            "id": "p23",
             "name": "Ancient Stirrings",
             "owner": "TestPlayer",
           }
@@ -841,6 +924,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -853,6 +940,10 @@
                   "Flying",
                 ],
                 "toughness": "2",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p12",
@@ -860,6 +951,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -868,6 +962,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -876,6 +973,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -884,6 +984,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -892,6 +995,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -948,6 +1054,7 @@
         "response_type": "index",
         "stack": [
           {
+            "id": "p23",
             "name": "Ancient Stirrings",
             "owner": "TestPlayer",
           }
@@ -1086,6 +1193,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -1126,6 +1234,9 @@
                 "name": "Ancient Stirrings",
                 "rules": [
                   "Look at the top five cards of your library. You may reveal a colorless card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -1134,6 +1245,9 @@
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1142,6 +1256,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1150,6 +1267,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1158,6 +1278,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1166,6 +1289,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1174,6 +1300,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1206,6 +1335,9 @@
             "name": "Ancient Stirrings",
             "rules": [
               "Look at the top five cards of your library. You may reveal a colorless card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+            ],
+            "types": [
+              "Sorcery",
             ]
           },
           {
@@ -1213,6 +1345,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1220,6 +1355,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1227,6 +1365,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1234,6 +1375,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1241,6 +1385,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1248,6 +1395,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -1293,6 +1443,9 @@
             "name": "Ancient Stirrings",
             "rules": [
               "Look at the top five cards of your library. You may reveal a colorless card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+            ],
+            "types": [
+              "Sorcery",
             ]
           },
           {
@@ -1300,6 +1453,9 @@
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1307,6 +1463,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1314,6 +1473,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1321,6 +1483,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1328,6 +1493,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -1335,6 +1503,9 @@
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -1378,6 +1549,9 @@
                 "name": "Ancient Stirrings",
                 "rules": [
                   "Look at the top five cards of your library. You may reveal a colorless card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -1387,6 +1561,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1396,6 +1573,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1405,6 +1585,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1414,6 +1597,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1423,6 +1609,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1432,6 +1621,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1534,6 +1726,9 @@
                 "name": "Ancient Stirrings",
                 "rules": [
                   "Look at the top five cards of your library. You may reveal a colorless card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -1543,6 +1738,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1552,6 +1750,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1561,6 +1762,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1570,6 +1774,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1579,6 +1786,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1588,6 +1798,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1695,6 +1908,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1705,6 +1922,9 @@
                 "playable": true,
                 "rules": [
                   "Look at the top five cards of your library. You may reveal a colorless card from among them and put it into your hand. Put the rest on the bottom of your library in any order.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -1713,6 +1933,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1721,6 +1944,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1729,6 +1955,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1737,6 +1966,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1745,6 +1977,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1823,6 +2058,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1832,6 +2071,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1840,6 +2082,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1848,6 +2093,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1856,6 +2104,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1864,6 +2115,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1892,6 +2146,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p23",
             "name": "Ancient Stirrings",
             "owner": "TestPlayer",
           }
@@ -1935,6 +2190,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1944,6 +2203,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1952,6 +2214,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1960,6 +2225,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1968,6 +2236,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1976,6 +2247,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2004,6 +2278,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p23",
             "name": "Ancient Stirrings",
             "owner": "TestPlayer",
           }
@@ -2050,6 +2325,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2059,6 +2338,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2067,6 +2349,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2075,6 +2360,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2083,6 +2371,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2091,6 +2382,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2153,6 +2447,7 @@
         "response_type": "index",
         "stack": [
           {
+            "id": "p23",
             "name": "Ancient Stirrings",
             "owner": "TestPlayer",
           }
@@ -2199,6 +2494,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2211,6 +2510,10 @@
                   "Flying",
                 ],
                 "toughness": "2",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p12",
@@ -2218,6 +2521,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2226,6 +2532,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2234,6 +2543,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2242,6 +2554,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2250,6 +2565,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2306,6 +2624,7 @@
         "response_type": "index",
         "stack": [
           {
+            "id": "p23",
             "name": "Ancient Stirrings",
             "owner": "TestPlayer",
           }
@@ -2349,6 +2668,10 @@
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2361,6 +2684,10 @@
                   "Flying",
                 ],
                 "toughness": "2",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
               },
               {
                 "id": "p12",
@@ -2368,6 +2695,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2376,6 +2706,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2384,6 +2717,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2392,6 +2728,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2400,6 +2739,9 @@
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2420,7 +2762,7 @@
           }
         ],
         "priority_player": "TestPlayer",
-        "snapshot_id": 558301020152,
+        "snapshot_id": 85051488444,
         "stack": [
           {
             "id": "p23",
@@ -2456,6 +2798,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",

@@ -299,6 +299,13 @@ public final class BridgeGameStateBuilder {
         if (value instanceof Map<?, ?> map) {
             var sorted = new TreeMap<String, Object>();
             for (Map.Entry<?, ?> entry : map.entrySet()) {
+                // A permanent's uid is its engine UUID prefix: fixed for the
+                // permanent's life (so it never marks a state change) but
+                // different every run, which would make snapshot ids — and
+                // the golden prompts that carry them — differ run to run.
+                if ("uid".equals(String.valueOf(entry.getKey()))) {
+                    continue;
+                }
                 sorted.put(String.valueOf(entry.getKey()), entry.getValue());
             }
             var sb = new StringBuilder("{");

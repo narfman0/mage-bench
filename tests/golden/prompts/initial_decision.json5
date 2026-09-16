@@ -125,7 +125,8 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=7 lib=43 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no",
+  Respond: choice=yes or choice=no\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.",
     "role": "tool",
     "tool_call_id": "call_2",
   },
@@ -210,6 +211,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Ancient Tomb",
               "rules": [
                 "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -218,6 +222,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Ancient Tomb",
               "rules": [
                 "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -226,6 +233,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Ancient Tomb",
               "rules": [
                 "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -234,6 +244,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Ancient Tomb",
               "rules": [
                 "{T}: Add {C}{C}. {this} deals 2 damage to you.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -242,6 +255,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Blood Moon",
               "rules": [
                 "Nonbasic lands are Mountains.",
+              ],
+              "types": [
+                "Enchantment",
               ]
             },
             {
@@ -250,6 +266,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Blood Moon",
               "rules": [
                 "Nonbasic lands are Mountains.",
+              ],
+              "types": [
+                "Enchantment",
               ]
             },
             {
@@ -258,6 +277,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Blood Moon",
               "rules": [
                 "Nonbasic lands are Mountains.",
+              ],
+              "types": [
+                "Enchantment",
               ]
             },
           ],
@@ -278,7 +300,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
         }
       ],
       "priority_player": "",
-      "snapshot_id": 1018570327402,
+      "snapshot_id": 155443165300,
       "stack": [],
       "turn": 1,
     },

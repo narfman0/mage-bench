@@ -126,7 +126,8 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=7 lib=53 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no",
+  Respond: choice=yes or choice=no\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.",
     "role": "tool",
     "tool_call_id": "call_2",
   },
@@ -157,10 +158,6 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Respond: choice=pN to play, or choice=no to pass",
     "role": "tool",
     "tool_call_id": "call_3",
-  },
-  {
-    "content": "Current game state: Turn 3; Precombat Main; TestPlayer: 20hp, 1 permanents, 6 cards; Opponent: 20hp, 0 permanents, 7 cards. Continue playing. Call pass_priority to get your next decision, then choose_action to respond. All cards listed are playable right now. Play cards with choice=pN, pass with choice=no.",
-    "role": "user",
   },
   {
     "content": null,
@@ -355,6 +352,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Choose spell or ability to play: Black Lotus\n\
   Choices (1): Cast Black Lotus\n\
   Respond: choice=0, choice=1, etc. (not yes/no)\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -472,6 +470,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Choose spell or ability to play: Thespian's Stage\n\
   Choices (2): {T}: Add {C}., {2}, {T}: Thespian's Stage becomes a copy of target land, except it has this ability.\n\
   Respond: choice=0, choice=1, etc. (not yes/no)\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -532,6 +531,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Select a land\n\
   Choices (2): Dark Depths [id=p11], Thespian's Stage [id=p16]\n\
   Respond: choice=pN, or choice=no to cancel\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -591,6 +591,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Message: Select a Dark Depths to keep (Legendary Rule)?\n\
   Choices (2): Dark Depths [id=p11], Dark Depths [id=p16]\n\
   Respond: choice=pN — must pick a target\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.\n\
 \n\
 [It's been 2 turns since you last chatted — send a message to your opponent!]",
     "role": "tool",
@@ -769,6 +770,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "tapped": true,
               "token": true,
               "toughness": 20,
+              "types": [
+                "Creature",
+              ],
+              "uid": "xxx",
             }
           ],
           "graveyard": [
@@ -804,6 +809,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -812,6 +820,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -820,6 +831,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -828,6 +842,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -836,6 +853,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -844,6 +864,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "name": "Plains",
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
           ],
@@ -880,7 +903,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
         }
       ],
       "priority_player": "TestPlayer",
-      "snapshot_id": 698816322071,
+      "snapshot_id": 305035548239,
       "stack": [],
       "step": "Declare Attackers",
       "turn": 3,

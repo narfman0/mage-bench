@@ -124,28 +124,28 @@
     },
     {
       "message": "TestPlayer puts Memnite from stack onto the Battlefield",
-      "seq": 56,
+      "seq": 55,
     },
     {
       "message": "TestPlayer skip attack",
-      "seq": 59,
+      "seq": 58,
     },
     {
       "active_player": "TestPlayer",
       "phase": "COMBAT",
-      "seq": 60,
+      "seq": 59,
       "step": "DECLARE_ATTACKERS",
       "turn": 3,
       "type": "phase_change",
     },
     {
       "message": "TestPlayer wants to concede",
-      "seq": 64,
+      "seq": 63,
     },
     {
       "active_player": "TestPlayer",
       "phase": "POSTCOMBAT_MAIN",
-      "seq": 65,
+      "seq": 64,
       "step": "POSTCOMBAT_MAIN",
       "turn": 3,
       "type": "phase_change",
@@ -222,6 +222,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -233,6 +236,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p12",
@@ -241,6 +247,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -250,6 +259,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -259,6 +271,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -268,6 +283,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -277,7 +295,11 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -462,6 +484,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -472,6 +498,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -483,6 +512,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -490,6 +522,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -498,6 +533,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -506,6 +544,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -515,7 +556,11 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -704,6 +749,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -714,6 +763,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -725,6 +777,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -733,6 +788,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -742,6 +800,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -751,6 +812,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -760,6 +824,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -769,7 +836,11 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -944,6 +1015,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -956,6 +1031,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -963,6 +1041,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -971,6 +1052,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -979,6 +1063,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -987,6 +1074,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -995,7 +1085,11 @@
                 "name": "Memnite",
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -1031,6 +1125,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p25",
             "name": "Black Lotus",
             "owner": "TestPlayer",
           }
@@ -1115,6 +1210,10 @@
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -1123,6 +1222,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1136,6 +1239,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -1144,6 +1250,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1153,6 +1262,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1162,6 +1274,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1171,6 +1286,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1180,7 +1298,11 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -1357,6 +1479,10 @@
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -1365,6 +1491,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1377,6 +1507,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -1384,6 +1517,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1392,6 +1528,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1400,6 +1539,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1408,6 +1550,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1445,6 +1590,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p26",
             "name": "Memnite",
             "owner": "TestPlayer",
           }
@@ -1529,6 +1675,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -1537,6 +1687,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -1555,6 +1710,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1563,6 +1721,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1571,6 +1732,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1579,6 +1743,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1616,6 +1783,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p27",
             "name": "Clone",
             "owner": "TestPlayer",
           }
@@ -1732,6 +1900,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "copy": true,
@@ -1743,6 +1915,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -1751,6 +1928,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -1770,6 +1952,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1779,6 +1964,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1788,6 +1976,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1797,6 +1988,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1825,7 +2019,7 @@
             "name": "Opponent",
           }
         ],
-        "board_cursor": 22,
+        "board_cursor": 21,
         "choices": [
           {
             "action": "land",
@@ -1853,14 +2047,14 @@
           }
         ],
         "context": "T2 Precombat Main/Precombat Main (TestPlayer) YOUR_MAIN",
-        "game_seq": 57,
+        "game_seq": 56,
         "land_drops_used": 0,
         "message": "Play spells and abilities",
         "respond_with": "choice=pN to play, or choice=no to pass",
         "response_type": "select",
         "success": true,
       },
-      "action_seq": 57,
+      "action_seq": 56,
       "action_type": "GAME_ASK",
       "choice_count": 0,
       "choices": [],
@@ -1889,7 +2083,7 @@
     },
     {
       "action_result": {},
-      "action_seq": 57,
+      "action_seq": 56,
       "action_type": "GAME_SELECT",
       "choice_count": 4,
       "choices": [
@@ -1948,7 +2142,7 @@
     },
     {
       "action_result": {},
-      "action_seq": 63,
+      "action_seq": 62,
       "action_type": "GAME_SELECT",
       "choice_count": 4,
       "choices": [
@@ -2009,7 +2203,7 @@
   "deck_type": "Constructed - Legacy",
   "game_over": {
     "message": "Opponent",
-    "seq": 66,
+    "seq": 65,
   },
   "game_type": "Two Player Duel",
   "harness_epoch": 60,
@@ -2026,6 +2220,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -2066,6 +2261,9 @@
                 "name": "Black Lotus",
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2077,6 +2275,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p12",
@@ -2084,6 +2285,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2092,6 +2296,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2100,6 +2307,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2108,6 +2318,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2116,7 +2329,11 @@
                 "name": "Memnite",
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": false,
@@ -2147,6 +2364,9 @@
             "name": "Black Lotus",
             "rules": [
               "{T}, Sacrifice {this}: Add three mana of any one color.",
+            ],
+            "types": [
+              "Artifact",
             ]
           },
           {
@@ -2157,12 +2377,8 @@
               "You may have {this} enter as a copy of any creature on the battlefield.",
             ],
             "toughness": "0",
-          },
-          {
-            "is_land": true,
-            "name": "Island",
-            "rules": [
-              "{T}: Add {U}.",
+            "types": [
+              "Creature",
             ]
           },
           {
@@ -2170,6 +2386,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2177,6 +2396,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2184,6 +2406,19 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Island",
+            "rules": [
+              "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2191,8 +2426,12 @@
             "name": "Memnite",
             "power": "1",
             "toughness": "1",
-          }
-        ],
+            "types": [
+              "Artifact",
+              "Creature",
+            ]
+          },
+        ]
       },
       "seq": 3,
       "tool": "choose_action",
@@ -2235,6 +2474,9 @@
             "name": "Black Lotus",
             "rules": [
               "{T}, Sacrifice {this}: Add three mana of any one color.",
+            ],
+            "types": [
+              "Artifact",
             ]
           },
           {
@@ -2245,12 +2487,8 @@
               "You may have {this} enter as a copy of any creature on the battlefield.",
             ],
             "toughness": "0",
-          },
-          {
-            "is_land": true,
-            "name": "Island",
-            "rules": [
-              "{T}: Add {U}.",
+            "types": [
+              "Creature",
             ]
           },
           {
@@ -2258,6 +2496,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2265,6 +2506,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2272,6 +2516,19 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
+            ]
+          },
+          {
+            "is_land": true,
+            "name": "Island",
+            "rules": [
+              "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2279,8 +2536,12 @@
             "name": "Memnite",
             "power": "1",
             "toughness": "1",
-          }
-        ],
+            "types": [
+              "Artifact",
+              "Creature",
+            ]
+          },
+        ]
       },
       "seq": 5,
       "tool": "pass_priority",
@@ -2322,6 +2583,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2333,6 +2597,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p12",
@@ -2341,6 +2608,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2350,6 +2620,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2359,6 +2632,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2368,6 +2644,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2377,7 +2656,11 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -2483,6 +2766,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2494,6 +2780,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p12",
@@ -2502,6 +2791,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2511,6 +2803,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2520,6 +2815,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2529,6 +2827,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2538,7 +2839,11 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -2648,6 +2953,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2658,6 +2967,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2669,6 +2981,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -2676,6 +2991,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2684,6 +3002,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2692,6 +3013,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2701,7 +3025,11 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -2784,6 +3112,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2794,6 +3126,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2805,6 +3140,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -2813,6 +3151,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2822,6 +3163,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2831,6 +3175,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2840,6 +3187,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2849,7 +3199,11 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -2969,6 +3323,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2979,6 +3337,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2990,6 +3351,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -2998,6 +3362,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3007,6 +3374,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3016,6 +3386,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3025,6 +3398,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3034,7 +3410,11 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 7,
             "is_active": true,
@@ -3161,6 +3541,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3173,6 +3557,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -3180,6 +3567,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3188,6 +3578,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3196,6 +3589,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3204,6 +3600,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3212,7 +3611,11 @@
                 "name": "Memnite",
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -3248,6 +3651,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p25",
             "name": "Black Lotus",
             "owner": "TestPlayer",
           }
@@ -3292,6 +3696,10 @@
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -3300,6 +3708,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3313,6 +3725,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -3321,6 +3736,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3330,6 +3748,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3339,6 +3760,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3348,6 +3772,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3357,7 +3784,11 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -3479,6 +3910,10 @@
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -3487,6 +3922,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3500,6 +3939,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -3508,6 +3950,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3517,6 +3962,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3526,6 +3974,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3535,6 +3986,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3544,7 +3998,11 @@
                 "playable": true,
                 "power": "1",
                 "toughness": "1",
-              }
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ]
+              },
             ],
             "hand_size": 6,
             "is_active": true,
@@ -3671,6 +4129,10 @@
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -3679,6 +4141,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3691,6 +4157,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -3698,6 +4167,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3706,6 +4178,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3714,6 +4189,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3722,6 +4200,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3759,6 +4240,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p26",
             "name": "Memnite",
             "owner": "TestPlayer",
           }
@@ -3803,6 +4285,10 @@
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -3811,6 +4297,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -3819,6 +4309,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3832,6 +4327,9 @@
                   "You may have {this} enter as a copy of any creature on the battlefield.",
                 ],
                 "toughness": "0",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -3840,6 +4338,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3849,6 +4350,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3858,6 +4362,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3867,6 +4374,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3981,6 +4491,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -3989,6 +4503,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4007,6 +4526,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4015,6 +4537,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4023,6 +4548,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4031,6 +4559,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4068,6 +4599,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p27",
             "name": "Clone",
             "owner": "TestPlayer",
           }
@@ -4111,6 +4643,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -4119,6 +4655,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4137,6 +4678,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4145,6 +4689,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4153,6 +4700,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4161,6 +4711,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4198,6 +4751,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p27",
             "name": "Clone",
             "owner": "TestPlayer",
           }
@@ -4228,7 +4782,7 @@
       "args": {
         "choice": "yes",
       },
-      "game_seq": 57,
+      "game_seq": 56,
       "player": "TestPlayer",
       "result": {
         "action_pending": true,
@@ -4244,6 +4798,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "copy": true,
@@ -4255,6 +4813,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -4263,6 +4826,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4282,6 +4850,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4291,6 +4862,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4300,6 +4874,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4309,6 +4886,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4337,7 +4917,7 @@
             "name": "Opponent",
           }
         ],
-        "board_cursor": 22,
+        "board_cursor": 21,
         "choices": [
           {
             "action": "land",
@@ -4365,7 +4945,7 @@
           }
         ],
         "context": "T2 Precombat Main/Precombat Main (TestPlayer) YOUR_MAIN",
-        "game_seq": 57,
+        "game_seq": 56,
         "land_drops_used": 0,
         "message": "Play spells and abilities",
         "respond_with": "choice=pN to play, or choice=no to pass",
@@ -4378,7 +4958,7 @@
     },
     {
       "cost_usd": 0.0,
-      "game_seq": 57,
+      "game_seq": 56,
       "player": "TestPlayer",
       "reasoning": null,
       "seq": 36,
@@ -4394,10 +4974,10 @@
     },
     {
       "args": {
-        "board_cursor": 22,
+        "board_cursor": 21,
         "until": "postcombat_main",
       },
-      "game_seq": 63,
+      "game_seq": 62,
       "player": "TestPlayer",
       "result": {
         "action_pending": true,
@@ -4412,6 +4992,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "copy": true,
@@ -4423,6 +5007,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -4431,6 +5020,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4450,6 +5044,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4459,6 +5056,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4468,6 +5068,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4477,6 +5080,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4505,7 +5111,7 @@
             "name": "Opponent",
           }
         ],
-        "board_cursor": 24,
+        "board_cursor": 23,
         "choices": [
           {
             "action": "land",
@@ -4534,7 +5140,7 @@
         ],
         "context": "T2 Postcombat Main/Postcombat Main (TestPlayer) YOUR_MAIN",
         "current_step": "Postcombat Main",
-        "game_seq": 63,
+        "game_seq": 62,
         "land_drops_used": 0,
         "message": "Play spells and abilities",
         "respond_with": "choice=pN to play, or choice=no to pass",
@@ -4547,7 +5153,7 @@
     },
     {
       "cost_usd": 0.0,
-      "game_seq": 63,
+      "game_seq": 62,
       "player": "TestPlayer",
       "reasoning": null,
       "seq": 38,
@@ -4561,12 +5167,12 @@
     },
     {
       "args": {},
-      "game_seq": 63,
+      "game_seq": 62,
       "player": "TestPlayer",
       "result": {
         "active_player": "TestPlayer",
         "available": true,
-        "game_seq": 63,
+        "game_seq": 62,
         "phase": "Postcombat Main",
         "players": [
           {
@@ -4578,6 +5184,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "copy": true,
@@ -4589,6 +5199,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p16",
@@ -4597,6 +5212,11 @@
                 "summoning_sick": true,
                 "tapped": false,
                 "toughness": "1",
+                "types": [
+                  "Artifact",
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4616,6 +5236,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4625,6 +5248,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4634,6 +5260,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4643,6 +5272,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4672,7 +5304,7 @@
           }
         ],
         "priority_player": "TestPlayer",
-        "snapshot_id": 673462047574,
+        "snapshot_id": 452164978921,
         "stack": [],
         "step": "Postcombat Main",
         "turn": 2,
@@ -4699,6 +5331,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",
@@ -8623,7 +9256,7 @@
         }
       ],
       "priority_player": "TestPlayer",
-      "seq": 57,
+      "seq": 56,
       "stack": [],
       "step": "PRECOMBAT_MAIN",
       "turn": 3,
@@ -8772,7 +9405,7 @@
         }
       ],
       "priority_player": "Opponent",
-      "seq": 58,
+      "seq": 57,
       "stack": [],
       "step": "PRECOMBAT_MAIN",
       "turn": 3,
@@ -8921,7 +9554,7 @@
         }
       ],
       "priority_player": "TestPlayer",
-      "seq": 61,
+      "seq": 60,
       "stack": [],
       "step": "DECLARE_ATTACKERS",
       "turn": 3,
@@ -9070,7 +9703,7 @@
         }
       ],
       "priority_player": "Opponent",
-      "seq": 62,
+      "seq": 61,
       "stack": [],
       "step": "DECLARE_ATTACKERS",
       "turn": 3,
@@ -9185,7 +9818,7 @@
         }
       ],
       "priority_player": "TestPlayer",
-      "seq": 66,
+      "seq": 65,
       "stack": [],
       "step": "POSTCOMBAT_MAIN",
       "turn": 3,

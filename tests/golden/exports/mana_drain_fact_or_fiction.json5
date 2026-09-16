@@ -270,6 +270,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -278,6 +281,9 @@
                 "name": "Fact or Fiction",
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -287,6 +293,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -296,6 +305,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -305,6 +317,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -314,6 +329,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -322,6 +340,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -489,6 +510,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -499,6 +524,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -507,6 +535,9 @@
                 "name": "Fact or Fiction",
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -515,6 +546,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -523,6 +557,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -531,6 +568,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -539,6 +579,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -702,6 +745,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -714,6 +761,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p10",
@@ -722,6 +772,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -730,6 +783,9 @@
                 "name": "Fact or Fiction",
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -739,6 +795,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -748,6 +807,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -757,6 +819,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -765,6 +830,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -784,6 +852,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -939,6 +1011,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -951,6 +1027,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -958,6 +1037,9 @@
                 "name": "Fact or Fiction",
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -966,6 +1048,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -974,6 +1059,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -982,6 +1070,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -990,6 +1081,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -1009,6 +1103,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -1044,6 +1142,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p29",
             "name": "Black Lotus",
             "owner": "TestPlayer",
           }
@@ -1128,6 +1227,10 @@
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -1136,6 +1239,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -1148,6 +1255,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -1156,6 +1266,9 @@
                 "playable": true,
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1164,6 +1277,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1172,6 +1288,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1180,6 +1299,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1188,6 +1310,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -1207,6 +1332,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -1363,6 +1492,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -1384,6 +1517,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -1391,6 +1527,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1399,6 +1538,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1407,6 +1549,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1415,6 +1560,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -1434,6 +1582,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -1469,6 +1621,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p30",
             "name": "Fact or Fiction",
             "owner": "TestPlayer",
           }
@@ -1641,6 +1794,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -1693,6 +1850,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p31",
@@ -1705,6 +1865,9 @@
                   "{2}{U}{U}, Remove a wish counter from {this}: Reveal the top card of your library. You may play that card without paying its mana cost. If you don't, exile it.",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -1713,6 +1876,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1722,6 +1888,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1731,6 +1900,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1740,6 +1912,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1748,6 +1923,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -1767,6 +1945,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -1935,6 +2117,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -1975,6 +2158,9 @@
                 "name": "Black Lotus",
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -1983,6 +2169,9 @@
                 "name": "Fact or Fiction",
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -1991,6 +2180,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1999,6 +2191,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2007,6 +2202,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2015,6 +2213,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2023,6 +2224,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -2055,6 +2259,9 @@
             "name": "Black Lotus",
             "rules": [
               "{T}, Sacrifice {this}: Add three mana of any one color.",
+            ],
+            "types": [
+              "Artifact",
             ]
           },
           {
@@ -2062,6 +2269,9 @@
             "name": "Fact or Fiction",
             "rules": [
               "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+            ],
+            "types": [
+              "Instant",
             ]
           },
           {
@@ -2069,6 +2279,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2076,6 +2289,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2083,6 +2299,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2090,6 +2309,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2097,6 +2319,9 @@
             "name": "Mana Drain",
             "rules": [
               "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+            ],
+            "types": [
+              "Instant",
             ]
           },
         ]
@@ -2142,6 +2367,9 @@
             "name": "Black Lotus",
             "rules": [
               "{T}, Sacrifice {this}: Add three mana of any one color.",
+            ],
+            "types": [
+              "Artifact",
             ]
           },
           {
@@ -2149,6 +2377,9 @@
             "name": "Fact or Fiction",
             "rules": [
               "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+            ],
+            "types": [
+              "Instant",
             ]
           },
           {
@@ -2156,6 +2387,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2163,6 +2397,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2170,6 +2407,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2177,6 +2417,9 @@
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -2184,6 +2427,9 @@
             "name": "Mana Drain",
             "rules": [
               "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+            ],
+            "types": [
+              "Instant",
             ]
           },
         ]
@@ -2228,6 +2474,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2236,6 +2485,9 @@
                 "name": "Fact or Fiction",
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -2245,6 +2497,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2254,6 +2509,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2263,6 +2521,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2272,6 +2533,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2280,6 +2544,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -2378,6 +2645,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2386,6 +2656,9 @@
                 "name": "Fact or Fiction",
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -2395,6 +2668,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2404,6 +2680,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2413,6 +2692,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2422,6 +2704,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2430,6 +2715,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -2532,6 +2820,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2542,6 +2834,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2550,6 +2845,9 @@
                 "name": "Fact or Fiction",
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -2558,6 +2856,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2566,6 +2867,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2574,6 +2878,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2582,6 +2889,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -2657,6 +2967,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2669,6 +2983,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p10",
@@ -2677,6 +2994,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2685,6 +3005,9 @@
                 "name": "Fact or Fiction",
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -2694,6 +3017,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2703,6 +3029,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2712,6 +3041,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2720,6 +3052,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -2739,6 +3074,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -2843,6 +3182,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2855,6 +3198,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p10",
@@ -2863,6 +3209,9 @@
                 "playable": true,
                 "rules": [
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
+                ],
+                "types": [
+                  "Artifact",
                 ]
               },
               {
@@ -2871,6 +3220,9 @@
                 "name": "Fact or Fiction",
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -2880,6 +3232,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2889,6 +3244,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2898,6 +3256,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2906,6 +3267,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -2925,6 +3289,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -3051,6 +3419,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3063,6 +3435,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -3070,6 +3445,9 @@
                 "name": "Fact or Fiction",
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -3078,6 +3456,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3086,6 +3467,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3094,6 +3478,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3102,6 +3489,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -3121,6 +3511,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -3156,6 +3550,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p29",
             "name": "Black Lotus",
             "owner": "TestPlayer",
           }
@@ -3200,6 +3595,10 @@
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -3208,6 +3607,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3220,6 +3623,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -3228,6 +3634,9 @@
                 "playable": true,
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -3237,6 +3646,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3246,6 +3658,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3255,6 +3670,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3263,6 +3681,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -3282,6 +3703,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -3386,6 +3811,10 @@
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -3394,6 +3823,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3406,6 +3839,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -3414,6 +3850,9 @@
                 "playable": true,
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -3422,6 +3861,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3430,6 +3872,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3438,6 +3883,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3446,6 +3894,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -3465,6 +3916,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -3546,6 +4001,10 @@
                   "{T}, Sacrifice {this}: Add three mana of any one color.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Artifact",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -3554,6 +4013,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3566,6 +4029,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -3574,6 +4040,9 @@
                 "playable": true,
                 "rules": [
                   "Reveal the top five cards of your library. An opponent separates those cards into two piles. Put one pile into your hand and the other into your graveyard.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
               {
@@ -3583,6 +4052,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3592,6 +4064,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3601,6 +4076,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3609,6 +4087,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -3628,6 +4109,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -3732,6 +4217,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -3753,6 +4242,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -3760,6 +4252,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3768,6 +4263,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3776,6 +4274,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3784,6 +4285,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -3803,6 +4307,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -3838,6 +4346,7 @@
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p30",
             "name": "Fact or Fiction",
             "owner": "TestPlayer",
           }
@@ -3884,6 +4393,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -3905,6 +4418,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -3912,6 +4428,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3920,6 +4439,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3928,6 +4450,9 @@
                 "name": "Island",
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3936,6 +4461,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -3955,6 +4483,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -3997,12 +4529,18 @@
               "{2}{U}{U}, Remove a wish counter from {this}: Reveal the top card of your library. You may play that card without paying its mana cost. If you don't, exile it.",
             ],
             "toughness": "4",
+            "types": [
+              "Creature",
+            ]
           },
           {
             "is_land": true,
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ],
@@ -4013,6 +4551,9 @@
             "rules": [
               "Enchant creature",
               "You control enchanted creature.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
           {
@@ -4024,6 +4565,9 @@
               "Vigilance",
             ],
             "toughness": "4",
+            "types": [
+              "Creature",
+            ]
           },
           {
             "mana_cost": "{4}{R}{R}",
@@ -4034,12 +4578,16 @@
               "{R}: {this} gets +1/+0 until end of turn.",
             ],
             "toughness": "5",
-          }
+            "types": [
+              "Creature",
+            ]
+          },
         ],
         "respond_with": "pile=1 or pile=2",
         "response_type": "pile",
         "stack": [
           {
+            "id": "p30",
             "name": "Fact or Fiction",
             "owner": "TestPlayer",
           }
@@ -4093,12 +4641,18 @@
               "{2}{U}{U}, Remove a wish counter from {this}: Reveal the top card of your library. You may play that card without paying its mana cost. If you don't, exile it.",
             ],
             "toughness": "4",
+            "types": [
+              "Creature",
+            ]
           },
           {
             "is_land": true,
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ],
@@ -4109,6 +4663,9 @@
             "rules": [
               "Enchant creature",
               "You control enchanted creature.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
           {
@@ -4120,6 +4677,9 @@
               "Vigilance",
             ],
             "toughness": "4",
+            "types": [
+              "Creature",
+            ]
           },
           {
             "mana_cost": "{4}{R}{R}",
@@ -4130,12 +4690,16 @@
               "{R}: {this} gets +1/+0 until end of turn.",
             ],
             "toughness": "5",
-          }
+            "types": [
+              "Creature",
+            ]
+          },
         ],
         "respond_with": "pile=1 or pile=2",
         "response_type": "pile",
         "stack": [
           {
+            "id": "p30",
             "name": "Fact or Fiction",
             "owner": "TestPlayer",
           }
@@ -4221,12 +4785,18 @@
               "{2}{U}{U}, Remove a wish counter from {this}: Reveal the top card of your library. You may play that card without paying its mana cost. If you don't, exile it.",
             ],
             "toughness": "4",
+            "types": [
+              "Creature",
+            ]
           },
           {
             "is_land": true,
             "name": "Island",
             "rules": [
               "{T}: Add {U}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ],
@@ -4237,6 +4807,9 @@
             "rules": [
               "Enchant creature",
               "You control enchanted creature.",
+            ],
+            "types": [
+              "Enchantment",
             ]
           },
           {
@@ -4248,6 +4821,9 @@
               "Vigilance",
             ],
             "toughness": "4",
+            "types": [
+              "Creature",
+            ]
           },
           {
             "mana_cost": "{4}{R}{R}",
@@ -4258,12 +4834,16 @@
               "{R}: {this} gets +1/+0 until end of turn.",
             ],
             "toughness": "5",
-          }
+            "types": [
+              "Creature",
+            ]
+          },
         ],
         "respond_with": "pile=1 or pile=2",
         "response_type": "pile",
         "stack": [
           {
+            "id": "p30",
             "name": "Fact or Fiction",
             "owner": "TestPlayer",
           }
@@ -4310,6 +4890,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4362,6 +4946,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p31",
@@ -4374,6 +4961,9 @@
                   "{2}{U}{U}, Remove a wish counter from {this}: Reveal the top card of your library. You may play that card without paying its mana cost. If you don't, exile it.",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -4382,6 +4972,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4391,6 +4984,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4400,6 +4996,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4409,6 +5008,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4417,6 +5019,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -4436,6 +5041,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4534,6 +5143,10 @@
                   "{T}: Add {U}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4586,6 +5199,9 @@
                   "Flying",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p31",
@@ -4598,6 +5214,9 @@
                   "{2}{U}{U}, Remove a wish counter from {this}: Reveal the top card of your library. You may play that card without paying its mana cost. If you don't, exile it.",
                 ],
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -4606,6 +5225,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4615,6 +5237,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4624,6 +5249,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4633,6 +5261,9 @@
                 "playable": true,
                 "rules": [
                   "{T}: Add {U}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4641,6 +5272,9 @@
                 "name": "Mana Drain",
                 "rules": [
                   "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+                ],
+                "types": [
+                  "Instant",
                 ]
               },
             ],
@@ -4660,6 +5294,10 @@
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -4687,7 +5325,7 @@
           }
         ],
         "priority_player": "TestPlayer",
-        "snapshot_id": 597385116241,
+        "snapshot_id": 32468346469,
         "stack": [],
         "step": "Postcombat Main",
         "turn": 2,
@@ -4714,6 +5352,7 @@
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",

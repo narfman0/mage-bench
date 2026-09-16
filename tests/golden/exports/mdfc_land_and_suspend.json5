@@ -534,6 +534,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -541,6 +544,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "rules": [
                   "Suspend 4&mdash;{G} (Rather than cast this card from your hand, you may pay {G} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
                   "Create two 4/4 green Rhino creature tokens with trample.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -550,6 +556,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -559,6 +568,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -568,6 +580,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -577,6 +592,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -586,6 +604,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -788,6 +809,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -800,6 +825,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -808,6 +836,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "rules": [
                   "Suspend 4&mdash;{G} (Rather than cast this card from your hand, you may pay {G} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
                   "Create two 4/4 green Rhino creature tokens with trample.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -816,6 +847,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -824,6 +858,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -832,6 +869,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -840,6 +880,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1017,6 +1060,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -1040,6 +1087,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -1048,6 +1098,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1057,6 +1110,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1066,6 +1122,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1075,6 +1134,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1084,6 +1146,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1363,6 +1428,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -1386,6 +1455,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -1394,6 +1466,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1403,6 +1478,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1412,6 +1490,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1421,6 +1502,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1430,6 +1514,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1572,6 +1659,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -1595,6 +1686,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -1603,6 +1697,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1612,6 +1709,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1621,6 +1721,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1630,6 +1733,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1639,6 +1745,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1733,6 +1842,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -1741,6 +1854,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -1760,6 +1877,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1768,6 +1888,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1776,6 +1899,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1784,6 +1910,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1792,6 +1921,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -1913,6 +2045,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -1921,6 +2057,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -1929,6 +2069,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -1948,6 +2092,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1956,6 +2103,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1964,6 +2114,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1972,6 +2125,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -1980,6 +2136,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2148,6 +2307,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -2156,6 +2319,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -2164,6 +2331,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p14",
@@ -2172,6 +2343,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -2191,6 +2366,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2199,6 +2377,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2207,6 +2388,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2215,6 +2399,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2223,6 +2410,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2398,6 +2588,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -2406,6 +2600,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -2414,6 +2612,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p14",
@@ -2422,6 +2624,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p15",
@@ -2430,6 +2636,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -2449,6 +2659,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2457,6 +2670,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2465,6 +2681,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2473,6 +2692,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2481,6 +2703,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2663,6 +2888,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -2671,6 +2900,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -2679,6 +2912,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p14",
@@ -2687,6 +2924,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p15",
@@ -2695,6 +2936,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -2704,6 +2949,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2712,6 +2960,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2720,6 +2971,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2728,6 +2982,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -2736,6 +2993,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -2800,6 +3060,7 @@ Create two 4/4 green Rhino creature tokens with trample.",
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p39",
             "name": "Crashing Footfalls",
             "owner": "TestPlayer",
           }
@@ -2959,6 +3220,7 @@ Create two 4/4 green Rhino creature tokens with trample.",
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "model": "google/gemini-2.0-flash-001",
       "player": "TestPlayer",
@@ -3002,6 +3264,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -3009,6 +3274,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "rules": [
                   "Suspend 4&mdash;{G} (Rather than cast this card from your hand, you may pay {G} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
                   "Create two 4/4 green Rhino creature tokens with trample.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -3017,6 +3285,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Forest",
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3025,6 +3296,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3033,6 +3307,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3041,6 +3318,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3049,6 +3329,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3084,12 +3367,18 @@ Create two 4/4 green Rhino creature tokens with trample.",
               "When {this} enters, exile target player's graveyard.",
             ],
             "toughness": "1",
+            "types": [
+              "Creature",
+            ]
           },
           {
             "name": "Crashing Footfalls",
             "rules": [
               "Suspend 4&mdash;{G} (Rather than cast this card from your hand, you may pay {G} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
               "Create two 4/4 green Rhino creature tokens with trample.",
+            ],
+            "types": [
+              "Sorcery",
             ]
           },
           {
@@ -3097,6 +3386,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -3104,6 +3396,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -3111,6 +3406,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -3118,6 +3416,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -3125,6 +3426,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -3173,12 +3477,18 @@ Create two 4/4 green Rhino creature tokens with trample.",
               "When {this} enters, exile target player's graveyard.",
             ],
             "toughness": "1",
+            "types": [
+              "Creature",
+            ]
           },
           {
             "name": "Crashing Footfalls",
             "rules": [
               "Suspend 4&mdash;{G} (Rather than cast this card from your hand, you may pay {G} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
               "Create two 4/4 green Rhino creature tokens with trample.",
+            ],
+            "types": [
+              "Sorcery",
             ]
           },
           {
@@ -3186,6 +3496,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
             "name": "Forest",
             "rules": [
               "{T}: Add {G}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -3193,6 +3506,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -3200,6 +3516,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -3207,6 +3526,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
           {
@@ -3214,6 +3536,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
             "name": "Plains",
             "rules": [
               "{T}: Add {W}.",
+            ],
+            "types": [
+              "Land",
             ]
           },
         ]
@@ -3261,6 +3586,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -3268,6 +3596,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "rules": [
                   "Suspend 4&mdash;{G} (Rather than cast this card from your hand, you may pay {G} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
                   "Create two 4/4 green Rhino creature tokens with trample.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -3277,6 +3608,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3286,6 +3620,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3295,6 +3632,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3304,6 +3644,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3313,6 +3656,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3431,6 +3777,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -3438,6 +3787,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "rules": [
                   "Suspend 4&mdash;{G} (Rather than cast this card from your hand, you may pay {G} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
                   "Create two 4/4 green Rhino creature tokens with trample.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -3447,6 +3799,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {G}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3456,6 +3811,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3465,6 +3823,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3474,6 +3835,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3483,6 +3847,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3602,6 +3969,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3614,6 +3985,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -3622,6 +3996,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "rules": [
                   "Suspend 4&mdash;{G} (Rather than cast this card from your hand, you may pay {G} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
                   "Create two 4/4 green Rhino creature tokens with trample.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -3630,6 +4007,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3638,6 +4018,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3646,6 +4029,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3654,6 +4040,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3728,6 +4117,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -3741,6 +4134,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p11",
@@ -3749,6 +4145,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "rules": [
                   "Suspend 4&mdash;{G} (Rather than cast this card from your hand, you may pay {G} and exile it with four time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
                   "Create two 4/4 green Rhino creature tokens with trample.",
+                ],
+                "types": [
+                  "Sorcery",
                 ]
               },
               {
@@ -3758,6 +4157,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3767,6 +4169,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3776,6 +4181,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3785,6 +4193,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3794,6 +4205,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -3929,6 +4343,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -3952,6 +4370,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -3960,6 +4381,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3969,6 +4393,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3978,6 +4405,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3987,6 +4417,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -3996,6 +4429,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4120,6 +4556,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -4143,6 +4583,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -4151,6 +4594,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4160,6 +4606,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4169,6 +4618,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4178,6 +4630,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4187,6 +4642,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4315,6 +4773,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -4338,6 +4800,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -4346,6 +4811,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4355,6 +4823,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4364,6 +4835,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4373,6 +4847,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4382,6 +4859,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4465,6 +4945,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -4488,6 +4972,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "When {this} enters, exile target player's graveyard.",
                 ],
                 "toughness": "1",
+                "types": [
+                  "Creature",
+                ]
               },
               {
                 "id": "p13",
@@ -4496,6 +4983,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4505,6 +4995,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4514,6 +5007,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4523,6 +5019,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4532,6 +5031,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4611,6 +5113,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -4619,6 +5125,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": true,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -4638,6 +5148,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4646,6 +5159,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4654,6 +5170,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4662,6 +5181,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4670,6 +5192,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4746,6 +5271,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -4754,6 +5283,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -4774,6 +5307,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4783,6 +5319,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4792,6 +5331,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4801,6 +5343,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4810,6 +5355,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4819,6 +5367,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -4945,6 +5496,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -4953,6 +5508,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -4961,6 +5520,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -4980,6 +5543,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4988,6 +5554,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -4996,6 +5565,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5004,6 +5576,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5012,6 +5587,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -5096,6 +5674,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -5104,6 +5686,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -5112,6 +5698,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -5132,6 +5722,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5141,6 +5734,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5150,6 +5746,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5159,6 +5758,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5168,6 +5770,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5177,6 +5782,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -5310,6 +5918,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -5318,6 +5930,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -5326,6 +5942,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p14",
@@ -5334,6 +5954,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -5353,6 +5977,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5361,6 +5988,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5369,6 +5999,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5377,6 +6010,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5385,6 +6021,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -5476,6 +6115,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -5484,6 +6127,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -5492,6 +6139,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p14",
@@ -5500,6 +6151,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -5520,6 +6175,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5529,6 +6187,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5538,6 +6199,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5547,6 +6211,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5556,6 +6223,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5565,6 +6235,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -5705,6 +6378,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -5713,6 +6390,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -5721,6 +6402,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p14",
@@ -5729,6 +6414,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p15",
@@ -5737,6 +6426,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -5756,6 +6449,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5764,6 +6460,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5772,6 +6471,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5780,6 +6482,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5788,6 +6493,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -5886,6 +6594,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -5894,6 +6606,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -5902,6 +6618,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p14",
@@ -5910,6 +6630,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p15",
@@ -5918,6 +6642,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "exile": [
@@ -5937,6 +6665,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5945,6 +6676,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5953,6 +6687,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5961,6 +6698,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -5969,6 +6709,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -6034,6 +6777,7 @@ Create two 4/4 green Rhino creature tokens with trample.",
         "stack": [
           {
             "ability_text": "When the last time counter is removed from Crashing Footfalls, if it's exiled, ",
+            "id": "p38",
             "name": "Crashing Footfalls",
             "owner": "TestPlayer",
             "source_card": "Crashing Footfalls",
@@ -6084,6 +6828,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -6092,6 +6840,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -6100,6 +6852,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p14",
@@ -6108,6 +6864,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p15",
@@ -6116,6 +6876,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               }
             ],
             "hand": [
@@ -6125,6 +6889,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6133,6 +6900,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6141,6 +6911,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6149,6 +6922,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6157,6 +6933,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "name": "Plains",
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -6221,6 +7000,7 @@ Create two 4/4 green Rhino creature tokens with trample.",
         "response_type": "boolean",
         "stack": [
           {
+            "id": "p39",
             "name": "Crashing Footfalls",
             "owner": "TestPlayer",
           }
@@ -6267,6 +7047,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -6275,6 +7059,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -6283,6 +7071,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p14",
@@ -6291,6 +7083,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p15",
@@ -6299,6 +7095,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p40",
@@ -6311,6 +7111,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "tapped": false,
                 "token": true,
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p41",
@@ -6323,6 +7127,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "tapped": false,
                 "token": true,
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -6343,6 +7151,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6352,6 +7163,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6361,6 +7175,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6370,6 +7187,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6379,6 +7199,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6388,6 +7211,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -6532,6 +7358,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {B}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p12",
@@ -6540,6 +7370,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {G}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p13",
@@ -6548,6 +7382,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p14",
@@ -6556,6 +7394,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p15",
@@ -6564,6 +7406,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                   "{T}: Add {W}.",
                 ],
                 "tapped": false,
+                "types": [
+                  "Land",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p40",
@@ -6576,6 +7422,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "tapped": false,
                 "token": true,
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               },
               {
                 "id": "p41",
@@ -6588,6 +7438,10 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "tapped": false,
                 "token": true,
                 "toughness": "4",
+                "types": [
+                  "Creature",
+                ],
+                "uid": "xxx",
               }
             ],
             "graveyard": [
@@ -6608,6 +7462,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6617,6 +7474,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6626,6 +7486,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6635,6 +7498,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6644,6 +7510,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
               {
@@ -6653,6 +7522,9 @@ Create two 4/4 green Rhino creature tokens with trample.",
                 "playable": true,
                 "rules": [
                   "{T}: Add {W}.",
+                ],
+                "types": [
+                  "Land",
                 ]
               },
             ],
@@ -6710,7 +7582,7 @@ Create two 4/4 green Rhino creature tokens with trample.",
           }
         ],
         "priority_player": "TestPlayer",
-        "snapshot_id": 875645921334,
+        "snapshot_id": 350694278684,
         "stack": [],
         "step": "Precombat Main",
         "turn": 6,
@@ -6737,6 +7609,7 @@ Create two 4/4 green Rhino creature tokens with trample.",
         "get_action_choices",
         "choose_action",
         "concede",
+        "rollback_turns",
       ],
       "total_cost_usd": 0.0,
       "type": "pilot",

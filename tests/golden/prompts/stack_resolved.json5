@@ -127,7 +127,8 @@ Call get_action_choices to see your options, then choose_action to decide.",
   Board: TestPlayer: 20hp hand=7 lib=53 | Opponent: 20hp hand=7 lib=53\n\
   Message: Mulligan down to 6 cards?\n\
   Choices (0): \n\
-  Respond: choice=yes or choice=no",
+  Respond: choice=yes or choice=no\n\
+  Note: pass_priority cannot skip this decision. Answer it with choose_action.",
     "role": "tool",
     "tool_call_id": "call_2",
   },
@@ -383,6 +384,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
                 "{T}: Add {R}.",
               ],
               "tapped": false,
+              "types": [
+                "Land",
+              ],
+              "uid": "xxx",
             }
           ],
           "graveyard": [
@@ -403,6 +408,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "rules": [
                 "{T}: Add {B}.",
                 "{T}: Add {R}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -412,6 +420,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{this} deals 3 damage to any target.",
+              ],
+              "types": [
+                "Instant",
               ]
             },
             {
@@ -421,6 +432,10 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "power": 1,
               "toughness": 1,
+              "types": [
+                "Artifact",
+                "Creature",
+              ]
             },
             {
               "id": "p25",
@@ -429,6 +444,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "playable": true,
               "rules": [
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -439,6 +457,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "rules": [
                 "{T}: Add {R}.",
                 "{T}: Add {W}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
             {
@@ -449,6 +470,9 @@ Call get_action_choices to see your options, then choose_action to decide.",
               "rules": [
                 "{T}: Add {G}.",
                 "{T}: Add {R}.",
+              ],
+              "types": [
+                "Land",
               ]
             },
           ],
@@ -478,7 +502,7 @@ Call get_action_choices to see your options, then choose_action to decide.",
         }
       ],
       "priority_player": "TestPlayer",
-      "snapshot_id": 847410460514,
+      "snapshot_id": 18028689560,
       "stack": [],
       "step": "Precombat Main",
       "turn": 2,

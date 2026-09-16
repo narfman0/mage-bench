@@ -1722,14 +1722,33 @@ def _json_diff(expected: object, actual: object, path: str = "", max_diffs: int 
     return diffs
 
 
+# A permanent's `uid` is the first 3 chars of its engine UUID — the ref that
+# engine log lines embed ("Name [58c]") — and so differs on every run, like
+# the log refs (which the pilot renderer already strips). Pin it in goldens.
+_UID_PLACEHOLDER = "xxx"
+
+
+def _pin_uids(obj: object) -> object:
+    """Replace every `uid` value in a nested structure with a fixed placeholder."""
+    if isinstance(obj, dict):
+        return {key: (_UID_PLACEHOLDER if key == "uid" and isinstance(value, str) else _pin_uids(value)) for key, value in obj.items()}
+    if isinstance(obj, list):
+        return [_pin_uids(item) for item in obj]
+    return obj
+
+
 def _normalize_prompt_for_golden(obj: object) -> object:
     """Normalize prompt payloads for deterministic golden comparisons.
 
     - Parse embedded JSON strings and re-serialize with sorted keys.
+    - Pin per-run permanent uids (see _pin_uids).
     """
     obj = _json_ready(obj)
     if isinstance(obj, dict):
-        return {key: _normalize_prompt_for_golden(value) for key, value in obj.items()}
+        return {
+            key: (_UID_PLACEHOLDER if key == "uid" and isinstance(value, str) else _normalize_prompt_for_golden(value))
+            for key, value in obj.items()
+        }
     if isinstance(obj, list):
         return [_normalize_prompt_for_golden(item) for item in obj]
     if isinstance(obj, str):
@@ -1859,8 +1878,10 @@ def _normalize_export_for_golden(export_data: dict, *, name_map: Mapping[str, st
     _strip_volatile(normalized)
     normalized = _normalize_embedded_json(normalized)
     normalized = _canonicalize_golden_names(normalized, name_map)
-    # Round-trip through JSON to convert dataclass instances to plain dicts
-    return json.loads(json.dumps(normalized, default=json_default))
+    # Round-trip through JSON to convert dataclass instances to plain dicts —
+    # board snapshots inside actions are dataclasses until here, so the uid
+    # pin has to run on the plain-dict result.
+    return _pin_uids(json.loads(json.dumps(normalized, default=json_default)))
 
 
 def assert_golden_export(name: str, export_data: dict, *, name_map: Mapping[str, str] | None = None) -> None:
