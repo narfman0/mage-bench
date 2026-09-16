@@ -1083,7 +1083,9 @@ public final class BridgePublishedQueryBuilder {
         for (Map<String, Object> item : stack) {
             var summary = new LinkedHashMap<String, Object>();
             for (Map.Entry<String, Object> entry : item.entrySet()) {
-                if ("id".equals(entry.getKey()) || "rules".equals(entry.getKey())) {
+                // Keep "id": clients render the stack and need a stable key per
+                // item; only the bulky rules text stays out of action results.
+                if ("rules".equals(entry.getKey())) {
                     continue;
                 }
                 summary.put(entry.getKey(), freezeJsonLike(entry.getValue()));
