@@ -3,8 +3,12 @@ package mage.collectors.services;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import mage.constants.ManaType;
+import mage.MageObject;
+import mage.abilities.Ability;
+import mage.cards.Card;
 import mage.game.Game;
 import mage.game.events.PlayerQueryEvent;
+import mage.game.permanent.Permanent;
 import mage.players.Player;
 import mage.util.ShortIdRegistry;
 import org.apache.log4j.Logger;
@@ -15,7 +19,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -168,7 +174,7 @@ public class ReplayFeederCollector extends EmptyDataCollector {
         }
         Runnable answer;
         try {
-            answer = responseFor(game, player, d);
+            answer = responseFor(game, player, event, d);
         } catch (IllegalStateException e) {
             diverge(r, e.getMessage());
             return;
@@ -192,7 +198,7 @@ public class ReplayFeederCollector extends EmptyDataCollector {
      *  game. Each answer is also reported to the collectors first, exactly as
      *  GameController.sendDirectPlayer* does for a client's answer, so the new
      *  record is complete and a resumed game can itself be resumed. */
-    private static Runnable responseFor(Game game, Player player, ReplayScript.Decision d) {
+    private static Runnable responseFor(Game game, Player player, PlayerQueryEvent event, ReplayScript.Decision d) {
         String type = d.responseType() == null ? "" : d.responseType();
         UUID playerId = player.getId();
         mage.collectors.DataCollectorServices collectors = mage.collectors.DataCollectorServices.getInstance();
@@ -209,12 +215,7 @@ public class ReplayFeederCollector extends EmptyDataCollector {
                         player.setResponseUUID(null);
                     };
                 }
-                ShortIdRegistry registry = game.getShortIdRegistry();
-                UUID target = registry.tryResolve(d.id());
-                if (target == null) {
-                    throw new IllegalStateException("recorded choice " + d.id() + " (" + d.name() + ") at seq " + d.seq()
-                        + " does not exist in this game");
-                }
+                UUID target = resolveRecordedChoice(game, event, d);
                 return () -> {
                     collectors.onPlayerResponse(game, playerId, "uuid", target);
                     player.setResponseUUID(target);
@@ -251,6 +252,84 @@ public class ReplayFeederCollector extends EmptyDataCollector {
             default:
                 throw new IllegalStateException("recorded response type '" + type + "' at seq " + d.seq() + " cannot be replayed");
         }
+    }
+
+    /** The live object a recorded uuid choice means. Short ids are stable by
+     *  construction for objects the recorder id'd at query time (targets);
+     *  they are not for abilities (id'd at response time) or for same-name
+     *  cards in a set the recorder walked in hash order — so the id is
+     *  checked against the recorded name and, failing that, the query's own
+     *  candidates are searched by content. */
+    static UUID resolveRecordedChoice(Game game, PlayerQueryEvent event, ReplayScript.Decision d) {
+        List<? extends Ability> abilities = event != null ? event.getAbilities() : null;
+        if (abilities != null && !abilities.isEmpty()) {
+            if (d.name() != null) {
+                for (Ability a : abilities) {
+                    if (d.name().equals(a.getRule())) {
+                        return a.getId();
+                    }
+                }
+            }
+            if (d.abilityIndex() != null && d.abilityIndex() >= 0 && d.abilityIndex() < abilities.size()) {
+                return abilities.get(d.abilityIndex()).getId();
+            }
+            if (abilities.size() == 1) {
+                return abilities.get(0).getId();
+            }
+            throw new IllegalStateException("recorded ability choice " + d.id() + " (" + d.name() + ") at seq " + d.seq()
+                + " matches none of the " + abilities.size() + " abilities offered");
+        }
+        ShortIdRegistry registry = game.getShortIdRegistry();
+        UUID target = registry.tryResolve(d.id());
+        if (target != null && d.name() != null) {
+            MageObject obj = game.getObject(target);
+            if (obj != null && !d.name().equals(obj.getName())) {
+                target = null; // the id landed on something else this run
+            }
+        }
+        if (target == null && d.name() != null && event != null) {
+            List<UUID> named = new ArrayList<>();
+            for (UUID id : candidates(game, event)) {
+                MageObject obj = game.getObject(id);
+                if (obj != null && d.name().equals(obj.getName()) && !named.contains(id)) {
+                    named.add(id);
+                }
+            }
+            // Same-name candidates are interchangeable; take the lowest short id for determinism.
+            named.sort(java.util.Comparator.comparingInt(registry::getSequence));
+            if (!named.isEmpty()) {
+                target = named.get(0);
+            }
+        }
+        if (target == null) {
+            throw new IllegalStateException("recorded choice " + d.id() + " (" + d.name() + ") at seq " + d.seq()
+                + " does not exist in this game");
+        }
+        return target;
+    }
+
+    private static List<UUID> candidates(Game game, PlayerQueryEvent event) {
+        List<UUID> out = new ArrayList<>();
+        if (event.getTargets() != null) {
+            out.addAll(event.getTargets());
+        }
+        if (event.getCards() != null) {
+            out.addAll(event.getCards());
+        }
+        if (event.getPerms() != null) {
+            for (Permanent p : event.getPerms()) {
+                out.add(p.getId());
+            }
+        }
+        List<List<? extends Card>> piles = java.util.Arrays.asList(event.getPile1(), event.getPile2(), event.getBooster());
+        for (List<? extends Card> pile : piles) {
+            if (pile != null) {
+                for (Card c : pile) {
+                    out.add(c.getId());
+                }
+            }
+        }
+        return out;
     }
 
     private void diverge(Replay r, String why) {

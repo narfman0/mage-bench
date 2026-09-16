@@ -36,6 +36,19 @@ class ReplayScriptTest {
     }
 
     @Test
+    void abilityChoicesCarryTheirIndexAndRule() {
+        ReplayScript s = ReplayScript.parse(List.of(
+            "{\"seq\":3,\"type\":\"decision\",\"player\":\"A\",\"query_type\":\"CHOOSE_ABILITY\","
+                + "\"response\":{\"type\":\"uuid\",\"id\":\"p29\",\"ability_index\":1,\"name\":\"{2}, {T}: copy target land.\"}}",
+            "{\"seq\":4,\"type\":\"decision\",\"player\":\"A\",\"query_type\":\"SELECT\",\"response\":{\"type\":\"uuid\",\"id\":\"p7\",\"name\":\"Island\"}}"
+        ));
+        ReplayScript.Decision ability = s.next("A");
+        assertEquals(1, ability.abilityIndex());
+        assertEquals("{2}, {T}: copy target land.", ability.name());
+        assertNull(s.next("A").abilityIndex());
+    }
+
+    @Test
     void normalizeStripsEveryEngineRef() {
         assertEquals("Bolt targets Memnite", ReplayScript.normalizeLog("Bolt [1ab] targets Memnite [c70]"));
         assertEquals("AI-003-04e0's library is shuffled",

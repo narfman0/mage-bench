@@ -21,8 +21,8 @@ import time
 from pathlib import Path
 
 from tests.golden_helpers import (
-    DECK_BOLT_AND_BURN,
     DECK_FILLER,
+    DECK_RESUME_FROM_RECORD,
     SpectatorProcess,
     _run_opponent_autopass,
     _run_replay_on_bridge,
@@ -37,20 +37,29 @@ MULLIGAN = [
     {"name": "pass_priority", "arguments": {}},
     {"name": "choose_action", "arguments": {"choice": "no"}},
 ]
-# T1: Mountain (p14), Memnite (p13), decline to cast Lightning Bolt.
+# Opponent's 7 Mountains are p3-p9; TestPlayer's hand alphabetically: Badlands
+# p10, Lightning Bolt p11/p12, Memnite p13, Mountain p14, Taiga p15,
+# Terramorphic Expanse p16. T1: play Terramorphic Expanse and crack it — an
+# ability choice (GAME_CHOOSE_ABILITY, replayed by content: abilities have no
+# stable short id) and a library search (declined) with a shuffle, both inside
+# the recorded half — then Memnite; decline to cast anything.
 FIRST_HALF = [
     *MULLIGAN,
     {"name": "pass_priority", "arguments": {}},
-    {"name": "choose_action", "arguments": {"choice": "p14"}},
+    {"name": "choose_action", "arguments": {"choice": "p16"}},
+    {"name": "pass_priority", "arguments": {}},
+    {"name": "choose_action", "arguments": {"choice": "p16"}},
+    {"name": "choose_action", "arguments": {"choice": "0"}},
+    {"name": "choose_action", "arguments": {"choice": "0"}},
     {"name": "pass_priority", "arguments": {}},
     {"name": "choose_action", "arguments": {"choice": "p13"}},
     {"name": "pass_priority", "arguments": {}},
     {"name": "choose_action", "arguments": {"choice": "no"}},
 ]
-# T2: Badlands (p10), skip attacking, Bolt (p11) the opponent.
+# T2: Mountain (p14), skip attacking, Bolt (p11) the opponent, let it resolve.
 SECOND_HALF = [
     {"name": "pass_priority", "arguments": {}},
-    {"name": "choose_action", "arguments": {"choice": "p10"}},
+    {"name": "choose_action", "arguments": {"choice": "p14"}},
     {"name": "pass_priority", "arguments": {}},
     {"name": "choose_action", "arguments": {"choice": "no"}},
     {"name": "pass_priority", "arguments": {}},
@@ -131,7 +140,7 @@ def _play(
     game_dir.mkdir(parents=True, exist_ok=True)
     players_config = {
         "players": [
-            {"type": "replay", "name": name_a, "deck": DECK_BOLT_AND_BURN},
+            {"type": "replay", "name": name_a, "deck": DECK_RESUME_FROM_RECORD},
             {"type": "replay", "name": name_b, "deck": DECK_FILLER},
         ],
         "gameType": "Two Player Duel",
@@ -151,7 +160,7 @@ def _play(
             errors.append(exc)
 
     threads = [
-        threading.Thread(target=_join, args=(session_a, DECK_BOLT_AND_BURN)),
+        threading.Thread(target=_join, args=(session_a, DECK_RESUME_FROM_RECORD)),
         threading.Thread(target=_join, args=(session_b, DECK_FILLER)),
     ]
     for t in threads:

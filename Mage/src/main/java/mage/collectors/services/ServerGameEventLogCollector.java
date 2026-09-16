@@ -391,6 +391,20 @@ public class ServerGameEventLogCollector extends EmptyDataCollector {
                     if (obj != null) {
                         response.put("name", obj.getName());
                     }
+                    // An ability has no game object and gets its short id only
+                    // here, at response time, so the id is not stable across
+                    // runs; a resume replays it by content (ReplayFeederCollector).
+                    if (pending.event != null && pending.event.getAbilities() != null) {
+                        int idx = 0;
+                        for (Ability ab : pending.event.getAbilities()) {
+                            if (ab.getId().equals(uuid)) {
+                                response.put("ability_index", idx);
+                                response.put("name", ab.getRule());
+                                break;
+                            }
+                            idx++;
+                        }
+                    }
                 }
                 break;
             case "boolean":

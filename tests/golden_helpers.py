@@ -297,6 +297,7 @@ DECK_ANCIENT_STIRRINGS = "tests/decks/ancient_stirrings.dck"
 DECK_MDFC_LAND_AND_SUSPEND = "tests/decks/mdfc_land_and_suspend.dck"
 DECK_GRIZZLY_BEARS = "tests/decks/grizzly_bears.dck"
 DECK_TWO_MEMNITES = "tests/decks/two_savannah_lions.dck"
+DECK_RESUME_FROM_RECORD = "tests/decks/resume_from_record.dck"
 
 
 # Main classes for direct java -cp launches (from each module's pom.xml exec-maven-plugin config)

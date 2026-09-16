@@ -31,7 +31,7 @@ public final class ReplayScript {
 
     /** One recorded decision. */
     public record Decision(int seq, String player, String queryType, String responseType,
-                           String id, String name, JsonElement value, String color) {
+                           String id, String name, JsonElement value, String color, Integer abilityIndex) {
     }
 
     private static final Pattern LOG_REF = Pattern.compile("\\s*\\[[0-9a-f]{3}\\]");
@@ -87,7 +87,8 @@ public final class ReplayScript {
                     str(r, "id"),
                     str(r, "name"),
                     r.get("value"),
-                    str(r, "color")));
+                    str(r, "color"),
+                    r.has("ability_index") && r.get("ability_index").isJsonPrimitive() ? r.get("ability_index").getAsInt() : null));
             } else if ("game_action".equals(type)) {
                 logs.add(normalizeLog(str(e, "message")));
             } else if ("game_start".equals(type) && e.has("players") && e.get("players").isJsonArray()) {
