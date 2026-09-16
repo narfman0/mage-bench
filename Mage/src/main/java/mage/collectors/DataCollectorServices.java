@@ -2,6 +2,7 @@ package mage.collectors;
 
 import mage.collectors.services.PrintGameLogsDataCollector;
 import mage.collectors.services.SaveGameHistoryDataCollector;
+import mage.collectors.services.ReplayFeederCollector;
 import mage.collectors.services.ServerGameEventLogCollector;
 import mage.game.Game;
 import mage.game.Table;
@@ -55,6 +56,7 @@ final public class DataCollectorServices implements DataCollector {
         getInstance().allServices.add(new PrintGameLogsDataCollector());
         getInstance().allServices.add(new SaveGameHistoryDataCollector());
         getInstance().allServices.add(new ServerGameEventLogCollector());
+        getInstance().allServices.add(new ReplayFeederCollector());
         logger.info(String.format("Data collectors: found %d services", getInstance().allServices.size()));
 
         // enable only needed
@@ -64,6 +66,8 @@ final public class DataCollectorServices implements DataCollector {
             isDefault |= enableSaveGameHistory && service.getServiceCode().equals(SaveGameHistoryDataCollector.SERVICE_CODE);
             // Server game event log is always enabled (no-ops when gameLogDir is null)
             isDefault |= service.getServiceCode().equals(ServerGameEventLogCollector.SERVICE_CODE);
+            // Replay feeder is always enabled too (no-ops when replayFrom is null)
+            isDefault |= service.getServiceCode().equals(ReplayFeederCollector.SERVICE_CODE);
             boolean isEnable = isServiceEnable(service.getServiceCode(), isDefault);
             if (isEnable) {
                 getInstance().activeServices.add(service);

@@ -1678,5 +1678,36 @@
 }",
       }
     ],
+  },
+  {
+    "name": "hold_for_replay",
+    "description": "Ignore game queries with game_seq at or below the given value (the host's replay feeder answers them); resume acting on the first query past it. 0 clears the hold.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "through_game_seq": {
+          "type": "integer",
+          "description": "Last recorded game_seq to hold through; 0 clears",
+        }
+      },
+      "additionalProperties": false,
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "through_game_seq": {
+          "type": "integer",
+          "description": "The game seq this bridge now holds through (0 = not holding)",
+        }
+      },
+    },
+    "examples": [
+      {
+        "label": "Hold through seq 523",
+        "value": "{\n\
+  \"through_game_seq\": 523\n\
+}",
+      }
+    ],
   }
 ]

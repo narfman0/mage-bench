@@ -58,6 +58,9 @@ public class MatchOptions implements Serializable {
     // RNG seed for each game of this match. Null leaves the stream alone.
     protected Long gameSeed;
 
+    // Recorded event log to replay decisions from (resume). Null plays normally.
+    protected String replayFrom;
+
     public MatchOptions(String name, String gameType, boolean multiPlayer) {
         this.name = name;
         this.gameType = gameType;
@@ -340,5 +343,13 @@ public class MatchOptions implements Serializable {
 
     public void setGameSeed(Long gameSeed) {
         this.gameSeed = gameSeed;
+    }
+
+    public String getReplayFrom() {
+        return replayFrom;
+    }
+
+    public void setReplayFrom(String replayFrom) {
+        this.replayFrom = replayFrom;
     }
 }

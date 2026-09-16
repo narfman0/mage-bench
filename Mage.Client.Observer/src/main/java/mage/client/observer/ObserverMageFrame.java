@@ -398,6 +398,11 @@ public class ObserverMageFrame extends MageFrame {
         Long gameSeed = cmd.has("gameSeed") && !cmd.get("gameSeed").isJsonNull()
                 ? cmd.get("gameSeed").getAsLong()
                 : null;
+        // Resume: the recorded event log whose decisions the server's replay
+        // feeder answers before live players take over (ReplayFeederCollector).
+        String replayFrom = cmd.has("replayFrom") && !cmd.get("replayFrom").isJsonNull()
+                ? cmd.get("replayFrom").getAsString()
+                : null;
 
         // Update game directory for the new game
         System.setProperty("xmage.observer.gameDir", gameDir);
@@ -412,7 +417,7 @@ public class ObserverMageFrame extends MageFrame {
         UUID roomId = SessionHandler.getSession().getMainRoomId();
         assert roomId != null : "keepAlive: no main room ID";
 
-        UUID tableId = createGameTable(roomId, config, gameDir, choosingPlayer, skipInitShuffling, winsNeeded, gameSeed);
+        UUID tableId = createGameTable(roomId, config, gameDir, choosingPlayer, skipInitShuffling, winsNeeded, gameSeed, replayFrom);
 
         // Start watching for the game to begin
         watchForGameStart(roomId, tableId, gameDir);
@@ -443,7 +448,8 @@ public class ObserverMageFrame extends MageFrame {
             String choosingPlayer,
             boolean skipInitShuffling,
             int winsNeeded,
-            Long gameSeed
+            Long gameSeed,
+            String replayFrom
     ) throws Exception {
         // Create a minimal test deck for bot slots (headless players bring their own decks)
         String testDeckFile = "test.dck";
@@ -488,6 +494,7 @@ public class ObserverMageFrame extends MageFrame {
         options.setBannedUsers(IgnoreList.getIgnoredUsers(serverAddress));
         options.setGameLogDir(gameDir);
         options.setGameSeed(gameSeed);
+        options.setReplayFrom(replayFrom);
 
         TableView table = SessionHandler.createTable(roomId, options);
         LOGGER.info("keepAlive: created table " + table.getTableId());

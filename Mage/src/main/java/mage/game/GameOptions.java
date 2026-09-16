@@ -82,6 +82,14 @@ public class GameOptions implements Serializable, Copyable<GameOptions> {
      */
     public Long gameSeed = null;
 
+    /**
+     * Path of a recorded server game event log (server_game_events.jsonl) whose
+     * decisions the ReplayFeederCollector answers for the players, in order,
+     * until they run out — how a seeded game is resumed from its record.
+     * Null means play normally.
+     */
+    public String replayFrom = null;
+
     // PLANECHASE game mode
     public boolean planeChase = false;
     // xmage uses increased by 1/3 chances (2/2/9) for chaos/planar result, see 1a9f12f5767ce0beeed26a8ff5c8a8f9490c9c47
@@ -106,6 +114,7 @@ public class GameOptions implements Serializable, Copyable<GameOptions> {
         this.globalEmblemCards = new HashSet<>(options.globalEmblemCards);
         this.gameLogDir = options.gameLogDir;
         this.gameSeed = options.gameSeed;
+        this.replayFrom = options.replayFrom;
     }
 
     @Override

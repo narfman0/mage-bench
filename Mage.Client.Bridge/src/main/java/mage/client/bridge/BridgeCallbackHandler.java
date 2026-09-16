@@ -168,6 +168,7 @@ public class BridgeCallbackHandler {
             ),
             CHAT_DEDUP_WINDOW_MS
         );
+        this.callbackProcessorService = callbackProcessorService;
         BridgeCallbackDispatcher dispatcher = new BridgeCallbackDispatcher(callbackProcessorService);
         this.processor = new BridgeProcessor(client.getUsername(), logger, dispatcher::process);
         processorRef.set(this.processor);
@@ -542,6 +543,13 @@ public class BridgeCallbackHandler {
      * Returns indexed choices so external clients can pick by index via chooseAction().
      */
     @SuppressWarnings("unchecked")
+    private BridgeCallbackProcessorService callbackProcessorService;
+
+    /** hold_for_replay: see HoldForReplayTool. */
+    public void holdForReplay(long throughGameSeq) {
+        callbackProcessorService.setHoldThroughGameSeq(throughGameSeq);
+    }
+
     public ActionResult getActionChoices(Long boardCursorParam) {
         return mcpQueryApi.getActionChoices(boardCursorParam);
     }

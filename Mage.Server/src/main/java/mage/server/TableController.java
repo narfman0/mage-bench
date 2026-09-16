@@ -683,6 +683,7 @@ public class TableController {
             gameOptions.skipInitShuffling = match.getOptions().isSkipInitShuffling();
             gameOptions.gameLogDir = match.getOptions().getGameLogDir();
             gameOptions.gameSeed = match.getOptions().getGameSeed();
+            gameOptions.replayFrom = match.getOptions().getReplayFrom();
             // Resolve fixed choosing player if configured (for deterministic tests)
             if (choosingPlayerId == null && match.getOptions().getChoosingPlayerName() != null) {
                 String targetName = match.getOptions().getChoosingPlayerName();

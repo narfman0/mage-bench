@@ -213,11 +213,37 @@ public final class BridgeCallbackProcessorService
         bridgeEventLogger.logBridgeEvent(method.name(), gameId, summary);
     }
 
+    // Resume (ReplayFeederCollector): while the server replays recorded
+    // decisions, this bridge must not act on the queries it sees — the feeder
+    // answers them. Hold through the last recorded game seq; the first query
+    // past it is the live game again. -Dxmage.bridge.holdThroughGameSeq=N.
+    private volatile long holdThroughGameSeq = Long.getLong("xmage.bridge.holdThroughGameSeq", 0L);
+
+    /** Set from the hold_for_replay MCP tool (a pooled bridge is already running when the resume is decided). */
+    public void setHoldThroughGameSeq(long seq) {
+        holdThroughGameSeq = Math.max(0L, seq);
+        logger.info("[" + username + "] Replay hold set through game_seq " + holdThroughGameSeq);
+    }
+
     @Override
     public void storePendingAction(UUID gameId, ClientCallbackMethod method, Object data) {
         String message = extractMessage(data);
         int gameSeq = 0;
         GameView gameView = extractGameView(data);
+        if (holdThroughGameSeq > 0) {
+            int seq = gameView != null ? gameView.getGameSeq() : 0;
+            if (seq <= holdThroughGameSeq) {
+                if (gameView != null) {
+                    updateLastGameView(gameView, "hold:" + method.name());
+                }
+                logger.info("[" + username + "] Holding " + method + " at game_seq " + seq
+                    + " (replay feeder answers through " + holdThroughGameSeq + ")");
+                bridgeEventLogger.logBridgeEvent("HELD_FOR_REPLAY", gameId, method.name() + "@" + seq);
+                return;
+            }
+            logger.info("[" + username + "] Replay hold released at game_seq " + seq);
+            holdThroughGameSeq = 0;
+        }
         PendingAction newAction = new PendingAction(gameId, method, data, message, gameSeq);
         PendingAction replacedAction;
         boolean projectedNewAction = false;
