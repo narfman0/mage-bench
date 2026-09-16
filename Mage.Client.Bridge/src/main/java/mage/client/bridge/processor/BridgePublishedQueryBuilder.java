@@ -343,6 +343,19 @@ public final class BridgePublishedQueryBuilder {
         result.response_type = "boolean";
         result.respond_with = "choice=yes or choice=no";
 
+        // A two-way chooseUse (Tireless Provisioner: "Food" or "Treasure"; modes,
+        // cost alternatives, "which player") arrives as GAME_ASK with the engine's
+        // button labels in the message options. Without them yes/no is a guess.
+        if (action.data() instanceof GameClientMessage askMessage && askMessage.getOptions() != null) {
+            Object yesText = askMessage.getOptions().get("UI.left.btn.text");
+            Object noText = askMessage.getOptions().get("UI.right.btn.text");
+            if (yesText != null && noText != null) {
+                result.yes_text = BridgePromptFormatting.stripHtml(yesText.toString());
+                result.no_text = BridgePromptFormatting.stripHtml(noText.toString());
+                result.respond_with = "choice=yes (" + result.yes_text + ") or choice=no (" + result.no_text + ")";
+            }
+        }
+
         String askMsg = action.message();
         if (askMsg != null && askMsg.toLowerCase().contains("mulligan") && gameView != null) {
             CardsView hand = gameView.getMyHand();

@@ -54,6 +54,14 @@ public class ActionResult {
         conditional = "action_pending")
     public List<Map<String, Object>> your_hand;
 
+    @ResultField(description = "What choice=yes means when the engine labelled the buttons (e.g. Food / Treasure); absent for a plain yes/no",
+        conditional = "action_pending")
+    public String yes_text;
+
+    @ResultField(description = "What choice=no means when the engine labelled the buttons",
+        conditional = "action_pending")
+    public String no_text;
+
     @ResultField(description = "declare_attackers or declare_blockers")
     public String combat_phase;
 

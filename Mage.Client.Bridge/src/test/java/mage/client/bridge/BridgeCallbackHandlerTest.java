@@ -64,6 +64,7 @@ import java.lang.reflect.Proxy;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -266,6 +267,43 @@ class BridgeCallbackHandlerTest {
             executor.shutdownNow();
             executor.awaitTermination(1, TimeUnit.SECONDS);
         }
+    }
+
+    @Test
+    void askCarriesTheEnginesButtonLabels() throws Exception {
+        BridgeMageClient client = new BridgeMageClient("TestPlayer");
+        BridgeCallbackHandler handler = client.getCallbackHandler();
+        BridgeProcessor processor = (BridgeProcessor) getDirectField(handler, "processor");
+        BridgeDecisionState decisionState = (BridgeDecisionState) getProcessorStateField(handler, "decisionState");
+
+        // HumanPlayer.chooseUse(trueText, falseText) ships the labels as UI.*.btn.text.
+        Map<String, Serializable> options = new HashMap<>();
+        options.put("UI.left.btn.text", "Food");
+        options.put("UI.right.btn.text", "Treasure");
+        GameClientMessage labelled = new GameClientMessage(gameView(7), options, "Create a Food token or a Treasure token?");
+        processor.submit(BridgeCommand.of(() -> {
+            decisionState.replacePendingAction(new PendingAction(
+                UUID.randomUUID(), ClientCallbackMethod.GAME_ASK, labelled, "Create a Food token or a Treasure token?", 7));
+            return null;
+        }));
+
+        ActionResult result = handler.getActionChoices(null);
+        assertThat(result.response_type).isEqualTo("boolean");
+        assertThat(result.yes_text).isEqualTo("Food");
+        assertThat(result.no_text).isEqualTo("Treasure");
+        assertThat(result.respond_with).isEqualTo("choice=yes (Food) or choice=no (Treasure)");
+
+        // A plain yes/no question has no labels and the fields stay out of the result.
+        GameClientMessage plain = new GameClientMessage(gameView(8), Collections.<String, Serializable>emptyMap(), "Mulligan hand?");
+        processor.submit(BridgeCommand.of(() -> {
+            decisionState.replacePendingAction(new PendingAction(
+                UUID.randomUUID(), ClientCallbackMethod.GAME_ASK, plain, "Mulligan hand?", 8));
+            return null;
+        }));
+        ActionResult mulligan = handler.getActionChoices(null);
+        assertThat(mulligan.yes_text).isNull();
+        assertThat(mulligan.no_text).isNull();
+        assertThat(mulligan.respond_with).isEqualTo("choice=yes or choice=no");
     }
 
     @Test
