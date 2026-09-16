@@ -307,6 +307,74 @@ class BridgeCallbackHandlerTest {
     }
 
     @Test
+    void offerManaSourcesListsManaOnlyPermanentsAmongPriorityChoices() throws Exception {
+        // A player who wants to sacrifice Crystal Vein for {C}{C} and keep the Forest
+        // up has to tap it themselves before casting. Off (the default), mana-only
+        // permanents stay out of the choices; on, each is offered as action=mana with
+        // its abilities, and choosing it sends the permanent (the engine then asks
+        // which ability when there are several).
+        BridgeMageClient client = new BridgeMageClient("TestPlayer");
+        BridgeCallbackHandler handler = client.getCallbackHandler();
+        BridgeProcessor processor = (BridgeProcessor) getDirectField(handler, "processor");
+        BridgeDecisionState decisionState = (BridgeDecisionState) getProcessorStateField(handler, "decisionState");
+
+        UUID playerId = UUID.randomUUID();
+        UUID veinId = UUID.randomUUID();
+        UUID forestId = UUID.randomUUID();
+        UUID boltId = UUID.randomUUID();
+        PlayerView player = playerView(playerId, "TestPlayer", "p99");
+        @SuppressWarnings("unchecked")
+        Map<UUID, Object> battlefield = (Map<UUID, Object>) getField(player, "battlefield");
+        battlefield.put(veinId, permanentView(veinId, "p1", "Crystal Vein", false));
+        battlefield.put(forestId, permanentView(forestId, "p2", "Forest", false));
+        GameView view = gameView(21, List.of(player), new CardsView());
+        setField(view, "myPlayerId", playerId);
+        CardsView hand = new CardsView();
+        hand.put(boltId, cardView(boltId, "p3", "Lightning Bolt"));
+        setField(view, "myHand", hand);
+        Map<UUID, PlayableObjectStats> canPlay = new LinkedHashMap<>();
+        canPlay.put(veinId, manaStats("{T}: Add {C}.", "{T}, Sacrifice Crystal Vein: Add {C}{C}."));
+        canPlay.put(forestId, manaStats("{T}: Add {G}."));
+        canPlay.put(boltId, playStats("Cast Lightning Bolt"));
+        setField(view, "canPlayObjects", playableObjects(canPlay));
+
+        Runnable pend = () -> processor.submit(BridgeCommand.of(() -> {
+            decisionState.replacePendingAction(new PendingAction(
+                UUID.randomUUID(), ClientCallbackMethod.GAME_SELECT,
+                new GameClientMessage(view, Collections.<String, Serializable>emptyMap(), "Play spells and abilities"),
+                "Play spells and abilities", 21));
+            return null;
+        }));
+
+        pend.run();
+        ActionResult hidden = handler.getActionChoices(null);
+        assertThat(hidden.choices).extracting(c -> c.get("name")).containsExactly("Lightning Bolt");
+
+        handler.setOfferManaSources(true);
+        pend.run();
+        ActionResult offered = handler.getActionChoices(null);
+        assertThat(offered.choices).extracting(c -> c.get("name"))
+            .containsExactly("Crystal Vein", "Forest", "Lightning Bolt");
+        Map<String, Object> vein = offered.choices.get(0);
+        assertThat(vein).containsEntry("action", "mana");
+        assertThat(vein.get("mana_abilities")).isEqualTo(List.of("{T}, Sacrifice Crystal Vein: Add {C}{C}.", "{T}: Add {C}."));
+        assertThat(offered.choices.get(2)).containsEntry("action", "cast");
+
+        // The toggle survives the fresh handler join_table creates.
+        BridgeCallbackHandler next = handler.createFreshForNextGame();
+        BridgeProcessor nextProcessor = (BridgeProcessor) getDirectField(next, "processor");
+        BridgeDecisionState nextDecisions = (BridgeDecisionState) getProcessorStateField(next, "decisionState");
+        nextProcessor.submit(BridgeCommand.of(() -> {
+            nextDecisions.replacePendingAction(new PendingAction(
+                UUID.randomUUID(), ClientCallbackMethod.GAME_SELECT,
+                new GameClientMessage(view, Collections.<String, Serializable>emptyMap(), "Play spells and abilities"),
+                "Play spells and abilities", 21));
+            return null;
+        }));
+        assertThat(next.getActionChoices(null).choices).hasSize(3);
+    }
+
+    @Test
     void stripsHtmlNoiseFromMultiAmountDescriptions() throws Exception {
         BridgeMageClient client = new BridgeMageClient("TestPlayer");
         BridgeCallbackHandler handler = client.getCallbackHandler();

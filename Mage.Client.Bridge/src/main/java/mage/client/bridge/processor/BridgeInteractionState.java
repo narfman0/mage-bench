@@ -19,9 +19,19 @@ public final class BridgeInteractionState {
     private int lastTurnNumber = -1;
     private int interactionsThisTurn = 0;
     private int maxInteractionsPerTurn = 25;
+    private boolean offerManaSources = false;
 
     public void setMaxInteractionsPerTurn(int maxInteractionsPerTurn) {
         this.maxInteractionsPerTurn = maxInteractionsPerTurn;
+    }
+
+    /** offer_mana_sources: list mana-only permanents among the priority choices (see OfferManaSourcesTool). */
+    public void setOfferManaSources(boolean offerManaSources) {
+        this.offerManaSources = offerManaSources;
+    }
+
+    public boolean offerManaSources() {
+        return offerManaSources;
     }
 
     public int maxInteractionsPerTurn() {

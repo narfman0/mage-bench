@@ -45,6 +45,7 @@ public class McpServer {
         ConcedeTool.class,
         RollbackTurnsTool.class,
         HoldForReplayTool.class,
+        OfferManaSourcesTool.class,
     };
 
     /** Additional tools only available in keepAlive (multi-game) mode. */

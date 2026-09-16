@@ -193,7 +193,8 @@ public class BridgeCallbackHandler {
             () -> processorState.decisionState().pendingAction(),
             () -> new BridgeProjectionInputs(
                 processorState.gameState().currentPlayerId(),
-                processorState.interactionState().failedManaCastsSnapshot()
+                processorState.interactionState().failedManaCastsSnapshot(),
+                processorState.interactionState().offerManaSources()
             ),
             () -> processorState.gameLogState().publishedGameLog(),
             state -> processorState.cursorState().updateBoardCursor(
@@ -369,6 +370,13 @@ public class BridgeCallbackHandler {
         logger.info("[" + client.getUsername() + "] maxInteractionsPerTurn set to " + effectiveMax);
     }
 
+    /** offer_mana_sources (OfferManaSourcesTool): persistent config, like maxInteractionsPerTurn. */
+    public void setOfferManaSources(boolean enabled) {
+        offerManaSourcesConfig = enabled;
+        applyPersistentProcessorConfig();
+        logger.info("[" + client.getUsername() + "] offerManaSources=" + enabled);
+    }
+
     public void setJoinHandler(JoinHandler handler) {
         this.joinHandler = handler;
     }
@@ -388,6 +396,7 @@ public class BridgeCallbackHandler {
         fresh.session = this.session;
         fresh.keepAliveAfterGameConfig = this.keepAliveAfterGameConfig;
         fresh.maxInteractionsPerTurnConfig = this.maxInteractionsPerTurnConfig;
+        fresh.offerManaSourcesConfig = this.offerManaSourcesConfig;
         fresh.applyPersistentProcessorConfig();
         if (this.holdThroughGameSeqConfig > 0) {
             fresh.holdForReplay(this.holdThroughGameSeqConfig);
@@ -460,6 +469,7 @@ public class BridgeCallbackHandler {
             public Void execute() {
                 processorState.gameState().setKeepAliveAfterGame(keepAliveAfterGameConfig);
                 processorState.interactionState().setMaxInteractionsPerTurn(maxInteractionsPerTurnConfig);
+                processorState.interactionState().setOfferManaSources(offerManaSourcesConfig);
                 return null;
             }
         });
@@ -554,6 +564,7 @@ public class BridgeCallbackHandler {
     // persistent config that the fresh handler inherits — for its next game
     // only; the processor releases it on the first live query.
     private volatile long holdThroughGameSeqConfig = 0L;
+    private volatile boolean offerManaSourcesConfig = false;
 
     /** hold_for_replay: see HoldForReplayTool. */
     public void holdForReplay(long throughGameSeq) {

@@ -108,7 +108,7 @@ public final class BridgePublishedQueryBuilder {
             case GAME_SELECT -> backingChoices = buildSelectChoices(result, data, gameView, projectionInputs);
             case GAME_PLAY_MANA, GAME_PLAY_XMANA -> backingChoices = buildManaChoices(result, data, gameView);
             case GAME_TARGET -> backingChoices = buildTargetChoices(result, data, gameView, projectionInputs.currentPlayerId());
-            case GAME_CHOOSE_ABILITY -> backingChoices = buildAbilityChoices(result, data);
+            case GAME_CHOOSE_ABILITY -> backingChoices = buildAbilityChoices(result, data, projectionInputs);
             case GAME_CHOOSE_CHOICE -> backingChoices = buildChoiceChoices(result, data);
             case GAME_CHOOSE_PILE -> backingChoices = buildPileChoices(result, data);
             case GAME_GET_AMOUNT -> backingChoices = buildAmountChoices(result, data);
@@ -403,7 +403,8 @@ public final class BridgePublishedQueryBuilder {
 
                 List<String> abilityNames = stats.getPlayableAbilityNames();
                 List<String> manaNames = stats.getAllManaAbilityNames();
-                if (!abilityNames.isEmpty() && manaNames.size() == abilityNames.size()) {
+                boolean manaOnly = !abilityNames.isEmpty() && manaNames.size() == abilityNames.size();
+                if (manaOnly && !projectionInputs.offerManaSources()) {
                     continue;
                 }
 
@@ -411,6 +412,22 @@ public final class BridgePublishedQueryBuilder {
                 var choiceEntry = new HashMap<String, Object>();
                 choiceEntry.put("index", idx);
                 choiceEntry.put("id", processorServices.viewLocator().getStableShortId(objectId, cardView, gameView));
+
+                // offer_mana_sources: a permanent whose only plays are mana abilities.
+                // Choosing it activates the ability (the engine asks which when there
+                // are several) and the mana floats until it is spent — the way a
+                // player taps their own lands before casting to decide what pays.
+                if (manaOnly) {
+                    choiceEntry.put("name", cardView != null
+                        ? processorServices.cardFormatter().safeDisplayName(cardView)
+                        : "Unknown");
+                    choiceEntry.put("action", "mana");
+                    choiceEntry.put("mana_abilities", new ArrayList<>(manaNames));
+                    choiceList.add(choiceEntry);
+                    indexToUuid.add(objectId);
+                    idx++;
+                    continue;
+                }
 
                 boolean isOnBattlefield = cardView == null
                     || (gameView.getMyHand().get(objectId) == null && gameView.getStack().get(objectId) == null);
@@ -749,7 +766,7 @@ public final class BridgePublishedQueryBuilder {
         return indexToUuid;
     }
 
-    private List<Object> buildAbilityChoices(ActionResult result, Object data) {
+    private List<Object> buildAbilityChoices(ActionResult result, Object data, BridgeProjectionInputs projectionInputs) {
         AbilityPickerView picker = (AbilityPickerView) data;
         Map<UUID, String> choices = picker.getChoices();
         result.response_type = "index";
@@ -784,8 +801,10 @@ public final class BridgePublishedQueryBuilder {
                 int colonIdx = message.indexOf(": ");
                 String cardName = colonIdx >= 0 ? message.substring(colonIdx + 2).trim() : "";
                 if (!cardName.isEmpty()) {
+                    // With offer_mana_sources on, the seat may have tapped this source
+                    // itself rather than been reached by a payment; don't claim either.
                     result.message = "Choose which mana to produce from " + cardName
-                        + " (tapping to pay for a spell)";
+                        + (projectionInputs.offerManaSources() ? "" : " (tapping to pay for a spell)");
                 }
             }
         }
