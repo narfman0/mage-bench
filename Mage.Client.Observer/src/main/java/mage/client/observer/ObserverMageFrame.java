@@ -384,9 +384,36 @@ public class ObserverMageFrame extends MageFrame {
         stdinThread.start();
     }
 
+    // The table this keepAlive observer created last, so end_table can remove it.
+    private volatile UUID keepAliveRoomId;
+    private volatile UUID keepAliveTableId;
+
+    private void endCurrentTable() {
+        UUID roomId = keepAliveRoomId;
+        UUID tableId = keepAliveTableId;
+        if (roomId == null || tableId == null) {
+            LOGGER.info("keepAlive: end_table with no table to end");
+            return;
+        }
+        boolean ok = SessionHandler.getSession().removeTable(roomId, tableId);
+        LOGGER.info("keepAlive: end_table " + tableId + " -> " + (ok ? "removed (game ended)" : "refused"));
+        keepAliveTableId = null;
+    }
+
     private void handleKeepAliveCommand(String json) throws Exception {
         Gson gson = new Gson();
         JsonObject cmd = gson.fromJson(json, JsonObject.class);
+
+        if (cmd.has("command") && "end_table".equals(cmd.get("command").getAsString())) {
+            // The host abandoned this game: end it on the server too. Killing
+            // our processes alone leaves the match running with its CPU players,
+            // who then play each other for ever on the shared JVM ("AI player
+            // thinks too long" for eleven minutes, stalling a live game's
+            // bridge — 2026-09-16). The observer created the table, so it may
+            // remove it, which ends the game.
+            endCurrentTable();
+            return;
+        }
 
         String gameDir = cmd.get("gameDir").getAsString();
         JsonObject playersConfigObj = cmd.getAsJsonObject("playersConfig");
@@ -420,6 +447,8 @@ public class ObserverMageFrame extends MageFrame {
         assert roomId != null : "keepAlive: no main room ID";
 
         UUID tableId = createGameTable(roomId, config, gameDir, choosingPlayer, skipInitShuffling, winsNeeded, gameSeed, replayFrom);
+        keepAliveRoomId = roomId;
+        keepAliveTableId = tableId;
 
         // Start watching for the game to begin
         watchForGameStart(roomId, tableId, gameDir);
