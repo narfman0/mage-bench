@@ -539,9 +539,19 @@ public final class BridgeDecisionFlowService {
                     }
                 }
                 case GAME_CHOOSE_ABILITY -> {
+                    if (resolvedIndex == null && Boolean.FALSE.equals(answer)) {
+                        // Cancel: a null ability is what XMage's own picker sends when
+                        // the player backs out — the activation is dropped, back to
+                        // priority, nothing tapped. (Terramorphic Expanse: activated,
+                        // changed mind, and "Pass" used to be rejected until an
+                        // ability was picked.)
+                        sendUuidOrDie(gameId, null, "chooseAction:GAME_CHOOSE_ABILITY_cancel");
+                        result.action_taken = "cancelled";
+                        break;
+                    }
                     if (resolvedIndex == null) {
                         return chooseActionDone(buildChooseActionError(result, "missing_param",
-                            "GAME_CHOOSE_ABILITY requires index=N. Call get_action_choices first to see the available abilities, then choose_action with the index of the one you want.",
+                            "GAME_CHOOSE_ABILITY requires index=N (or choice=\"no\" to cancel the activation). Call get_action_choices first to see the available abilities.",
                             true, action, true));
                     }
                     if (resolvedIndex < 0 || resolvedIndex >= choiceBackings.size()) {
@@ -1892,7 +1902,7 @@ public final class BridgeDecisionFlowService {
                     processorState.interactionState().resetPoolManaTracking();
                     processorState.interactionState().clearManaPlan();
                     processorState.interactionState().markFailedManaCast(payingForId);
-                    processorState.gameLogState().addSystemMessage("[System] Spell cancelled — not enough mana to complete payment.");
+                    processorState.gameLogState().addSystemMessage(spellCancelledMessage(payingForId, messageText, gameView));
                     eventLogger.log("SPELL_CANCELLED", processorState.gameState().currentGameId(), "not enough mana to complete payment");
                     sendBooleanOrDie(gameId, false, "manaAuto:pool_loop_cancel");
                     return true;
@@ -1913,9 +1923,29 @@ public final class BridgeDecisionFlowService {
         logger.info("[" + username + "] Mana: \"" + messageText + "\" -> no mana source available, cancelling spell");
         processorState.interactionState().markFailedManaCast(payingForId);
         processorState.interactionState().clearManaPlan();
-        processorState.gameLogState().addSystemMessage("[System] Spell cancelled — not enough mana to complete payment.");
+        processorState.gameLogState().addSystemMessage(spellCancelledMessage(payingForId, messageText, gameView));
         eventLogger.log("SPELL_CANCELLED", processorState.gameState().currentGameId(), "not enough mana to complete payment");
         sendBooleanOrDie(gameId, false, "manaAuto:no_source_cancel");
         return true;
+    }
+
+    /**
+     * The one line a person sees when a cast dies for lack of mana. Names the
+     * spell and what was still owed: "Return of the Wildspeaker" went back to
+     * hand with no word (a report on 2026-09-16), and the bridge hides a
+     * failed cast for the rest of the turn, so without this it just vanished.
+     */
+    private String spellCancelledMessage(UUID payingForId, String paymentText, GameView gameView) {
+        String name = null;
+        if (payingForId != null) {
+            CardView cardView = processorServices.viewLocator().findCardViewById(payingForId, gameView);
+            if (cardView != null) {
+                name = processorServices.cardFormatter().safeDisplayName(cardView);
+            }
+        }
+        String owed = paymentText == null ? "" : paymentText.split("<", 2)[0].replaceFirst("^(?i)pay\\s*", "").trim();
+        return "[System] Couldn't pay for " + (name != null ? name : "that spell")
+            + (owed.isEmpty() ? "" : " — " + owed + " still owed") + ": not enough mana. It's back where it was"
+            + (name != null ? " and won't be offered again this turn." : ".");
     }
 }

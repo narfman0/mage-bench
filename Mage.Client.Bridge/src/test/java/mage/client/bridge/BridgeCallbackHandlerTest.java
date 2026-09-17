@@ -1321,6 +1321,48 @@ class BridgeCallbackHandlerTest {
     }
 
     @Test
+    void abilityPickerAcceptsNoAsCancel() throws Exception {
+        // Terramorphic Expanse: activated, changed mind. choice="no" on the
+        // ability picker sends a null ability (XMage's own cancel) instead of
+        // being rejected until an ability is chosen.
+        BridgeMageClient client = new BridgeMageClient("TestPlayer");
+        BridgeCallbackHandler handler = client.getCallbackHandler();
+        UUID gameId = UUID.randomUUID();
+        List<Object> sentUuids = new ArrayList<>();
+        GameView pickView = gameView(30);
+        GameView nextView = gameView(31);
+        var abilities = new LinkedHashMap<UUID, String>();
+        abilities.put(UUID.randomUUID(), "{T}: Add {C}.");
+        abilities.put(UUID.randomUUID(), "{T}, Sacrifice: Search your library for a basic land card.");
+        AbilityPickerView picker = new AbilityPickerView(pickView, abilities, "Choose spell or ability to play: Terramorphic Expanse");
+        GameClientMessage nextDecision = new GameClientMessage(nextView, Collections.<String, Serializable>emptyMap(), "Play spells and abilities");
+        addActiveGame(handler, gameId);
+        setField(handler, "currentGameId", gameId);
+        setField(handler, "lastGameView", pickView);
+        client.setSession((Session) Proxy.newProxyInstance(
+            Session.class.getClassLoader(),
+            new Class<?>[]{Session.class},
+            (proxy, method, args) -> {
+                if ("sendPlayerUUID".equals(method.getName())) {
+                    sentUuids.add(args[1]);
+                    enqueueCallback(handler, ClientCallbackMethod.GAME_SELECT, gameId, nextDecision);
+                    return true;
+                }
+                return defaultReturnValue(method.getReturnType());
+            }
+        ));
+        setField(handler, "pendingAction", new PendingAction(
+            gameId, ClientCallbackMethod.GAME_CHOOSE_ABILITY, picker, "Choose spell or ability to play: Terramorphic Expanse", 30));
+
+        var result = handler.chooseAction(null, null, false, null, null, null, null, null, null, null, null);
+
+        assertThat(result.success).isTrue();
+        assertThat(result.action_taken).isEqualTo("cancelled");
+        assertThat(sentUuids).containsExactly((Object) null);
+        assertThat(result.action_type).isEqualTo("GAME_SELECT");
+    }
+
+    @Test
     void chooseActionWaitsThroughMultipleAutoResolvedFollowups() throws Exception {
         BridgeMageClient client = new BridgeMageClient("TestPlayer");
         BridgeCallbackHandler handler = client.getCallbackHandler();
